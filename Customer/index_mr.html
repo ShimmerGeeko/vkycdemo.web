@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Customer Home</title>
+    <!-- Favicon-->
+    <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
+        type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Grid Css -->
+    <link href="../css/bootstrap-grid.css" rel="stylesheet">
+
+    <!-- Bootstrap Core Css -->
+    <link href="../plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Waves Effect Css -->
+    <link href="../plugins/node-waves/waves.css" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="../plugins/animate-css/animate.css" rel="stylesheet" />
+
+    <!-- Sweetalert Css -->
+    <link href="../plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/customStyle.css" rel="stylesheet">
+
+    <style>
+        html {
+            min-height: 100% !important;
+        }
+        .lng-select{
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body class="splash-page col-md-8 col-centered-mt3" style="background-image: url(../images/bg_Landing.png) !important;">
+    <div class="splash-box">
+        <div class="logo">
+            <!-- Red -->
+            <!-- <a href="javascript:void(0);" style="color: #E91E63 !important;">Finacus <b>Video KYC</b></a> -->
+
+            <!-- <a href="javascript:void(0);" style="color: #673AB7 !important;"><b>व्हिडिओ केवायसी</b></a>
+            <small style="color: #673AB7 !important;">वन स्टॉप केवायसी सोल्यूशन</small> -->
+            <a href="javascript:void(0);"><b>व्हिडिओ केवायसी</b></a>
+            <small>वन स्टॉप केवायसी सोल्यूशन</small>
+        </div>
+        <div class="card">
+            <div class="body">
+                <form class="formBody" action="javascript:void(0);" method="POST" autocomplete="off">
+                    <div id="rowWelcome">
+                        <div class="row">
+                        <div class="msg mb-2 col-md-8" style="text-align: unset;">सूचना</div>
+                        <div class="form-group field-requiredVal col-md-4 mb-0">
+                            <div class="lng-select">
+                            <label class="custom-select-label">भाषा बदला </label>
+                            <select id="selLanguage" name="selLanguage" onchange="selLanguageChange(value);" class="show-tick ml-4"
+                                required>
+                                <!-- <option value="">--select--</option> -->
+                                <option value="EN">English</option>
+                                <option value="MR" selected>मराठी</option>
+                            </select>
+                            </div>
+                        </div>
+                        </div>
+                        <hr class="mt-3 mb-2" style="border-bottom: 2px solid #1f91f3;">
+                        <div class="row">
+                            <!-- <div class="col-xs-12 col-md-12 col-lg-12 pb-0 mb-0">
+                                <img src="../images/tbsbLogo.jpg" style="width: 100%;" />
+                            </div> -->
+                            <div class="col-xs-12" style="text-align: center;">
+                                <h1 class="mb-4" translate="yes">आमच्या शून्य-संपर्क व्हिडिओ केवायसी डिजिटल खाते उघडण्यामध्ये आपले स्वागत आहे.</h1>
+                                <h3 class="mb-4">आमच्या बँकिंग एजंटसह व्हिडिओ कॉलद्वारे आपले केवायसी पूर्ण करा.</h3>
+                                <h4 class="mb-4">आमच्या शाखेत भेट न घेता आमच्याकडे खाते उघडण्याचे फायदे उपभोगण्याचा एक सोपा आणि सुकर मार्ग.</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row clearfix">
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div id="btnAccOpening" class="info-box-4 hover-zoom-effect hover-expand-effect"
+                                        style="cursor: pointer !important;">
+                                        <div class="icon">
+                                            <i class="material-icons col-indigo">account_balance</i>
+                                        </div>
+                                        <!-- <div class="content" style="text-align: center; padding: 6px 0px;">
+                                            <div class="text" style="font-size: 16px;">Account Opening</div>
+                                            <div class="number"></div>
+                                        </div> -->
+                                        <div class="content">
+                                            <div class="text">खाते</div>
+                                            <div class="number">उघडणे</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div id="btnGetLoan" class="info-box-4 hover-zoom-effect hover-expand-effect"
+                                        style="cursor: pointer !important;">
+                                        <div class="icon">
+                                            <i class="material-icons col-teal">attach_money</i>
+                                        </div>
+                                        <div class="content">
+                                            <div class="text">अर्ज</div>
+                                            <div class="number">कर्ज</div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div id="btnBasicKYC" class="info-box-4 hover-zoom-effect hover-expand-effect"
+                                        style="cursor: pointer !important;">
+                                        <div class="icon">
+                                            <i class="material-icons col-teal">person</i>
+                                        </div>
+                                        <div class="content">
+                                            <div class="text">मूलभूत</div>
+                                            <div class="number">व्हीकेवायसी</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div id="btnCC" class="info-box-4 hover-zoom-effect hover-expand-effect"
+                                        style="cursor: pointer !important;">
+                                        <div class="icon">
+                                            <i class="material-icons col-teal">credit_card</i>
+                                        </div>
+                                        <div class="content">
+                                            <div class="text">अर्ज</div>
+                                            <div class="number">क्रेडीट कार्ड</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-centered">
+                                    <div id="btnReKyc" class="info-box-4 hover-zoom-effect hover-expand-effect"
+                                        style="cursor: pointer !important;">
+                                        <div class="icon">
+                                            <i class="material-icons col-pink">account_circle</i>
+                                        </div>
+                                        <div class="content">
+                                            <div class="text">रे</div>
+                                            <div class="number">केवायसी</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="rowRequire" style="display: none;">
+                        <!-- <div class="msg mb-2">Instructions</div>
+                        <hr class="mt-3 mb-2" style="border-bottom: 2px solid #1f91f3;"> -->
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pb-0 mb-0">
+                                <ol class="breadcrumb breadcrumb-col-indigo" style="margin-bottom: 0px !important; padding-bottom: 0px !important;">
+                                    <li><a href="./index.html"><i class="material-icons">home</i> मुख्यपृष्ठ</a></li>
+                                    <li id="icoAccOpening" style="display: none;" class="active"><i class="material-icons">account_balance</i> खाते उघडणे</li>
+                                    <li id="icoApplyLoan" style="display: none;" class="active"><i class="material-icons">attach_money</i> कर्जासाठी अर्ज करा</li>
+                                    <li id="icoReKyc" style="display: none;" class="active"><i class="material-icons">account_circle</i> रे केवायसी</li>
+                                    <li id="icoCC" style="display: none;" class="active"><i class="material-icons">credit_card</i> क्रेडिट कार्डसाठी अर्ज करा</li>
+                                    <li id="icoBKyc" style="display: none;" class="active"><i class="material-icons">person</i> मूलभूत व्हीकेवायसी</li>
+                                </ol>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-2">
+                                <hr class="mt-3 mb-2" style="border-bottom: 2px solid #1f91f3;">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <ul class="list-group mb-2">
+                                    <!-- &#9655:|>; &#9680: CircleHalf-filled -->
+                                    <li class="list-group-item"
+                                        style="font-size: 1.7rem; border: 0; font-weight: bold;">
+                                        <span style="color:#1b6ec2">&#9733 </span>आवश्यकता
+                                    </li>
+                                    <li class="list-group-item" style="font-size: 1.7rem; padding-left: 0; border: 0;">
+                                        <ul>
+                                            <li>आपला आधार क्रमांक / व्हर्च्युअल आयडी / ऑफलाइन केवायसी</li>
+                                            <ol style="padding-left: 1rem;">
+                                                <small>
+                                                    <ul style="padding-left: 0.3rem;">
+                                                        <li>ऑफलाइन केवायसी डाउनलोड करण्यासाठी चरण :</li>
+                                                    </ul>
+                                                    <li>भेट <b><a href="https://resident.uidai.gov.in/offline-kyc"
+                                                                target="_blank">https://resident.uidai.gov.in/offline-kyc</b></a>
+                                                    </li>
+                                                    <li>कृपया आपला आधार क्रमांक कॅप्चासह प्रविष्ट करा.</li>
+                                                    <li>त्यानंतर आपल्या नोंदणीकृत मोबाइल नंबरवर आपल्याला एक ओटीपी मिळेल.</li>
+                                                    <li class="mb-2">4 अंकी सामायिक कोड तयार करण्यासाठी आणि पिन फाइल डाउनलोड करण्यासाठी ओटीपी वापरा.</li>
+                                                </small>
+                                            </ol>
+                                            <li>आपले पॅन कार्ड</li>
+                                            <li>आपला मोबाइल फोन</li>
+                                            <li>पांढरा कागद आणि एक काळा पेन.</li>
+                                            <li>आपल्या मागे सरळ भिंतीसह एक चांगली प्रकाशित खोली.</li>
+                                            <li>इंटरनेट कनेक्टिव्हिटी.</li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-group-item"
+                                        style="font-size: 1.7rem; border: 0; font-weight: bold;">
+                                        <span style="color:#1b6ec2">&#9733 </span>परिस्थिती
+                                    </li>
+                                    <li class="list-group-item" style="font-size: 1.7rem; border: 0; padding-left: 0;">
+                                        <ul>
+                                            <li>व्हिडिओ केवायसी प्रक्रिया आमच्या बँकिंग अवस्थेत (सकाळी 9.00 ते 7.00 वाजता) करणे आवश्यक आहे.</li>
+                                            <li>तुमचा मोबाईल नंबर आणि आधार नंबर लिंक केला पाहिजे.</li>
+                                            <li>व्हिडिओ केवायसी प्रक्रियेदरम्यान आपल्याला भारतात शारीरिकरित्या उपस्थित असणे आवश्यक आहे.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="divPrev" class="col-lg-4 col-md-4 col-sm-4 col-xs-6 center-block mb-2 mr-0"
+                            style="display: none;">
+                            <button id="btnPrev" class="btn btn-lg btn-block bg-deep-purple waves-effect" type="button"
+                                onclick="prev();">मागील</button>
+                        </div>
+                        <!-- <div id="divNext" class="col-lg-4 col-md-4 col-sm-4 col-xs-6 center-block mb-2">
+                            <button id="btnNext" class="btn btn-lg btn-block bg-deep-purple waves-effect" type="button"
+                                onclick="next();">Next</button>
+                        </div> -->
+                        <div id="divProceed" class="col-lg-4 col-md-4 col-sm-4 col-xs-6 center-block mb-2 ml-0"
+                            style="display: none;">
+                            <button id="btnProceed" class="btn btn-lg btn-block bg-deep-purple waves-effect"
+                                type="button" onclick="proceed();">पुढे जा</button>
+                        </div>
+                    </div>
+                    <!-- <div class="row row-block">
+                        <div id="divProceed" class="col-lg-4 col-md-4 col-sm-4 col-xs-6 mb-2 pull-right" style="display: none;">
+                            <button id="btnProceed" class="btn btn-lg btn-block bg-deep-purple waves-effect" type="button" onclick="proceed();">Proceed</button>
+                        </div>
+                        <div id="divNext" class="col-lg-4 col-md-4 col-sm-4 col-xs-6 mb-2 pull-right">
+                            <button id="btnNext" class="btn btn-lg btn-block bg-deep-purple waves-effect" type="button" onclick="next();">Next</button>
+                        </div>
+                        <div id="divPrev" class="col-lg-4 col-md-4 col-sm-4 col-xs-6 mb-2 pull-right" style="display: none;">
+                            <button id="btnPrev" class="btn btn-lg btn-block bg-deep-purple waves-effect" type="button" onclick="prev();">Previous</button>
+                        </div>
+                    </div> -->
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery Core Js -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="../plugins/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="../plugins/node-waves/waves.js"></script>
+
+    <!-- Validation Plugin Js -->
+    <script src="../plugins/jquery-validation/jquery.validate.js"></script>
+
+    <!-- SweetAlert Plugin Js -->
+    <script src="../plugins/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Custom Js -->
+    <script src="../js/admin.js"></script>
+
+    <script>
+        window.onload = function () {
+            sessionStorage.clear();
+            sessionStorage.setItem("selLanguage", "MR");
+        }
+
+        function next() {
+            document.getElementById('rowWelcome').style.display = 'none';
+            // document.getElementById('divNext').style.display = 'none';
+            document.getElementById('rowRequire').style.display = 'block';
+            document.getElementById('divPrev').style.display = 'block';
+            document.getElementById('divProceed').style.display = 'block';
+        }
+        function prev() {
+            document.getElementById('rowRequire').style.display = 'none';
+            document.getElementById('divPrev').style.display = 'none';
+            document.getElementById('divProceed').style.display = 'none';
+            // document.getElementById('divNext').style.display = 'block';
+            document.getElementById('rowWelcome').style.display = 'block';
+
+        }
+        function proceed() {
+            var ApplType = sessionStorage.getItem('sesParamApplType');
+            var selLang = sessionStorage.getItem("selLanguage");
+                if  (ApplType === '1') {
+                    window.location.href = "./CustIndex_mr.html";
+                }
+                else if (ApplType === '2') {
+                    window.location.href = "./CustIndexAcc_mr.html";
+                }
+                else if (ApplType === '3') {
+                    window.location.href = "./CustIndex_mr.html";
+                }
+                else if (ApplType === '5') {
+                }
+                else if (ApplType === '4') {
+                    window.location.href = "./CustIndexReKYC_mr.html";
+                }           
+        }
+
+        var btnBasicKYC = document.getElementById('btnBasicKYC');
+        btnBasicKYC.addEventListener('click', () => {
+            sessionStorage.setItem('sesParamApplType', '1');
+            document.getElementById('icoAccOpening').style.display = 'none';
+            document.getElementById('icoApplyLoan').style.display = 'none';
+            document.getElementById('icoReKyc').style.display = 'none';
+            document.getElementById('icoCC').style.display = 'none';
+            document.getElementById('icoBKyc').style.display = 'inline-block';
+            routeToNext();
+        })
+
+        var btnAccOpening = document.getElementById('btnAccOpening');
+        btnAccOpening.addEventListener('click', () => {
+            sessionStorage.setItem('sesParamApplType', '2');
+            document.getElementById('icoAccOpening').style.display = 'inline-block';
+            document.getElementById('icoApplyLoan').style.display = 'none';
+            document.getElementById('icoReKyc').style.display = 'none';
+            document.getElementById('icoCC').style.display = 'none';
+            routeToNext();
+        })
+
+        var btnCC = document.getElementById('btnCC');
+        btnCC.addEventListener('click', () => {
+            sessionStorage.setItem('sesParamApplType', '3');
+            document.getElementById('icoAccOpening').style.display = 'none';
+            document.getElementById('icoApplyLoan').style.display = 'none';
+            document.getElementById('icoReKyc').style.display = 'none';
+            document.getElementById('icoCC').style.display = 'inline-block';
+            routeToNext();
+        })
+
+        var btnReKyc = document.getElementById('btnReKyc');
+        btnReKyc.addEventListener('click', () => {
+            sessionStorage.setItem('sesParamApplType', '4');
+            document.getElementById('icoAccOpening').style.display = 'none';
+            document.getElementById('icoApplyLoan').style.display = 'none';
+            document.getElementById('icoReKyc').style.display = 'inline-block';
+            document.getElementById('icoCC').style.display = 'none';
+            routeToNext();
+        })
+
+        function routeToNext() {
+            var selLang = document.getElementById("selLanguage").value
+            sessionStorage.setItem("selLanguage", selLang)
+            next();
+        }
+
+        function selLanguageChange(value) {
+            debugger;
+            console.log(">>>",value)
+            if(value === "MR"){
+                sessionStorage.setItem("selLanguage", value)
+                window.location.href = './index_mr.html';
+            }
+            else if(value === "EN"){
+                sessionStorage.setItem("selLanguage", value)
+                window.location.href = './index.html';
+            }
+            else{
+                sessionStorage.setItem("selLanguage", value)
+                window.location.href = './index.html';
+            }
+        }
+    </script>
+</body>
+
+</html>

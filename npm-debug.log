@@ -1,0 +1,797 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'bufferutil' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData bufferutil
+8 silly fetchNamedPackageData bufferutil
+9 silly mapToRegistry name bufferutil
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry uri https://registry.npmjs.org/bufferutil
+13 verbose request uri https://registry.npmjs.org/bufferutil
+14 verbose request no auth needed
+15 info attempt registry request try #1 at 11:20:41 AM
+16 verbose request id ef3f1a838c3dff29
+17 verbose etag W/"d152ecbcb5a1345426a96c67e5c60801"
+18 verbose lastModified Tue, 01 Jan 2019 11:09:11 GMT
+19 http request GET https://registry.npmjs.org/bufferutil
+20 http 304 https://registry.npmjs.org/bufferutil
+21 verbose headers { date: 'Mon, 03 Aug 2020 11:20:41 GMT',
+21 verbose headers   connection: 'keep-alive',
+21 verbose headers   'set-cookie':
+21 verbose headers    [ '__cfduid=dfdf148ceba9cc1f1b39477fba1f3c5a11596453641; expires=Wed, 02-Sep-20 11:20:41 GMT; path=/; domain=.npmjs.org; HttpOnly; SameSite=Lax' ],
+21 verbose headers   'cf-ray': '5bcfa69bcbc2e129-BOM',
+21 verbose headers   etag: '"d152ecbcb5a1345426a96c67e5c60801"',
+21 verbose headers   'last-modified': 'Tue, 01 Jan 2019 11:09:11 GMT',
+21 verbose headers   'cf-cache-status': 'DYNAMIC',
+21 verbose headers   'cf-request-id': '0455a6755d0000e129d8b88200000001',
+21 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+21 verbose headers   vary: 'Accept-Encoding',
+21 verbose headers   server: 'cloudflare' }
+22 silly get cb [ 304,
+22 silly get   { date: 'Mon, 03 Aug 2020 11:20:41 GMT',
+22 silly get     connection: 'keep-alive',
+22 silly get     'set-cookie':
+22 silly get      [ '__cfduid=dfdf148ceba9cc1f1b39477fba1f3c5a11596453641; expires=Wed, 02-Sep-20 11:20:41 GMT; path=/; domain=.npmjs.org; HttpOnly; SameSite=Lax' ],
+22 silly get     'cf-ray': '5bcfa69bcbc2e129-BOM',
+22 silly get     etag: '"d152ecbcb5a1345426a96c67e5c60801"',
+22 silly get     'last-modified': 'Tue, 01 Jan 2019 11:09:11 GMT',
+22 silly get     'cf-cache-status': 'DYNAMIC',
+22 silly get     'cf-request-id': '0455a6755d0000e129d8b88200000001',
+22 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+22 silly get     vary: 'Accept-Encoding',
+22 silly get     server: 'cloudflare' } ]
+23 verbose etag https://registry.npmjs.org/bufferutil from cache
+24 verbose get saving bufferutil to /home/finadmin/.npm/registry.npmjs.org/bufferutil/.cache.json
+25 silly install normalizeTree
+26 silly loadCurrentTree Finishing
+27 silly loadIdealTree Starting
+28 silly install loadIdealTree
+29 silly cloneCurrentTree Starting
+30 silly install cloneCurrentTreeToIdealTree
+31 silly cloneCurrentTree Finishing
+32 silly loadShrinkwrap Starting
+33 silly install loadShrinkwrap
+34 silly loadShrinkwrap Finishing
+35 silly loadAllDepsIntoIdealTree Starting
+36 silly install loadAllDepsIntoIdealTree
+37 silly resolveWithNewModule bufferutil@4.0.1 checking installable status
+38 silly cache add args [ 'bufferutil', null ]
+39 verbose cache add spec bufferutil
+40 silly cache add parsed spec Result {
+40 silly cache add   raw: 'bufferutil',
+40 silly cache add   scope: null,
+40 silly cache add   name: 'bufferutil',
+40 silly cache add   rawSpec: '',
+40 silly cache add   spec: 'latest',
+40 silly cache add   type: 'tag' }
+41 silly addNamed bufferutil@latest
+42 verbose addNamed "latest" is being treated as a dist-tag for bufferutil
+43 info addNameTag [ 'bufferutil', 'latest' ]
+44 silly mapToRegistry name bufferutil
+45 silly mapToRegistry using default registry
+46 silly mapToRegistry registry https://registry.npmjs.org/
+47 silly mapToRegistry uri https://registry.npmjs.org/bufferutil
+48 verbose addNameTag registry:https://registry.npmjs.org/bufferutil not in flight; fetching
+49 verbose get https://registry.npmjs.org/bufferutil not expired, no request
+50 silly addNameTag next cb for bufferutil with tag latest
+51 silly addNamed bufferutil@4.0.1
+52 verbose addNamed "4.0.1" is a plain semver version for bufferutil
+53 silly cache afterAdd bufferutil@4.0.1
+54 verbose afterAdd /home/finadmin/.npm/bufferutil/4.0.1/package/package.json not in flight; writing
+55 verbose afterAdd /home/finadmin/.npm/bufferutil/4.0.1/package/package.json written
+56 silly fetchNamedPackageData node-gyp-build
+57 silly mapToRegistry name node-gyp-build
+58 silly mapToRegistry using default registry
+59 silly mapToRegistry registry https://registry.npmjs.org/
+60 silly mapToRegistry uri https://registry.npmjs.org/node-gyp-build
+61 verbose request uri https://registry.npmjs.org/node-gyp-build
+62 verbose request no auth needed
+63 info attempt registry request try #1 at 11:20:41 AM
+64 verbose etag W/"9e31536c27d2d66990bf048b7106cbd5"
+65 verbose lastModified Mon, 20 Jul 2020 10:30:36 GMT
+66 http request GET https://registry.npmjs.org/node-gyp-build
+67 http 304 https://registry.npmjs.org/node-gyp-build
+68 verbose headers { date: 'Mon, 03 Aug 2020 11:20:42 GMT',
+68 verbose headers   connection: 'keep-alive',
+68 verbose headers   'set-cookie':
+68 verbose headers    [ '__cfduid=dfdf148ceba9cc1f1b39477fba1f3c5a11596453641; expires=Wed, 02-Sep-20 11:20:41 GMT; path=/; domain=.npmjs.org; HttpOnly; SameSite=Lax' ],
+68 verbose headers   'cf-ray': '5bcfa69df9b6e129-BOM',
+68 verbose headers   etag: '"9e31536c27d2d66990bf048b7106cbd5"',
+68 verbose headers   'last-modified': 'Mon, 20 Jul 2020 10:30:36 GMT',
+68 verbose headers   'cf-cache-status': 'DYNAMIC',
+68 verbose headers   'cf-request-id': '0455a676b80000e129d8ba8200000001',
+68 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+68 verbose headers   vary: 'Accept-Encoding',
+68 verbose headers   server: 'cloudflare' }
+69 silly get cb [ 304,
+69 silly get   { date: 'Mon, 03 Aug 2020 11:20:42 GMT',
+69 silly get     connection: 'keep-alive',
+69 silly get     'set-cookie':
+69 silly get      [ '__cfduid=dfdf148ceba9cc1f1b39477fba1f3c5a11596453641; expires=Wed, 02-Sep-20 11:20:41 GMT; path=/; domain=.npmjs.org; HttpOnly; SameSite=Lax' ],
+69 silly get     'cf-ray': '5bcfa69df9b6e129-BOM',
+69 silly get     etag: '"9e31536c27d2d66990bf048b7106cbd5"',
+69 silly get     'last-modified': 'Mon, 20 Jul 2020 10:30:36 GMT',
+69 silly get     'cf-cache-status': 'DYNAMIC',
+69 silly get     'cf-request-id': '0455a676b80000e129d8ba8200000001',
+69 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+69 silly get     vary: 'Accept-Encoding',
+69 silly get     server: 'cloudflare' } ]
+70 verbose etag https://registry.npmjs.org/node-gyp-build from cache
+71 verbose get saving node-gyp-build to /home/finadmin/.npm/registry.npmjs.org/node-gyp-build/.cache.json
+72 silly resolveWithNewModule node-gyp-build@3.7.0 checking installable status
+73 silly cache add args [ 'node-gyp-build@~3.7.0', null ]
+74 verbose cache add spec node-gyp-build@~3.7.0
+75 silly cache add parsed spec Result {
+75 silly cache add   raw: 'node-gyp-build@~3.7.0',
+75 silly cache add   scope: null,
+75 silly cache add   name: 'node-gyp-build',
+75 silly cache add   rawSpec: '~3.7.0',
+75 silly cache add   spec: '>=3.7.0 <3.8.0',
+75 silly cache add   type: 'range' }
+76 silly addNamed node-gyp-build@>=3.7.0 <3.8.0
+77 verbose addNamed ">=3.7.0 <3.8.0" is a valid semver range for node-gyp-build
+78 silly addNameRange { name: 'node-gyp-build',
+78 silly addNameRange   range: '>=3.7.0 <3.8.0',
+78 silly addNameRange   hasData: false }
+79 silly mapToRegistry name node-gyp-build
+80 silly mapToRegistry using default registry
+81 silly mapToRegistry registry https://registry.npmjs.org/
+82 silly mapToRegistry uri https://registry.npmjs.org/node-gyp-build
+83 verbose addNameRange registry:https://registry.npmjs.org/node-gyp-build not in flight; fetching
+84 verbose get https://registry.npmjs.org/node-gyp-build not expired, no request
+85 silly addNameRange number 2 { name: 'node-gyp-build',
+85 silly addNameRange   range: '>=3.7.0 <3.8.0',
+85 silly addNameRange   hasData: true }
+86 silly addNameRange versions [ 'node-gyp-build',
+86 silly addNameRange   [ '1.0.0',
+86 silly addNameRange     '1.0.1',
+86 silly addNameRange     '1.1.0',
+86 silly addNameRange     '1.1.1',
+86 silly addNameRange     '2.0.0',
+86 silly addNameRange     '2.0.1',
+86 silly addNameRange     '2.0.2',
+86 silly addNameRange     '3.0.0',
+86 silly addNameRange     '3.0.1',
+86 silly addNameRange     '3.1.0',
+86 silly addNameRange     '3.2.0',
+86 silly addNameRange     '3.2.1',
+86 silly addNameRange     '3.2.2',
+86 silly addNameRange     '3.3.0',
+86 silly addNameRange     '3.4.0',
+86 silly addNameRange     '3.5.0',
+86 silly addNameRange     '3.5.1',
+86 silly addNameRange     '3.6.0',
+86 silly addNameRange     '3.7.0',
+86 silly addNameRange     '3.8.0',
+86 silly addNameRange     '4.0.0',
+86 silly addNameRange     '3.9.0',
+86 silly addNameRange     '4.1.0',
+86 silly addNameRange     '4.1.1',
+86 silly addNameRange     '4.2.0',
+86 silly addNameRange     '4.2.1',
+86 silly addNameRange     '4.2.2',
+86 silly addNameRange     '4.2.3' ] ]
+87 silly addNamed node-gyp-build@3.7.0
+88 verbose addNamed "3.7.0" is a plain semver version for node-gyp-build
+89 silly cache afterAdd node-gyp-build@3.7.0
+90 verbose afterAdd /home/finadmin/.npm/node-gyp-build/3.7.0/package/package.json not in flight; writing
+91 verbose afterAdd /home/finadmin/.npm/node-gyp-build/3.7.0/package/package.json written
+92 silly loadAllDepsIntoIdealTree Finishing
+93 silly idealTree:prePrune vctest
+93 silly idealTree:prePrune ├── bootstrap@4.4.1
+93 silly idealTree:prePrune ├── bufferutil@4.0.1
+93 silly idealTree:prePrune ├── From bhavesh
+93 silly idealTree:prePrune ├── node-gyp-build@3.7.0
+93 silly idealTree:prePrune └── ws@7.3.1
+94 silly loadIdealTree Finishing
+95 silly currentTree vctest
+95 silly currentTree ├── bootstrap@4.4.1
+95 silly currentTree ├── From bhavesh
+95 silly currentTree └── ws@7.3.1
+96 silly idealTree vctest
+96 silly idealTree ├── bootstrap@4.4.1
+96 silly idealTree ├── bufferutil@4.0.1
+96 silly idealTree ├── From bhavesh
+96 silly idealTree ├── node-gyp-build@3.7.0
+96 silly idealTree └── ws@7.3.1
+97 silly generateActionsToTake Starting
+98 silly install generateActionsToTake
+99 silly generateActionsToTake Finishing
+100 silly diffTrees action count 4
+101 silly diffTrees add node-gyp-build@3.7.0
+102 silly diffTrees update bootstrap@4.4.1
+103 silly diffTrees add bufferutil@4.0.1
+104 silly diffTrees update ws@7.3.1
+105 silly decomposeActions action count 32
+106 silly decomposeActions fetch node-gyp-build@3.7.0
+107 silly decomposeActions extract node-gyp-build@3.7.0
+108 silly decomposeActions test node-gyp-build@3.7.0
+109 silly decomposeActions preinstall node-gyp-build@3.7.0
+110 silly decomposeActions build node-gyp-build@3.7.0
+111 silly decomposeActions install node-gyp-build@3.7.0
+112 silly decomposeActions postinstall node-gyp-build@3.7.0
+113 silly decomposeActions finalize node-gyp-build@3.7.0
+114 silly decomposeActions fetch bootstrap@4.4.1
+115 silly decomposeActions extract bootstrap@4.4.1
+116 silly decomposeActions test bootstrap@4.4.1
+117 silly decomposeActions preinstall bootstrap@4.4.1
+118 silly decomposeActions build bootstrap@4.4.1
+119 silly decomposeActions install bootstrap@4.4.1
+120 silly decomposeActions postinstall bootstrap@4.4.1
+121 silly decomposeActions finalize bootstrap@4.4.1
+122 silly decomposeActions fetch bufferutil@4.0.1
+123 silly decomposeActions extract bufferutil@4.0.1
+124 silly decomposeActions test bufferutil@4.0.1
+125 silly decomposeActions preinstall bufferutil@4.0.1
+126 silly decomposeActions build bufferutil@4.0.1
+127 silly decomposeActions install bufferutil@4.0.1
+128 silly decomposeActions postinstall bufferutil@4.0.1
+129 silly decomposeActions finalize bufferutil@4.0.1
+130 silly decomposeActions fetch ws@7.3.1
+131 silly decomposeActions extract ws@7.3.1
+132 silly decomposeActions test ws@7.3.1
+133 silly decomposeActions preinstall ws@7.3.1
+134 silly decomposeActions build ws@7.3.1
+135 silly decomposeActions install ws@7.3.1
+136 silly decomposeActions postinstall ws@7.3.1
+137 silly decomposeActions finalize ws@7.3.1
+138 silly executeActions Starting
+139 silly install executeActions
+140 silly doSerial global-install 0
+141 silly doParallel fetch 4
+142 verbose lock using /home/finadmin/.npm/_locks/staging-cc13d808a2d3aae1.lock for /var/www/html/vctest/node_modules/.staging
+143 silly doParallel extract 4
+144 silly extract node-gyp-build@3.7.0
+145 silly extract bootstrap@4.4.1
+146 silly extract bufferutil@4.0.1
+147 silly extract ws@7.3.1
+148 silly addNamed bootstrap@4.4.1
+149 verbose addNamed "4.4.1" is a plain semver version for bootstrap
+150 silly mapToRegistry name bootstrap
+151 silly mapToRegistry using default registry
+152 silly mapToRegistry registry https://registry.npmjs.org/
+153 silly mapToRegistry uri https://registry.npmjs.org/bootstrap
+154 verbose addNameVersion registry:https://registry.npmjs.org/bootstrap not in flight; fetching
+155 verbose unbuild node_modules/.staging/ws-699bbeb7
+156 verbose unbuild node_modules/.staging/bufferutil-efd5557b
+157 verbose unbuild node_modules/.staging/node-gyp-build-a35c718e
+158 silly gentlyRm /var/www/html/vctest/node_modules/.staging/ws-699bbeb7 is being purged from base /var/www/html/vctest
+159 verbose gentlyRm don't care about contents; nuking /var/www/html/vctest/node_modules/.staging/ws-699bbeb7
+160 silly gentlyRm /var/www/html/vctest/node_modules/.staging/bufferutil-efd5557b is being purged from base /var/www/html/vctest
+161 verbose gentlyRm don't care about contents; nuking /var/www/html/vctest/node_modules/.staging/bufferutil-efd5557b
+162 verbose request uri https://registry.npmjs.org/bootstrap
+163 verbose request no auth needed
+164 info attempt registry request try #1 at 11:20:43 AM
+165 verbose etag W/"13842ccb222f39a48c5cbc2041ae5090"
+166 verbose lastModified Fri, 26 Jun 2020 20:55:24 GMT
+167 http request GET https://registry.npmjs.org/bootstrap
+168 silly gentlyRm /var/www/html/vctest/node_modules/.staging/node-gyp-build-a35c718e is being purged from base /var/www/html/vctest
+169 verbose gentlyRm don't care about contents; nuking /var/www/html/vctest/node_modules/.staging/node-gyp-build-a35c718e
+170 verbose tar unpack /home/finadmin/.npm/ws/7.3.1/package.tgz
+171 verbose tar unpacking to /var/www/html/vctest/node_modules/.staging/ws-699bbeb7
+172 silly gentlyRm /var/www/html/vctest/node_modules/.staging/ws-699bbeb7 is being purged
+173 verbose gentlyRm don't care about contents; nuking /var/www/html/vctest/node_modules/.staging/ws-699bbeb7
+174 verbose tar unpack /home/finadmin/.npm/bufferutil/4.0.1/package.tgz
+175 verbose tar unpacking to /var/www/html/vctest/node_modules/.staging/bufferutil-efd5557b
+176 silly gentlyRm /var/www/html/vctest/node_modules/.staging/bufferutil-efd5557b is being purged
+177 verbose gentlyRm don't care about contents; nuking /var/www/html/vctest/node_modules/.staging/bufferutil-efd5557b
+178 verbose tar unpack /home/finadmin/.npm/node-gyp-build/3.7.0/package.tgz
+179 verbose tar unpacking to /var/www/html/vctest/node_modules/.staging/node-gyp-build-a35c718e
+180 silly gentlyRm /var/www/html/vctest/node_modules/.staging/node-gyp-build-a35c718e is being purged
+181 verbose gentlyRm don't care about contents; nuking /var/www/html/vctest/node_modules/.staging/node-gyp-build-a35c718e
+182 silly gunzTarPerm modes [ '755', '644' ]
+183 silly gunzTarPerm modes [ '755', '644' ]
+184 silly gunzTarPerm modes [ '755', '644' ]
+185 silly gunzTarPerm extractEntry LICENSE
+186 silly gunzTarPerm extractEntry package.json
+187 silly gunzTarPerm extractEntry package.json
+188 silly gunzTarPerm extractEntry browser.js
+189 silly gunzTarPerm extractEntry lib/buffer-util.js
+190 silly gunzTarPerm extractEntry binding.gyp
+191 silly gunzTarPerm extractEntry fallback.js
+192 silly gunzTarPerm extractEntry bin.js
+193 silly gunzTarPerm extractEntry build-test.js
+194 silly gunzTarPerm extractEntry lib/constants.js
+195 silly gunzTarPerm extractEntry lib/event-target.js
+196 silly gunzTarPerm extractEntry index.js
+197 silly gunzTarPerm extractEntry LICENSE
+198 silly gunzTarPerm extractEntry index.js
+199 silly gunzTarPerm extractEntry LICENSE
+200 silly gunzTarPerm extractEntry lib/extension.js
+201 silly gunzTarPerm extractEntry index.js
+202 silly gunzTarPerm extractEntry lib/limiter.js
+203 silly gunzTarPerm extractEntry lib/permessage-deflate.js
+204 silly gunzTarPerm extractEntry lib/receiver.js
+205 silly gunzTarPerm extractEntry lib/sender.js
+206 silly gunzTarPerm extractEntry lib/stream.js
+207 silly gunzTarPerm extractEntry lib/validation.js
+208 silly gunzTarPerm extractEntry lib/websocket-server.js
+209 silly gunzTarPerm extractEntry lib/websocket.js
+210 silly gunzTarPerm extractEntry package.json
+211 silly gunzTarPerm extractEntry README.md
+212 silly gunzTarPerm extractEntry README.md
+213 silly gunzTarPerm extractEntry prebuilds/darwin-x64/electron-napi.node
+214 silly gunzTarPerm extractEntry optional.js
+215 silly gunzTarPerm extractEntry README.md
+216 silly gunzTarPerm extractEntry prebuilds/darwin-x64/node-napi.node
+217 silly gunzTarPerm extractEntry prebuilds/linux-x64/electron-napi.node
+218 silly gunzTarPerm extractEntry prebuilds/linux-x64/node-napi.node
+219 silly gunzTarPerm extractEntry prebuilds/win32-ia32/electron-napi.node
+220 silly gunzTarPerm extractEntry prebuilds/win32-ia32/node-napi.node
+221 silly gunzTarPerm extractEntry prebuilds/win32-x64/electron-napi.node
+222 silly gunzTarPerm extractEntry prebuilds/win32-x64/node-napi.node
+223 silly gunzTarPerm extractEntry src/bufferutil.c
+224 silly gentlyRm /var/www/html/vctest/node_modules/.staging/node-gyp-build-a35c718e/node_modules is being purged
+225 verbose gentlyRm don't care about contents; nuking /var/www/html/vctest/node_modules/.staging/node-gyp-build-a35c718e/node_modules
+226 silly gentlyRm /var/www/html/vctest/node_modules/.staging/ws-699bbeb7/node_modules is being purged
+227 verbose gentlyRm don't care about contents; nuking /var/www/html/vctest/node_modules/.staging/ws-699bbeb7/node_modules
+228 silly gentlyRm /var/www/html/vctest/node_modules/.staging/bufferutil-efd5557b/node_modules is being purged
+229 verbose gentlyRm don't care about contents; nuking /var/www/html/vctest/node_modules/.staging/bufferutil-efd5557b/node_modules
+230 http 304 https://registry.npmjs.org/bootstrap
+231 verbose headers { date: 'Mon, 03 Aug 2020 11:20:43 GMT',
+231 verbose headers   connection: 'keep-alive',
+231 verbose headers   'set-cookie':
+231 verbose headers    [ '__cfduid=d1c8e94ea5b9eb7365979226bebaeaeb71596453642; expires=Wed, 02-Sep-20 11:20:42 GMT; path=/; domain=.npmjs.org; HttpOnly; SameSite=Lax' ],
+231 verbose headers   'cf-ray': '5bcfa6a4ac1de129-BOM',
+231 verbose headers   etag: '"13842ccb222f39a48c5cbc2041ae5090"',
+231 verbose headers   'last-modified': 'Fri, 26 Jun 2020 20:55:24 GMT',
+231 verbose headers   'cf-cache-status': 'DYNAMIC',
+231 verbose headers   'cf-request-id': '0455a67ae70000e129d8bff200000001',
+231 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+231 verbose headers   vary: 'Accept-Encoding',
+231 verbose headers   server: 'cloudflare' }
+232 silly get cb [ 304,
+232 silly get   { date: 'Mon, 03 Aug 2020 11:20:43 GMT',
+232 silly get     connection: 'keep-alive',
+232 silly get     'set-cookie':
+232 silly get      [ '__cfduid=d1c8e94ea5b9eb7365979226bebaeaeb71596453642; expires=Wed, 02-Sep-20 11:20:42 GMT; path=/; domain=.npmjs.org; HttpOnly; SameSite=Lax' ],
+232 silly get     'cf-ray': '5bcfa6a4ac1de129-BOM',
+232 silly get     etag: '"13842ccb222f39a48c5cbc2041ae5090"',
+232 silly get     'last-modified': 'Fri, 26 Jun 2020 20:55:24 GMT',
+232 silly get     'cf-cache-status': 'DYNAMIC',
+232 silly get     'cf-request-id': '0455a67ae70000e129d8bff200000001',
+232 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+232 silly get     vary: 'Accept-Encoding',
+232 silly get     server: 'cloudflare' } ]
+233 verbose etag https://registry.npmjs.org/bootstrap from cache
+234 verbose get saving bootstrap to /home/finadmin/.npm/registry.npmjs.org/bootstrap/.cache.json
+235 silly mapToRegistry name bootstrap
+236 silly mapToRegistry using default registry
+237 silly mapToRegistry registry https://registry.npmjs.org/
+238 silly mapToRegistry uri https://registry.npmjs.org/bootstrap
+239 verbose addRemoteTarball https://registry.npmjs.org/bootstrap/-/bootstrap-4.4.1.tgz not in flight; adding
+240 verbose addRemoteTarball [ 'https://registry.npmjs.org/bootstrap/-/bootstrap-4.4.1.tgz',
+240 verbose addRemoteTarball   '8582960eea0c5cd2bede84d8b0baf3789c3e8b01' ]
+241 info retry fetch attempt 1 at 11:20:44 AM
+242 info attempt registry request try #1 at 11:20:44 AM
+243 http fetch GET https://registry.npmjs.org/bootstrap/-/bootstrap-4.4.1.tgz
+244 http fetch 200 https://registry.npmjs.org/bootstrap/-/bootstrap-4.4.1.tgz
+245 silly fetchAndShaCheck shasum 8582960eea0c5cd2bede84d8b0baf3789c3e8b01
+246 verbose addTmpTarball /tmp/npm-12485-f2a1439a/registry.npmjs.org/bootstrap/-/bootstrap-4.4.1.tgz not in flight; adding
+247 verbose addTmpTarball already have metadata; skipping unpack for bootstrap@4.4.1
+248 verbose unbuild node_modules/.staging/bootstrap-fe10e382
+249 silly gentlyRm /var/www/html/vctest/node_modules/.staging/bootstrap-fe10e382 is being purged from base /var/www/html/vctest
+250 verbose gentlyRm don't care about contents; nuking /var/www/html/vctest/node_modules/.staging/bootstrap-fe10e382
+251 verbose tar unpack /home/finadmin/.npm/bootstrap/4.4.1/package.tgz
+252 verbose tar unpacking to /var/www/html/vctest/node_modules/.staging/bootstrap-fe10e382
+253 silly gentlyRm /var/www/html/vctest/node_modules/.staging/bootstrap-fe10e382 is being purged
+254 verbose gentlyRm don't care about contents; nuking /var/www/html/vctest/node_modules/.staging/bootstrap-fe10e382
+255 silly gunzTarPerm modes [ '755', '644' ]
+256 silly gunzTarPerm extractEntry LICENSE
+257 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+258 silly gunzTarPerm extractEntry dist/css/bootstrap-grid.css
+259 silly gunzTarPerm modified mode [ 'dist/css/bootstrap-grid.css', 438, 420 ]
+260 silly gunzTarPerm extractEntry dist/css/bootstrap-grid.min.css
+261 silly gunzTarPerm modified mode [ 'dist/css/bootstrap-grid.min.css', 438, 420 ]
+262 silly gunzTarPerm extractEntry dist/css/bootstrap-reboot.css
+263 silly gunzTarPerm modified mode [ 'dist/css/bootstrap-reboot.css', 438, 420 ]
+264 silly gunzTarPerm extractEntry dist/css/bootstrap-reboot.min.css
+265 silly gunzTarPerm modified mode [ 'dist/css/bootstrap-reboot.min.css', 438, 420 ]
+266 silly gunzTarPerm extractEntry dist/css/bootstrap.css
+267 silly gunzTarPerm modified mode [ 'dist/css/bootstrap.css', 438, 420 ]
+268 silly gunzTarPerm extractEntry dist/css/bootstrap.min.css
+269 silly gunzTarPerm modified mode [ 'dist/css/bootstrap.min.css', 438, 420 ]
+270 silly gunzTarPerm extractEntry js/dist/alert.js
+271 silly gunzTarPerm modified mode [ 'js/dist/alert.js', 438, 420 ]
+272 silly gunzTarPerm extractEntry js/src/alert.js
+273 silly gunzTarPerm modified mode [ 'js/src/alert.js', 438, 420 ]
+274 silly gunzTarPerm extractEntry dist/js/bootstrap.bundle.js
+275 silly gunzTarPerm modified mode [ 'dist/js/bootstrap.bundle.js', 438, 420 ]
+276 silly gunzTarPerm extractEntry dist/js/bootstrap.bundle.min.js
+277 silly gunzTarPerm modified mode [ 'dist/js/bootstrap.bundle.min.js', 438, 420 ]
+278 silly gunzTarPerm extractEntry dist/js/bootstrap.js
+279 silly gunzTarPerm modified mode [ 'dist/js/bootstrap.js', 438, 420 ]
+280 silly gunzTarPerm extractEntry dist/js/bootstrap.min.js
+281 silly gunzTarPerm modified mode [ 'dist/js/bootstrap.min.js', 438, 420 ]
+282 silly gunzTarPerm extractEntry js/dist/button.js
+283 silly gunzTarPerm modified mode [ 'js/dist/button.js', 438, 420 ]
+284 silly gunzTarPerm extractEntry js/src/button.js
+285 silly gunzTarPerm modified mode [ 'js/src/button.js', 438, 420 ]
+286 silly gunzTarPerm extractEntry js/dist/carousel.js
+287 silly gunzTarPerm modified mode [ 'js/dist/carousel.js', 438, 420 ]
+288 silly gunzTarPerm extractEntry js/src/carousel.js
+289 silly gunzTarPerm modified mode [ 'js/src/carousel.js', 438, 420 ]
+290 silly gunzTarPerm extractEntry js/dist/collapse.js
+291 silly gunzTarPerm modified mode [ 'js/dist/collapse.js', 438, 420 ]
+292 silly gunzTarPerm extractEntry js/src/collapse.js
+293 silly gunzTarPerm modified mode [ 'js/src/collapse.js', 438, 420 ]
+294 silly gunzTarPerm extractEntry js/dist/dropdown.js
+295 silly gunzTarPerm modified mode [ 'js/dist/dropdown.js', 438, 420 ]
+296 silly gunzTarPerm extractEntry js/src/dropdown.js
+297 silly gunzTarPerm modified mode [ 'js/src/dropdown.js', 438, 420 ]
+298 silly gunzTarPerm extractEntry js/dist/index.js
+299 silly gunzTarPerm modified mode [ 'js/dist/index.js', 438, 420 ]
+300 silly gunzTarPerm extractEntry js/src/index.js
+301 silly gunzTarPerm modified mode [ 'js/src/index.js', 438, 420 ]
+302 silly gunzTarPerm extractEntry js/dist/modal.js
+303 silly gunzTarPerm modified mode [ 'js/dist/modal.js', 438, 420 ]
+304 silly gunzTarPerm extractEntry js/src/modal.js
+305 silly gunzTarPerm modified mode [ 'js/src/modal.js', 438, 420 ]
+306 silly gunzTarPerm extractEntry js/dist/popover.js
+307 silly gunzTarPerm modified mode [ 'js/dist/popover.js', 438, 420 ]
+308 silly gunzTarPerm extractEntry js/src/popover.js
+309 silly gunzTarPerm modified mode [ 'js/src/popover.js', 438, 420 ]
+310 silly gunzTarPerm extractEntry js/src/tools/sanitizer.js
+311 silly gunzTarPerm modified mode [ 'js/src/tools/sanitizer.js', 438, 420 ]
+312 silly gunzTarPerm extractEntry js/dist/scrollspy.js
+313 silly gunzTarPerm modified mode [ 'js/dist/scrollspy.js', 438, 420 ]
+314 silly gunzTarPerm extractEntry js/src/scrollspy.js
+315 silly gunzTarPerm modified mode [ 'js/src/scrollspy.js', 438, 420 ]
+316 silly gunzTarPerm extractEntry js/dist/tab.js
+317 silly gunzTarPerm modified mode [ 'js/dist/tab.js', 438, 420 ]
+318 silly gunzTarPerm extractEntry js/src/tab.js
+319 silly gunzTarPerm modified mode [ 'js/src/tab.js', 438, 420 ]
+320 silly gunzTarPerm extractEntry js/dist/toast.js
+321 silly gunzTarPerm modified mode [ 'js/dist/toast.js', 438, 420 ]
+322 silly gunzTarPerm extractEntry js/src/toast.js
+323 silly gunzTarPerm modified mode [ 'js/src/toast.js', 438, 420 ]
+324 silly gunzTarPerm extractEntry js/dist/tooltip.js
+325 silly gunzTarPerm modified mode [ 'js/dist/tooltip.js', 438, 420 ]
+326 silly gunzTarPerm extractEntry js/src/tooltip.js
+327 silly gunzTarPerm modified mode [ 'js/src/tooltip.js', 438, 420 ]
+328 silly gunzTarPerm extractEntry js/dist/util.js
+329 silly gunzTarPerm modified mode [ 'js/dist/util.js', 438, 420 ]
+330 silly gunzTarPerm extractEntry js/src/util.js
+331 silly gunzTarPerm modified mode [ 'js/src/util.js', 438, 420 ]
+332 silly gunzTarPerm extractEntry package.json
+333 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+334 silly gunzTarPerm extractEntry js/dist/alert.js.map
+335 silly gunzTarPerm modified mode [ 'js/dist/alert.js.map', 438, 420 ]
+336 silly gunzTarPerm extractEntry dist/css/bootstrap-grid.css.map
+337 silly gunzTarPerm modified mode [ 'dist/css/bootstrap-grid.css.map', 438, 420 ]
+338 silly gunzTarPerm extractEntry dist/css/bootstrap-grid.min.css.map
+339 silly gunzTarPerm modified mode [ 'dist/css/bootstrap-grid.min.css.map', 438, 420 ]
+340 silly gunzTarPerm extractEntry dist/css/bootstrap-reboot.css.map
+341 silly gunzTarPerm modified mode [ 'dist/css/bootstrap-reboot.css.map', 438, 420 ]
+342 silly gunzTarPerm extractEntry dist/css/bootstrap-reboot.min.css.map
+343 silly gunzTarPerm modified mode [ 'dist/css/bootstrap-reboot.min.css.map', 438, 420 ]
+344 silly gunzTarPerm extractEntry dist/js/bootstrap.bundle.js.map
+345 silly gunzTarPerm modified mode [ 'dist/js/bootstrap.bundle.js.map', 438, 420 ]
+346 silly gunzTarPerm extractEntry dist/js/bootstrap.bundle.min.js.map
+347 silly gunzTarPerm modified mode [ 'dist/js/bootstrap.bundle.min.js.map', 438, 420 ]
+348 silly gunzTarPerm extractEntry dist/css/bootstrap.css.map
+349 silly gunzTarPerm modified mode [ 'dist/css/bootstrap.css.map', 438, 420 ]
+350 silly gunzTarPerm extractEntry dist/js/bootstrap.js.map
+351 silly gunzTarPerm modified mode [ 'dist/js/bootstrap.js.map', 438, 420 ]
+352 silly gunzTarPerm extractEntry dist/css/bootstrap.min.css.map
+353 silly gunzTarPerm modified mode [ 'dist/css/bootstrap.min.css.map', 438, 420 ]
+354 silly gunzTarPerm extractEntry dist/js/bootstrap.min.js.map
+355 silly gunzTarPerm modified mode [ 'dist/js/bootstrap.min.js.map', 438, 420 ]
+356 silly gunzTarPerm extractEntry js/dist/button.js.map
+357 silly gunzTarPerm modified mode [ 'js/dist/button.js.map', 438, 420 ]
+358 silly gunzTarPerm extractEntry js/dist/carousel.js.map
+359 silly gunzTarPerm modified mode [ 'js/dist/carousel.js.map', 438, 420 ]
+360 silly gunzTarPerm extractEntry js/dist/collapse.js.map
+361 silly gunzTarPerm modified mode [ 'js/dist/collapse.js.map', 438, 420 ]
+362 silly gunzTarPerm extractEntry js/dist/dropdown.js.map
+363 silly gunzTarPerm modified mode [ 'js/dist/dropdown.js.map', 438, 420 ]
+364 silly gunzTarPerm extractEntry js/dist/index.js.map
+365 silly gunzTarPerm modified mode [ 'js/dist/index.js.map', 438, 420 ]
+366 silly gunzTarPerm extractEntry js/dist/modal.js.map
+367 silly gunzTarPerm modified mode [ 'js/dist/modal.js.map', 438, 420 ]
+368 silly gunzTarPerm extractEntry js/dist/popover.js.map
+369 silly gunzTarPerm modified mode [ 'js/dist/popover.js.map', 438, 420 ]
+370 silly gunzTarPerm extractEntry js/dist/scrollspy.js.map
+371 silly gunzTarPerm modified mode [ 'js/dist/scrollspy.js.map', 438, 420 ]
+372 silly gunzTarPerm extractEntry js/dist/tab.js.map
+373 silly gunzTarPerm modified mode [ 'js/dist/tab.js.map', 438, 420 ]
+374 silly gunzTarPerm extractEntry js/dist/toast.js.map
+375 silly gunzTarPerm modified mode [ 'js/dist/toast.js.map', 438, 420 ]
+376 silly gunzTarPerm extractEntry js/dist/tooltip.js.map
+377 silly gunzTarPerm modified mode [ 'js/dist/tooltip.js.map', 438, 420 ]
+378 silly gunzTarPerm extractEntry js/dist/util.js.map
+379 silly gunzTarPerm modified mode [ 'js/dist/util.js.map', 438, 420 ]
+380 silly gunzTarPerm extractEntry README.md
+381 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+382 silly gunzTarPerm extractEntry scss/_alert.scss
+383 silly gunzTarPerm modified mode [ 'scss/_alert.scss', 438, 420 ]
+384 silly gunzTarPerm extractEntry scss/mixins/_alert.scss
+385 silly gunzTarPerm modified mode [ 'scss/mixins/_alert.scss', 438, 420 ]
+386 silly gunzTarPerm extractEntry scss/utilities/_align.scss
+387 silly gunzTarPerm modified mode [ 'scss/utilities/_align.scss', 438, 420 ]
+388 silly gunzTarPerm extractEntry scss/mixins/_background-variant.scss
+389 silly gunzTarPerm modified mode [ 'scss/mixins/_background-variant.scss', 438, 420 ]
+390 silly gunzTarPerm extractEntry scss/utilities/_background.scss
+391 silly gunzTarPerm modified mode [ 'scss/utilities/_background.scss', 438, 420 ]
+392 silly gunzTarPerm extractEntry scss/_badge.scss
+393 silly gunzTarPerm modified mode [ 'scss/_badge.scss', 438, 420 ]
+394 silly gunzTarPerm extractEntry scss/mixins/_badge.scss
+395 silly gunzTarPerm modified mode [ 'scss/mixins/_badge.scss', 438, 420 ]
+396 silly gunzTarPerm extractEntry scss/mixins/_border-radius.scss
+397 silly gunzTarPerm modified mode [ 'scss/mixins/_border-radius.scss', 438, 420 ]
+398 silly gunzTarPerm extractEntry scss/utilities/_borders.scss
+399 silly gunzTarPerm modified mode [ 'scss/utilities/_borders.scss', 438, 420 ]
+400 silly gunzTarPerm extractEntry scss/mixins/_box-shadow.scss
+401 silly gunzTarPerm modified mode [ 'scss/mixins/_box-shadow.scss', 438, 420 ]
+402 silly gunzTarPerm extractEntry scss/_breadcrumb.scss
+403 silly gunzTarPerm modified mode [ 'scss/_breadcrumb.scss', 438, 420 ]
+404 silly gunzTarPerm extractEntry scss/mixins/_breakpoints.scss
+405 silly gunzTarPerm modified mode [ 'scss/mixins/_breakpoints.scss', 438, 420 ]
+406 silly gunzTarPerm extractEntry scss/_button-group.scss
+407 silly gunzTarPerm modified mode [ 'scss/_button-group.scss', 438, 420 ]
+408 silly gunzTarPerm extractEntry scss/_buttons.scss
+409 silly gunzTarPerm modified mode [ 'scss/_buttons.scss', 438, 420 ]
+410 silly gunzTarPerm extractEntry scss/mixins/_buttons.scss
+411 silly gunzTarPerm modified mode [ 'scss/mixins/_buttons.scss', 438, 420 ]
+412 silly gunzTarPerm extractEntry scss/_card.scss
+413 silly gunzTarPerm modified mode [ 'scss/_card.scss', 438, 420 ]
+414 silly gunzTarPerm extractEntry scss/mixins/_caret.scss
+415 silly gunzTarPerm modified mode [ 'scss/mixins/_caret.scss', 438, 420 ]
+416 silly gunzTarPerm extractEntry scss/_carousel.scss
+417 silly gunzTarPerm modified mode [ 'scss/_carousel.scss', 438, 420 ]
+418 silly gunzTarPerm extractEntry scss/mixins/_clearfix.scss
+419 silly gunzTarPerm modified mode [ 'scss/mixins/_clearfix.scss', 438, 420 ]
+420 silly gunzTarPerm extractEntry scss/utilities/_clearfix.scss
+421 silly gunzTarPerm modified mode [ 'scss/utilities/_clearfix.scss', 438, 420 ]
+422 silly gunzTarPerm extractEntry scss/_close.scss
+423 silly gunzTarPerm modified mode [ 'scss/_close.scss', 438, 420 ]
+424 silly gunzTarPerm extractEntry scss/_code.scss
+425 silly gunzTarPerm modified mode [ 'scss/_code.scss', 438, 420 ]
+426 silly gunzTarPerm extractEntry scss/_custom-forms.scss
+427 silly gunzTarPerm modified mode [ 'scss/_custom-forms.scss', 438, 420 ]
+428 silly gunzTarPerm extractEntry scss/mixins/_deprecate.scss
+429 silly gunzTarPerm modified mode [ 'scss/mixins/_deprecate.scss', 438, 420 ]
+430 silly gunzTarPerm extractEntry scss/utilities/_display.scss
+431 silly gunzTarPerm modified mode [ 'scss/utilities/_display.scss', 438, 420 ]
+432 silly gunzTarPerm extractEntry scss/_dropdown.scss
+433 silly gunzTarPerm modified mode [ 'scss/_dropdown.scss', 438, 420 ]
+434 silly gunzTarPerm extractEntry scss/utilities/_embed.scss
+435 silly gunzTarPerm modified mode [ 'scss/utilities/_embed.scss', 438, 420 ]
+436 silly gunzTarPerm extractEntry scss/utilities/_flex.scss
+437 silly gunzTarPerm modified mode [ 'scss/utilities/_flex.scss', 438, 420 ]
+438 silly gunzTarPerm extractEntry scss/mixins/_float.scss
+439 silly gunzTarPerm modified mode [ 'scss/mixins/_float.scss', 438, 420 ]
+440 silly gunzTarPerm extractEntry scss/utilities/_float.scss
+441 silly gunzTarPerm modified mode [ 'scss/utilities/_float.scss', 438, 420 ]
+442 silly gunzTarPerm extractEntry scss/_forms.scss
+443 silly gunzTarPerm modified mode [ 'scss/_forms.scss', 438, 420 ]
+444 silly gunzTarPerm extractEntry scss/mixins/_forms.scss
+445 silly gunzTarPerm modified mode [ 'scss/mixins/_forms.scss', 438, 420 ]
+446 silly gunzTarPerm extractEntry scss/_functions.scss
+447 silly gunzTarPerm modified mode [ 'scss/_functions.scss', 438, 420 ]
+448 silly gunzTarPerm extractEntry scss/mixins/_gradients.scss
+449 silly gunzTarPerm modified mode [ 'scss/mixins/_gradients.scss', 438, 420 ]
+450 silly gunzTarPerm extractEntry scss/mixins/_grid-framework.scss
+451 silly gunzTarPerm modified mode [ 'scss/mixins/_grid-framework.scss', 438, 420 ]
+452 silly gunzTarPerm extractEntry scss/_grid.scss
+453 silly gunzTarPerm modified mode [ 'scss/_grid.scss', 438, 420 ]
+454 silly gunzTarPerm extractEntry scss/mixins/_grid.scss
+455 silly gunzTarPerm modified mode [ 'scss/mixins/_grid.scss', 438, 420 ]
+456 silly gunzTarPerm extractEntry scss/mixins/_hover.scss
+457 silly gunzTarPerm modified mode [ 'scss/mixins/_hover.scss', 438, 420 ]
+458 silly gunzTarPerm extractEntry scss/mixins/_image.scss
+459 silly gunzTarPerm modified mode [ 'scss/mixins/_image.scss', 438, 420 ]
+460 silly gunzTarPerm extractEntry scss/_images.scss
+461 silly gunzTarPerm modified mode [ 'scss/_images.scss', 438, 420 ]
+462 silly gunzTarPerm extractEntry scss/_input-group.scss
+463 silly gunzTarPerm modified mode [ 'scss/_input-group.scss', 438, 420 ]
+464 silly gunzTarPerm extractEntry scss/_jumbotron.scss
+465 silly gunzTarPerm modified mode [ 'scss/_jumbotron.scss', 438, 420 ]
+466 silly gunzTarPerm extractEntry scss/_list-group.scss
+467 silly gunzTarPerm modified mode [ 'scss/_list-group.scss', 438, 420 ]
+468 silly gunzTarPerm extractEntry scss/mixins/_list-group.scss
+469 silly gunzTarPerm modified mode [ 'scss/mixins/_list-group.scss', 438, 420 ]
+470 silly gunzTarPerm extractEntry scss/mixins/_lists.scss
+471 silly gunzTarPerm modified mode [ 'scss/mixins/_lists.scss', 438, 420 ]
+472 silly gunzTarPerm extractEntry scss/_media.scss
+473 silly gunzTarPerm modified mode [ 'scss/_media.scss', 438, 420 ]
+474 silly gunzTarPerm extractEntry scss/_mixins.scss
+475 silly gunzTarPerm modified mode [ 'scss/_mixins.scss', 438, 420 ]
+476 silly gunzTarPerm extractEntry scss/_modal.scss
+477 silly gunzTarPerm modified mode [ 'scss/_modal.scss', 438, 420 ]
+478 silly gunzTarPerm extractEntry scss/mixins/_nav-divider.scss
+479 silly gunzTarPerm modified mode [ 'scss/mixins/_nav-divider.scss', 438, 420 ]
+480 silly gunzTarPerm extractEntry scss/_nav.scss
+481 silly gunzTarPerm modified mode [ 'scss/_nav.scss', 438, 420 ]
+482 silly gunzTarPerm extractEntry scss/_navbar.scss
+483 silly gunzTarPerm modified mode [ 'scss/_navbar.scss', 438, 420 ]
+484 silly gunzTarPerm extractEntry scss/utilities/_overflow.scss
+485 silly gunzTarPerm modified mode [ 'scss/utilities/_overflow.scss', 438, 420 ]
+486 silly gunzTarPerm extractEntry scss/_pagination.scss
+487 silly gunzTarPerm modified mode [ 'scss/_pagination.scss', 438, 420 ]
+488 silly gunzTarPerm extractEntry scss/mixins/_pagination.scss
+489 silly gunzTarPerm modified mode [ 'scss/mixins/_pagination.scss', 438, 420 ]
+490 silly gunzTarPerm extractEntry scss/_popover.scss
+491 silly gunzTarPerm modified mode [ 'scss/_popover.scss', 438, 420 ]
+492 silly gunzTarPerm extractEntry scss/utilities/_position.scss
+493 silly gunzTarPerm modified mode [ 'scss/utilities/_position.scss', 438, 420 ]
+494 silly gunzTarPerm extractEntry scss/_print.scss
+495 silly gunzTarPerm modified mode [ 'scss/_print.scss', 438, 420 ]
+496 silly gunzTarPerm extractEntry scss/_progress.scss
+497 silly gunzTarPerm modified mode [ 'scss/_progress.scss', 438, 420 ]
+498 silly gunzTarPerm extractEntry scss/_reboot.scss
+499 silly gunzTarPerm modified mode [ 'scss/_reboot.scss', 438, 420 ]
+500 silly gunzTarPerm extractEntry scss/mixins/_reset-text.scss
+501 silly gunzTarPerm modified mode [ 'scss/mixins/_reset-text.scss', 438, 420 ]
+502 silly gunzTarPerm extractEntry scss/mixins/_resize.scss
+503 silly gunzTarPerm modified mode [ 'scss/mixins/_resize.scss', 438, 420 ]
+504 silly gunzTarPerm extractEntry scss/vendor/_rfs.scss
+505 silly gunzTarPerm modified mode [ 'scss/vendor/_rfs.scss', 438, 420 ]
+506 silly gunzTarPerm extractEntry scss/_root.scss
+507 silly gunzTarPerm modified mode [ 'scss/_root.scss', 438, 420 ]
+508 silly gunzTarPerm extractEntry scss/mixins/_screen-reader.scss
+509 silly gunzTarPerm modified mode [ 'scss/mixins/_screen-reader.scss', 438, 420 ]
+510 silly gunzTarPerm extractEntry scss/utilities/_screenreaders.scss
+511 silly gunzTarPerm modified mode [ 'scss/utilities/_screenreaders.scss', 438, 420 ]
+512 silly gunzTarPerm extractEntry scss/utilities/_shadows.scss
+513 silly gunzTarPerm modified mode [ 'scss/utilities/_shadows.scss', 438, 420 ]
+514 silly gunzTarPerm extractEntry scss/mixins/_size.scss
+515 silly gunzTarPerm modified mode [ 'scss/mixins/_size.scss', 438, 420 ]
+516 silly gunzTarPerm extractEntry scss/utilities/_sizing.scss
+517 silly gunzTarPerm modified mode [ 'scss/utilities/_sizing.scss', 438, 420 ]
+518 silly gunzTarPerm extractEntry scss/utilities/_spacing.scss
+519 silly gunzTarPerm modified mode [ 'scss/utilities/_spacing.scss', 438, 420 ]
+520 silly gunzTarPerm extractEntry scss/_spinners.scss
+521 silly gunzTarPerm modified mode [ 'scss/_spinners.scss', 438, 420 ]
+522 silly gunzTarPerm extractEntry scss/utilities/_stretched-link.scss
+523 silly gunzTarPerm modified mode [ 'scss/utilities/_stretched-link.scss', 438, 420 ]
+524 silly gunzTarPerm extractEntry scss/mixins/_table-row.scss
+525 silly gunzTarPerm modified mode [ 'scss/mixins/_table-row.scss', 438, 420 ]
+526 silly gunzTarPerm extractEntry scss/_tables.scss
+527 silly gunzTarPerm modified mode [ 'scss/_tables.scss', 438, 420 ]
+528 silly gunzTarPerm extractEntry scss/mixins/_text-emphasis.scss
+529 silly gunzTarPerm modified mode [ 'scss/mixins/_text-emphasis.scss', 438, 420 ]
+530 silly gunzTarPerm extractEntry scss/mixins/_text-hide.scss
+531 silly gunzTarPerm modified mode [ 'scss/mixins/_text-hide.scss', 438, 420 ]
+532 silly gunzTarPerm extractEntry scss/mixins/_text-truncate.scss
+533 silly gunzTarPerm modified mode [ 'scss/mixins/_text-truncate.scss', 438, 420 ]
+534 silly gunzTarPerm extractEntry scss/utilities/_text.scss
+535 silly gunzTarPerm modified mode [ 'scss/utilities/_text.scss', 438, 420 ]
+536 silly gunzTarPerm extractEntry scss/_toasts.scss
+537 silly gunzTarPerm modified mode [ 'scss/_toasts.scss', 438, 420 ]
+538 silly gunzTarPerm extractEntry scss/_tooltip.scss
+539 silly gunzTarPerm modified mode [ 'scss/_tooltip.scss', 438, 420 ]
+540 silly gunzTarPerm extractEntry scss/mixins/_transition.scss
+541 silly gunzTarPerm modified mode [ 'scss/mixins/_transition.scss', 438, 420 ]
+542 silly gunzTarPerm extractEntry scss/_transitions.scss
+543 silly gunzTarPerm modified mode [ 'scss/_transitions.scss', 438, 420 ]
+544 silly gunzTarPerm extractEntry scss/_type.scss
+545 silly gunzTarPerm modified mode [ 'scss/_type.scss', 438, 420 ]
+546 silly gunzTarPerm extractEntry scss/_utilities.scss
+547 silly gunzTarPerm modified mode [ 'scss/_utilities.scss', 438, 420 ]
+548 silly gunzTarPerm extractEntry scss/_variables.scss
+549 silly gunzTarPerm modified mode [ 'scss/_variables.scss', 438, 420 ]
+550 silly gunzTarPerm extractEntry scss/mixins/_visibility.scss
+551 silly gunzTarPerm modified mode [ 'scss/mixins/_visibility.scss', 438, 420 ]
+552 silly gunzTarPerm extractEntry scss/utilities/_visibility.scss
+553 silly gunzTarPerm modified mode [ 'scss/utilities/_visibility.scss', 438, 420 ]
+554 silly gunzTarPerm extractEntry scss/bootstrap-grid.scss
+555 silly gunzTarPerm modified mode [ 'scss/bootstrap-grid.scss', 438, 420 ]
+556 silly gunzTarPerm extractEntry scss/bootstrap-reboot.scss
+557 silly gunzTarPerm modified mode [ 'scss/bootstrap-reboot.scss', 438, 420 ]
+558 silly gunzTarPerm extractEntry scss/bootstrap.scss
+559 silly gunzTarPerm modified mode [ 'scss/bootstrap.scss', 438, 420 ]
+560 silly gentlyRm /var/www/html/vctest/node_modules/.staging/bootstrap-fe10e382/node_modules is being purged
+561 verbose gentlyRm don't care about contents; nuking /var/www/html/vctest/node_modules/.staging/bootstrap-fe10e382/node_modules
+562 silly doParallel preinstall 4
+563 silly preinstall node-gyp-build@3.7.0 /var/www/html/vctest/node_modules/.staging/node-gyp-build-a35c718e
+564 info lifecycle node-gyp-build@3.7.0~preinstall: node-gyp-build@3.7.0
+565 silly preinstall bootstrap@4.4.1 /var/www/html/vctest/node_modules/.staging/bootstrap-fe10e382
+566 info lifecycle bootstrap@4.4.1~preinstall: bootstrap@4.4.1
+567 silly preinstall bufferutil@4.0.1 /var/www/html/vctest/node_modules/.staging/bufferutil-efd5557b
+568 info lifecycle bufferutil@4.0.1~preinstall: bufferutil@4.0.1
+569 silly preinstall ws@7.3.1 /var/www/html/vctest/node_modules/.staging/ws-699bbeb7
+570 info lifecycle ws@7.3.1~preinstall: ws@7.3.1
+571 silly lifecycle node-gyp-build@3.7.0~preinstall: no script for preinstall, continuing
+572 silly lifecycle bootstrap@4.4.1~preinstall: no script for preinstall, continuing
+573 silly lifecycle bufferutil@4.0.1~preinstall: no script for preinstall, continuing
+574 silly lifecycle ws@7.3.1~preinstall: no script for preinstall, continuing
+575 silly doReverseSerial remove 0
+576 silly doSerial move 0
+577 silly doSerial finalize 4
+578 silly finalize /var/www/html/vctest/node_modules/node-gyp-build
+579 silly finalize /var/www/html/vctest/node_modules/bootstrap
+580 silly finalize /var/www/html/vctest/node_modules/bufferutil
+581 silly finalize /var/www/html/vctest/node_modules/ws
+582 silly doSerial build 4
+583 silly build node-gyp-build@3.7.0
+584 info linkStuff node-gyp-build@3.7.0
+585 silly linkStuff node-gyp-build@3.7.0 has /var/www/html/vctest/node_modules as its parent node_modules
+586 verbose linkBins node-gyp-build@3.7.0
+587 verbose link bins [ { 'node-gyp-build': './bin.js',
+587 verbose link bins     'node-gyp-build-optional': './optional.js',
+587 verbose link bins     'node-gyp-build-test': './build-test.js' },
+587 verbose link bins   '/var/www/html/vctest/node_modules/.bin',
+587 verbose link bins   false ]
+588 verbose linkMans node-gyp-build@3.7.0
+589 silly build bootstrap@4.4.1
+590 info linkStuff bootstrap@4.4.1
+591 silly linkStuff bootstrap@4.4.1 has /var/www/html/vctest/node_modules as its parent node_modules
+592 verbose linkBins bootstrap@4.4.1
+593 verbose linkMans bootstrap@4.4.1
+594 silly build bufferutil@4.0.1
+595 info linkStuff bufferutil@4.0.1
+596 silly linkStuff bufferutil@4.0.1 has /var/www/html/vctest/node_modules as its parent node_modules
+597 verbose linkBins bufferutil@4.0.1
+598 verbose linkMans bufferutil@4.0.1
+599 silly build ws@7.3.1
+600 info linkStuff ws@7.3.1
+601 silly linkStuff ws@7.3.1 has /var/www/html/vctest/node_modules as its parent node_modules
+602 verbose linkBins ws@7.3.1
+603 verbose linkMans ws@7.3.1
+604 silly doSerial global-link 0
+605 silly doParallel update-linked 0
+606 silly doSerial install 4
+607 silly install node-gyp-build@3.7.0 /var/www/html/vctest/node_modules/.staging/node-gyp-build-a35c718e
+608 info lifecycle node-gyp-build@3.7.0~install: node-gyp-build@3.7.0
+609 silly lifecycle node-gyp-build@3.7.0~install: no script for install, continuing
+610 silly install bootstrap@4.4.1 /var/www/html/vctest/node_modules/.staging/bootstrap-fe10e382
+611 info lifecycle bootstrap@4.4.1~install: bootstrap@4.4.1
+612 silly lifecycle bootstrap@4.4.1~install: no script for install, continuing
+613 silly install bufferutil@4.0.1 /var/www/html/vctest/node_modules/.staging/bufferutil-efd5557b
+614 info lifecycle bufferutil@4.0.1~install: bufferutil@4.0.1
+615 verbose lifecycle bufferutil@4.0.1~install: unsafe-perm in lifecycle false
+616 verbose lifecycle bufferutil@4.0.1~install: PATH: /usr/share/npm/bin/node-gyp-bin:/var/www/html/vctest/node_modules/bufferutil/node_modules/.bin:/var/www/html/vctest/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+617 verbose lifecycle bufferutil@4.0.1~install: CWD: /var/www/html/vctest/node_modules/bufferutil
+618 silly lifecycle bufferutil@4.0.1~install: Args: [ '-c', 'node-gyp-build' ]
+619 info lifecycle bufferutil@4.0.1~install: Failed to exec install script
+620 verbose unlock done using /home/finadmin/.npm/_locks/staging-cc13d808a2d3aae1.lock for /var/www/html/vctest/node_modules/.staging
+621 silly rollbackFailedOptional Starting
+622 silly rollbackFailedOptional Finishing
+623 silly runTopLevelLifecycles Starting
+624 silly runTopLevelLifecycles Finishing
+625 silly install printInstalled
+626 warn enoent ENOENT: no such file or directory, open '/var/www/html/vctest/package.json'
+627 warn enoent ENOENT: no such file or directory, open '/var/www/html/vctest/node_modules/From bhavesh/package.json'
+628 warn bootstrap@4.4.1 requires a peer of jquery@1.9.1 - 3 but none was installed.
+629 warn bootstrap@4.4.1 requires a peer of popper.js@^1.16.0 but none was installed.
+630 warn ws@7.3.1 requires a peer of utf-8-validate@^5.0.2 but none was installed.
+631 warn vctest No description
+632 warn vctest No repository field.
+633 warn vctest No README data
+634 warn vctest No license field.
+635 verbose stack Error: bufferutil@4.0.1 install: `node-gyp-build`
+635 verbose stack spawn ENOENT
+635 verbose stack     at ChildProcess.<anonymous> (/usr/share/npm/lib/utils/spawn.js:17:16)
+635 verbose stack     at emitTwo (events.js:126:13)
+635 verbose stack     at ChildProcess.emit (events.js:214:7)
+635 verbose stack     at maybeClose (internal/child_process.js:925:16)
+635 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)
+636 verbose pkgid bufferutil@4.0.1
+637 verbose cwd /var/www/html/vctest
+638 error Linux 4.15.0-112-generic
+639 error argv "/usr/bin/node" "/usr/bin/npm" "install" "bufferutil"
+640 error node v8.10.0
+641 error npm  v3.5.2
+642 error file sh
+643 error code ELIFECYCLE
+644 error errno ENOENT
+645 error syscall spawn
+646 error bufferutil@4.0.1 install: `node-gyp-build`
+646 error spawn ENOENT
+647 error Failed at the bufferutil@4.0.1 install script 'node-gyp-build'.
+647 error Make sure you have the latest version of node.js and npm installed.
+647 error If you do, this is most likely a problem with the bufferutil package,
+647 error not with npm itself.
+647 error Tell the author that this fails on your system:
+647 error     node-gyp-build
+647 error You can get information on how to open an issue for this project with:
+647 error     npm bugs bufferutil
+647 error Or if that isn't available, you can get their info via:
+647 error     npm owner ls bufferutil
+647 error There is likely additional logging output above.
+648 verbose exit [ 1, true ]

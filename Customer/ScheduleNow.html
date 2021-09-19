@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Customer Init Call</title>
+    <!-- Favicon-->
+    <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
+        type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Grid Css -->
+    <link href="../css/bootstrap-grid.css" rel="stylesheet">
+
+    <!-- Bootstrap Core Css -->
+    <link href="../plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Waves Effect Css -->
+    <link href="../plugins/node-waves/waves.css" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="../plugins/animate-css/animate.css" rel="stylesheet" />
+
+    <!-- Sweetalert Css -->
+    <link href="../plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+
+    <!-- Jquery Countdown -->
+    <link href="../plugins/jquery.countdown-2.2.0/css/countdown.css" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/customStyle.css" rel="stylesheet">
+
+
+    <style>
+        html {
+            min-height: 100% !important;
+        }
+
+        @media screen and (min-width: 823px) {
+            .img-fluid {
+                max-width: 19% !important;
+            }
+        }
+
+        @media screen and (max-width: 823px) {
+            .img-fluid {
+                max-width: 30% !important;
+            }
+        }
+        label {
+            font-size: 1.4rem !important;
+        }
+    </style>
+    <script src="../js/validateAppSessionCust.js"></script>
+</head>
+
+<body class="splash-page col-lg-7 col-md-7 col-sm-7 col-xs-12 col-centered-mt3">
+    <div class="splash-box">
+        <div class="logo">
+            <!-- Red -->
+            <!-- <a href="javascript:void(0);" style="color: #E91E63 !important;">Finacus <b>Video KYC</b></a> -->
+            <a href="javascript:void(0);" style="color: #673AB7 !important;"><b>Video KYC</b></a>
+            <small style="color: #673AB7 !important;">One Stop KYC Solution</small>
+        </div>
+        <div class="container-fluid">
+            <div class="row clearfix">
+                <div class="card">
+                    <div class="body">
+                        <div class="msg mb-2">Complete your KYC over a video call with our banking agent.</div>
+                        <hr class="mt-3 mb-2" style="border-bottom: 2px solid #1f91f3;">
+                        <div class="row mb-4">
+                            <div class="col-md-10 col-xs-12 col-centered" style="text-align: center;">
+                                <h3 class="mb-4" style="font-weight: 100;">A simple and easy way to enjoy the benefits of opening an account with
+                                    us
+                                    without the need to visit our branch.</h3>
+                            </div>
+                        </div>
+                        <div class="row col-md-12">
+                            <div align="center" class="col-md-12 col-centered">
+                                <!-- <p align="center"><i class="fa fa-hand-o-right" aria-hidden="true"
+                                        style="color: black"></i>
+                                    You will need the following
+                                </p> -->
+                                <div align="center" style="display: inline-flex;">
+                                    <i class="material-icons">verified_user</i>
+                                    <span style="margin-top: 3px; margin-left: 5px;">You will need the following</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row col-md-12 mx-auto pb-3">
+                            <div style="text-align: center;">
+                                <img src="../images/Aadhar.png" title="Aadhar Card" id="img1" class="img-fluid" />
+                                <img src="../images/PAN.png" title="PAN Card" id="img1" class="img-fluid" />
+                                <img src="../images/Phone.png" title="PAN Card" id="img1" class="img-fluid" />
+                                <img src="../images/Pen_Paper.png" title="PAN Card" id="img1" class="img-fluid" />
+                                <img src="../images/Globe.png" title="PAN Card" id="img1" class="img-fluid" />
+                            </div>
+                        </div>
+                        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 col-centered">
+                            
+                            <!-- <div class="col-md-12 mt-3 col-centered">
+                                <p><i class="fa fa-hand-o-right" aria-hidden="true"></i> Please make sure you are in
+                                    a well lit room with a plain wall behind you.</p>
+                            </div> -->
+                            <div class="input-group">
+                                <div class="mb-2">
+                                    <input type="checkbox" id="ck1" class="chk-col-deep-purple"/>
+                                    <label for="ck1">I am an <b>Indian Citizen</b> and a <b>Tax Resident of India</b> and of no other country.</label>
+                                </div>
+                                <div class="mb-2">
+                                    <input type="checkbox" id="ck2" class="chk-col-deep-purple"/>
+                                    <label for="ck2">We request you to allow us to
+                                        access your <b>Location</b>.</label>
+                                </div>
+                                <div class="mb-2">
+                                    <input type="checkbox" id="ck3" class="chk-col-deep-purple"/>
+                                    <label for="ck3">We request you to allow us to
+                                        access your <b>Aadhaar</b> Information.</label>
+                                </div>
+                                <div class="mb-2">
+                                    <input type="checkbox" id="ck4" class="chk-col-deep-purple"/>
+                                    <label for="ck4">I accept the <span style="color: #673AB7;">Terms and Conditions</span>.</label>
+                                </div>
+                            </div>
+                        </form>
+                        </div>
+                        <div class="modal fade" id="counterModal" tabindex="-1" role="dialog"
+                            aria-labelledby="counterModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="mx-auto">
+                                    <!-- <div class="rounded bg-gradient-5 text-white shadow p-5 text-center mb-5 col-lg-6 col-md-6 col-sm-6 col-xs-12 col-centered" style="color: #fff;"> -->
+                                    <div class="bg-gradient-5 text-white shadow p-5 text-center mb-5 col-lg-6 col-md-6 col-sm-6 col-xs-12 col-centered"
+                                        style="color: #673ab7; background: #f3f2f2;">
+                                        <p class="mb-0 text-uppercase" style="font-size: 1.6rem; font-weight: 700;">Your
+                                            Call Will Start In</p>
+                                        <div id="clock"
+                                            class="countdown-circles d-flex flex-wrap justify-content-center pt-4">
+                                            <div class="holder m-2"><span id="min" class="h1"
+                                                    style="font-size: 4rem; font-weight: 700;"></span>
+                                                Min</div>
+                                            <div class="holder m-2"><span id="sec" class="h1"
+                                                    style="font-size: 4rem; font-weight: 700;"></span>
+                                                Sec</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row col-md-12 mb-5 center-block">
+                            <div
+                                class="col-lg-4 col-md-4 col-sm-4 col-xs-6 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
+                                <button id="btnNext" class="btn btn-lg btn-block bg-deep-purple waves-effect"
+                                    type="button" onclick="callNow();">Start Call</button>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                                <button id="btnPrev" class="btn btn-lg btn-block bg-deep-purple waves-effect"
+                                    type="button" onclick="scheduleCall();">Schedule Call</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Jquery Core Js -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="../plugins/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="../plugins/node-waves/waves.js"></script>
+
+    <!-- Validation Plugin Js -->
+    <script src="../plugins/jquery-validation/jquery.validate.js"></script>
+
+    <!-- Jquery Countdown -->
+    <script src="../plugins/jquery.countdown-2.2.0/js/jquery.countdown.js"></script>
+
+    <!-- SweetAlert Plugin Js -->
+    <script src="../plugins/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Custom Js -->
+    <script src="../js/admin.js"></script>
+    <script src="../js/env.url.js"></script>
+
+    <!-- Final Script -->
+    <script src="../js/pages/Customer/scheduleNow.js"></script>
+    
+</body>
+
+</html>

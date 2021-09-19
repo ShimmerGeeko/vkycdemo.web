@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Customer Home</title>
+    <!-- Favicon-->
+    <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
+        type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Grid Css -->
+    <link href="../css/bootstrap-grid.css" rel="stylesheet">
+
+    <!-- Bootstrap Core Css -->
+    <link href="../plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Waves Effect Css -->
+    <link href="../plugins/node-waves/waves.css" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="../plugins/animate-css/animate.css" rel="stylesheet" />
+
+    <!-- Sweetalert Css -->
+    <link href="../plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/customStyle.css" rel="stylesheet">
+
+    <style>
+        html {
+            min-height: 100% !important;
+        }
+        .lng-select{
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body class="splash-page col-md-8 col-centered-mt3" style="background-image: url(../images/bg_Landing.png) !important;">
+    <div class="splash-box">
+        <div class="logo">
+            <!-- Red -->
+            <!-- <a href="javascript:void(0);" style="color: #E91E63 !important;">Finacus <b>Video KYC</b></a> -->
+
+            <!-- <a href="javascript:void(0);" style="color: #673AB7 !important;"><b>Video KYC</b></a>
+            <small style="color: #673AB7 !important;">One Stop KYC Solution</small> -->
+            <a href="javascript:void(0);"><b>Video KYC</b></a>
+            <small>One Stop KYC Solution</small>
+        </div>
+        <div class="card">
+            <div class="body">
+                <form class="formBody" action="javascript:void(0);" method="POST" autocomplete="off">
+                    <div id="rowWelcome">
+                        <div class="row">
+                        <div class="msg mb-2 col-md-8" style="text-align: unset;">Instructions</div>
+                        <div class="form-group field-requiredVal col-md-4 mb-0">
+                            <div class="lng-select">
+                            <label class="custom-select-label">Change Language </label>
+                            <select id="selLanguage" name="selLanguage" onchange="selLanguageChange(value);" class="show-tick ml-4"
+                                required>
+                                <!-- <option value="">--select--</option> -->
+                                <option value="EN">English</option>
+                                <option value="MR">मराठी</option>
+                            </select>
+                            </div>
+                        </div>
+                        </div>
+                        <hr class="mt-3 mb-2" style="border-bottom: 2px solid #1f91f3;">
+                        <div class="row">
+                            <!-- <div class="col-xs-12 col-md-12 col-lg-12 pb-0 mb-0">
+                                <img src="../images/tbsbLogo.jpg" style="width: 100%;" />
+                            </div> -->
+                            <div class="col-xs-12" style="text-align: center;">
+                                <h1 class="mb-4" translate="yes">Welcome to our Zero-Contact Video KYC Digital Account Opening.</h1>
+                                <h3 class="mb-4">Complete your KYC over a video call with our banking agent.</h3>
+                                <h4 class="mb-4">A simple and easy way to enjoy the benefits of opening an account with
+                                    us without the need to visit our branch.</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row clearfix">
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div id="btnAccOpening" class="info-box-4 hover-zoom-effect hover-expand-effect"
+                                        style="cursor: pointer !important;">
+                                        <div class="icon">
+                                            <i class="material-icons col-indigo">account_balance</i>
+                                        </div>
+                                        <!-- <div class="content" style="text-align: center; padding: 6px 0px;">
+                                            <div class="text" style="font-size: 16px;">Account Opening</div>
+                                            <div class="number"></div>
+                                        </div> -->
+                                        <div class="content">
+                                            <div class="text">Account</div>
+                                            <div class="number">Opening</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div id="btnGetLoan" class="info-box-4 hover-zoom-effect hover-expand-effect"
+                                        style="cursor: pointer !important;">
+                                        <div class="icon">
+                                            <i class="material-icons col-teal">attach_money</i>
+                                        </div>
+                                        <div class="content">
+                                            <div class="text">Apply For</div>
+                                            <div class="number">Loan</div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div id="btnBasicKYC" class="info-box-4 hover-zoom-effect hover-expand-effect"
+                                        style="cursor: pointer !important;">
+                                        <div class="icon">
+                                            <i class="material-icons col-teal">person</i>
+                                        </div>
+                                        <div class="content">
+                                            <div class="text">Basic</div>
+                                            <div class="number">VKYC</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div id="btnCC" class="info-box-4 hover-zoom-effect hover-expand-effect"
+                                        style="cursor: pointer !important;">
+                                        <div class="icon">
+                                            <i class="material-icons col-teal">credit_card</i>
+                                        </div>
+                                        <div class="content">
+                                            <div class="text">Apply For</div>
+                                            <div class="number">Credit Card</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-centered">
+                                    <div id="btnReKyc" class="info-box-4 hover-zoom-effect hover-expand-effect"
+                                        style="cursor: pointer !important;">
+                                        <div class="icon">
+                                            <i class="material-icons col-pink">account_circle</i>
+                                        </div>
+                                        <div class="content">
+                                            <div class="text">Re</div>
+                                            <div class="number">KYC</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="rowRequire" style="display: none;">
+                        <!-- <div class="msg mb-2">Instructions</div>
+                        <hr class="mt-3 mb-2" style="border-bottom: 2px solid #1f91f3;"> -->
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pb-0 mb-0">
+                                <ol class="breadcrumb breadcrumb-col-indigo" style="margin-bottom: 0px !important; padding-bottom: 0px !important;">
+                                    <li><a href="./index.html"><i class="material-icons">home</i> Home</a></li>
+                                    <li id="icoAccOpening" style="display: none;" class="active"><i class="material-icons">account_balance</i> Account
+                                        Opening</li>
+                                    <li id="icoApplyLoan" style="display: none;" class="active"><i class="material-icons">attach_money</i> Apply For
+                                        Loan</li>
+                                    <li id="icoReKyc" style="display: none;" class="active"><i class="material-icons">account_circle</i> Re KYC</li>
+                                    <li id="icoCC" style="display: none;" class="active"><i class="material-icons">credit_card</i> Apply For Credit Card</li>
+                                    <li id="icoBKyc" style="display: none;" class="active"><i class="material-icons">person</i> Basic VKYC</li>
+                                </ol>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-2">
+                                <hr class="mt-3 mb-2" style="border-bottom: 2px solid #1f91f3;">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <ul class="list-group mb-2">
+                                    <!-- &#9655:|>; &#9680: CircleHalf-filled -->
+                                    <li class="list-group-item"
+                                        style="font-size: 1.7rem; border: 0; font-weight: bold;">
+                                        <span style="color:#1b6ec2">&#9733 </span>Requirements
+                                    </li>
+                                    <li class="list-group-item" style="font-size: 1.7rem; padding-left: 0; border: 0;">
+                                        <ul>
+                                            <li>Your Aadhaar Number/ Virtual ID/ Offline KYC</li>
+                                            <ol style="padding-left: 1rem;">
+                                                <small>
+                                                    <ul style="padding-left: 0.3rem;">
+                                                        <li>Steps to download Offline KYC :</li>
+                                                    </ul>
+                                                    <li>Visit <b><a href="https://resident.uidai.gov.in/offline-kyc"
+                                                                target="_blank">https://resident.uidai.gov.in/offline-kyc</b></a>
+                                                    </li>
+                                                    <li>Please enter your Aadhaar Number along with Captcha.</li>
+                                                    <li>After which you will receive an OTP on your registered mobile
+                                                        number.</li>
+                                                    <li class="mb-2">Use the OTP, to create a 4 digit share code and
+                                                        download the zip file.</li>
+                                                </small>
+                                            </ol>
+                                            <li>Your PAN Card.</li>
+                                            <li>Your Mobile Phone.</li>
+                                            <li>A white sheet of paper and a black pen.</li>
+                                            <li>A well lit room with plain wall behind you.</li>
+                                            <li>Internet Connectivity.</li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-group-item"
+                                        style="font-size: 1.7rem; border: 0; font-weight: bold;">
+                                        <span style="color:#1b6ec2">&#9733 </span>Conditions
+                                    </li>
+                                    <li class="list-group-item" style="font-size: 1.7rem; border: 0; padding-left: 0;">
+                                        <ul>
+                                            <li>The video KYC process needs to be done within our Banking Hours (8.00
+                                                a.m. to 7.00 p.m.)</li>
+                                            <li>Your Mobile Number and Aadhaar Number should be linked.</li>
+                                            <li>You need to be physically present in India during the Video KYC process.
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="divPrev" class="col-lg-4 col-md-4 col-sm-4 col-xs-6 center-block mb-2 mr-0"
+                            style="display: none;">
+                            <button id="btnPrev" class="btn btn-lg btn-block bg-deep-purple waves-effect" type="button"
+                                onclick="prev();">Previous</button>
+                        </div>
+                        <!-- <div id="divNext" class="col-lg-4 col-md-4 col-sm-4 col-xs-6 center-block mb-2">
+                            <button id="btnNext" class="btn btn-lg btn-block bg-deep-purple waves-effect" type="button"
+                                onclick="next();">Next</button>
+                        </div> -->
+                        <div id="divProceed" class="col-lg-4 col-md-4 col-sm-4 col-xs-6 center-block mb-2 ml-0"
+                            style="display: none;">
+                            <button id="btnProceed" class="btn btn-lg btn-block bg-deep-purple waves-effect"
+                                type="button" onclick="proceed();">Proceed</button>
+                        </div>
+                    </div>
+                    <!-- <div class="row row-block">
+                        <div id="divProceed" class="col-lg-4 col-md-4 col-sm-4 col-xs-6 mb-2 pull-right" style="display: none;">
+                            <button id="btnProceed" class="btn btn-lg btn-block bg-deep-purple waves-effect" type="button" onclick="proceed();">Proceed</button>
+                        </div>
+                        <div id="divNext" class="col-lg-4 col-md-4 col-sm-4 col-xs-6 mb-2 pull-right">
+                            <button id="btnNext" class="btn btn-lg btn-block bg-deep-purple waves-effect" type="button" onclick="next();">Next</button>
+                        </div>
+                        <div id="divPrev" class="col-lg-4 col-md-4 col-sm-4 col-xs-6 mb-2 pull-right" style="display: none;">
+                            <button id="btnPrev" class="btn btn-lg btn-block bg-deep-purple waves-effect" type="button" onclick="prev();">Previous</button>
+                        </div>
+                    </div> -->
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery Core Js -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="../plugins/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="../plugins/node-waves/waves.js"></script>
+
+    <!-- Validation Plugin Js -->
+    <script src="../plugins/jquery-validation/jquery.validate.js"></script>
+
+    <!-- SweetAlert Plugin Js -->
+    <script src="../plugins/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Custom Js -->
+    <script src="../js/admin.js"></script>
+
+    <script>
+        window.onload = function () {
+            sessionStorage.clear();
+            sessionStorage.setItem("selLanguage", "EN");
+        }
+
+        function next() {
+            document.getElementById('rowWelcome').style.display = 'none';
+            // document.getElementById('divNext').style.display = 'none';
+            document.getElementById('rowRequire').style.display = 'block';
+            document.getElementById('divPrev').style.display = 'block';
+            document.getElementById('divProceed').style.display = 'block';
+        }
+        function prev() {
+            document.getElementById('rowRequire').style.display = 'none';
+            document.getElementById('divPrev').style.display = 'none';
+            document.getElementById('divProceed').style.display = 'none';
+            // document.getElementById('divNext').style.display = 'block';
+            document.getElementById('rowWelcome').style.display = 'block';
+
+        }
+        function proceed() {
+            var ApplType = sessionStorage.getItem('sesParamApplType');
+            var selLang = sessionStorage.getItem("selLanguage");
+            if(selLang ==="MR"){
+            	if (ApplType === '1') {
+                    window.location.href = "./CustIndex_mr.html";
+                }
+                else if (ApplType === '2') {
+                    window.location.href = "./CustIndexAcc_mr.html";
+                }
+                else if (ApplType === '3') {
+                    window.location.href = "./CustIndex_mr.html";
+                }
+                else if (ApplType === '5') {
+                }
+                else if (ApplType === '4') {
+                    window.location.href = "./CustIndexReKYC_mr.html";
+                }
+            }
+            else{
+            	if (ApplType === '1') {
+                    window.location.href = "./CustIndex.html";
+                }
+                if (ApplType === '2') {
+                    window.location.href = "./CustIndexAcc.html";
+                }
+                else if (ApplType === '3') {
+                    debugger;
+                    window.location.href = "./CustIndex.html";
+                }
+                else if (ApplType === '5') {
+                }
+                else if (ApplType === '4') {
+                    window.location.href = "./CustIndexReKYC.html";
+                }
+            }
+        }
+
+        var btnBasicKYC = document.getElementById('btnBasicKYC');
+        btnBasicKYC.addEventListener('click', () => {
+            sessionStorage.setItem('sesParamApplType', '1');
+            document.getElementById('icoAccOpening').style.display = 'none';
+            document.getElementById('icoApplyLoan').style.display = 'none';
+            document.getElementById('icoReKyc').style.display = 'none';
+            document.getElementById('icoCC').style.display = 'none';
+            document.getElementById('icoBKyc').style.display = 'inline-block';
+            routeToNext();
+        })
+
+        var btnAccOpening = document.getElementById('btnAccOpening');
+        btnAccOpening.addEventListener('click', () => {
+            sessionStorage.setItem('sesParamApplType', '2');
+            document.getElementById('icoAccOpening').style.display = 'inline-block';
+            document.getElementById('icoApplyLoan').style.display = 'none';
+            document.getElementById('icoReKyc').style.display = 'none';
+            document.getElementById('icoCC').style.display = 'none';
+            document.getElementById('icoBKyc').style.display = 'none';
+            routeToNext();
+        })
+
+        /*var btnGetLoan = document.getElementById('btnGetLoan');
+        btnGetLoan.addEventListener('click', () => {
+            swal('Coming Soon...', '', 'info');
+            sessionStorage.setItem('sesParamApplType', '5');
+            document.getElementById('icoAccOpening').style.display = 'none';
+            document.getElementById('icoApplyLoan').style.display = 'inline-block';
+            document.getElementById('icoReKyc').style.display = 'none';
+            routeToNext();
+        })*/
+
+        var btnCC = document.getElementById('btnCC');
+        btnCC.addEventListener('click', () => {
+            sessionStorage.setItem('sesParamApplType', '3');
+            document.getElementById('icoAccOpening').style.display = 'none';
+            document.getElementById('icoApplyLoan').style.display = 'none';
+            document.getElementById('icoReKyc').style.display = 'none';
+            document.getElementById('icoCC').style.display = 'inline-block';
+            document.getElementById('icoBKyc').style.display = 'none';
+            routeToNext();
+        })
+
+        var btnReKyc = document.getElementById('btnReKyc');
+        btnReKyc.addEventListener('click', () => {
+            sessionStorage.setItem('sesParamApplType', '4');
+            document.getElementById('icoAccOpening').style.display = 'none';
+            document.getElementById('icoApplyLoan').style.display = 'none';
+            document.getElementById('icoReKyc').style.display = 'inline-block';
+            document.getElementById('icoCC').style.display = 'none';
+            document.getElementById('icoBKyc').style.display = 'none';
+            routeToNext();
+        })
+
+        function routeToNext() {
+            next();
+        }
+        function selLanguageChange(value) {
+            // var selLang = document.getElementById("selLanguage").value
+            if(value === "MR"){
+                sessionStorage.setItem("selLanguage", value)
+                window.location.href = './index_mr.html';
+            }
+            else if(value === "EN"){
+                sessionStorage.setItem("selLanguage", value)
+                window.location.href = './index.html';
+            }
+            else{
+                sessionStorage.setItem("selLanguage", value)
+                window.location.href = './index.html';
+            }
+        }
+    </script>
+</body>
+
+</html>

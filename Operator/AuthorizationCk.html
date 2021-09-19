@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Customer Basic Info</title>
+    <!-- Favicon-->
+    <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
+        type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core Css -->
+    <link href="../plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Bootstrap Select Css -->
+    <link href="../plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+
+    <!-- Waves Effect Css -->
+    <link href="../plugins/node-waves/waves.css" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="../plugins/animate-css/animate.css" rel="stylesheet" />
+
+    <!-- Sweet Alert Css -->
+    <link href="../plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="../css/themes/all-themes.css" rel="stylesheet" />
+    <link href="../css/customStyle.css" rel="stylesheet">
+
+    <link href="../lib/alertifyjs/build/css/alertify.css" rel="stylesheet" />
+    <link href="../lib/alertifyjs/build/css/themes/default.css" rel="stylesheet" />
+    <link href="../lib/lightbox2-2.11.3/dist/css/lightbox.css" rel="stylesheet" />
+
+    <!-- SweetAlert Plugin Js -->
+    <script src="../plugins/sweetalert/sweetalert.min.js"></script>
+    <style>
+        .tabDiv {
+            border: 1px solid transparent;
+            border-top: 0;
+            display: block;
+            /* border-color: #dee2e6 #dee2e6 #fff; */
+            background-color: #fff !important;
+            padding: 20px 10px;
+        }
+
+        .nav-tabs > li {
+            top: 0 !important;
+        }
+
+        .nav-tabs>li>a.active {
+            display: inline-block;
+            transition: all 0.3s ease-in;
+            color: #fff !important;
+            font-weight: 500;
+            background-color: #673ab7 !important;
+        }
+
+        .nav-tabs>li>a:hover {
+            display: inline-block;
+            color: #fff !important;
+            transition: all 0.3s ease-in;
+            font-weight: 500;
+            background-color: #03A9F4 !important;
+            width: 99% !important;
+        }
+
+        .dataTables_filter {
+            display: none;
+        }
+
+        .nav-pills>li.active>a,
+        .nav-pills>li.active>a:hover,
+        .nav-pills>li.active>a:focus {
+            color: #fff !important;
+            background-color: #673ab7 !important;
+            width: 99%;
+        }
+    </style>
+
+    <script src="../js/validateAppSessionCust.js"></script>
+</head>
+
+<body class="theme-deep-purple ls-closed bg">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Search Bar -->
+    <!-- <div class="search-bar">
+        <div class="search-icon">
+            <i class="material-icons">search</i>
+        </div>
+        <input type="text" placeholder="START TYPING...">
+        <div class="close-search">
+            <i class="material-icons">close</i>
+        </div>
+    </div> -->
+    <!-- #END# Search Bar -->
+    <!-- Top Bar -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!-- Right Notification Toggle -->
+                <!-- <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a> -->
+                <!-- <a href="javascript:void(0);" class="bars"></a> -->
+                <a class="navbar-brand" href="#">Video KYC | <small>One Stop KYC Solution</small></a>
+                <div id="serverClock"></div>
+            </div>
+        </div>
+    </nav>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                Customer Authorization
+                            </h2>
+                        </div>
+                        <div class="body row" style="padding: 0px 15px;">
+
+                            <div id="leftBlock" class="col-md-2" style="padding: unset;">
+                                <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked"
+                                    style="border-bottom: unset;">
+                                    <!-- <li data-toggle="tab" class="active"><a onclick="toggleSideTabs('0');"
+                                            data-refId="1234567890123456">8097442407</a></li>
+                                    <li data-toggle="tab"><a onclick="toggleSideTabs('1');"
+                                            data-refId="1234567890123456">8080825257</a></li>
+                                    <li data-toggle="tab"><a onclick="toggleSideTabs('2');"
+                                            data-refId="1234567890123456">8995898858</a></li>
+                                    <li data-toggle="tab"><a onclick="toggleSideTabs('3');"
+                                            data-refId="1234567890123456">8080825257</a></li>
+                                    <li data-toggle="tab"><a onclick="toggleSideTabs('4');"
+                                            data-refId="1234567890123456">8995898858</a></li> -->
+                                </ul>
+                            </div>
+                            <div id="rightBlock" class="col-sm-12 card">
+                                <div class="row clearfix" style="overflow: hidden;">
+                                    <ul id="menuTabs" class="nav nav-tabs" style="border-bottom: 2px solid #673ab7;">
+                                        <li class="nav-item">
+                                            <a id="ancBasic" class="nav-link active" href="javascript:void(0)"
+                                                onclick="toggleDiv('0');">Basic Details</a>
+                                            <!-- <button class="nav-link btn-sm btn-primary">Active</button> -->
+                                        </li>
+                                        <li class="nav-item">
+                                            <a id="ancAadhaar" class="nav-link" href="javascript:void(0)"
+                                                onclick="toggleDiv('1');">Aadhaar Details</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a id="ancPan" class="nav-link" href="javascript:void(0)"
+                                                onclick="toggleDiv('2');">PAN
+                                                Details</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a id="ancRec" class="nav-link" href="javascript:void(0)"
+                                                onclick="toggleDiv('3');">Media & Geo Details</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a id="ancNominee" class="nav-link" href="javascript:void(0)"
+                                                onclick="toggleDiv('4');">Nominee</a>
+                                        </li>
+                                    </ul>
+                                    <div id="headerInfo" class=" tabDiv">
+                                        <div class="row col-md-12">
+                                            <div class="col-md-4">
+                                                <label for="CustId" class="col-form-label-sm mb-0">Reference Id</label>
+                                                <input type="text" id="CustId" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label for="hTitle" class="col-form-label-sm mb-0">Title</label>
+                                                <input type="text" id="hTitle" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label for="hName" class="col-form-label-sm mb-0">Name</label>
+                                                <input type="text" id="hName" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="hMobile" class="col-form-label-sm mb-0">Mobile</label>
+                                                <input type="text" id="hMobile" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                        </div>
+                                        <div class="row col-md-12">
+                                            <!-- <div class="col-md-4">
+                                                <label for="hVeriCode" class="col-form-label-sm mb-0">Verification Code</label>
+                                                <input type="text" id="hVeriCode" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div> -->
+                                            <div class="col-md-4">
+                                                <label for="hApplType" class="col-form-label-sm mb-0">Application Type</label>
+                                                <input type="text" id="hApplType" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="hPAN" class="col-form-label-sm mb-0">PAN No.</label>
+                                                <input type="text" id="hPAN" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <!-- <div class="col-md-2">
+                                    <label for="hAadhaar" class="col-form-label-sm mb-0">Aadhaar No.</label>
+                                    <input type="text" id="hAadhaar" placeholder="XXXX XXXX XXXX" readonly class="form-control form-control-sm"
+                                        value=""></input>
+                                </div> -->
+                                            <div class="col-md-2">
+                                                <label for="hGender" class="col-form-label-sm mb-0">Gender</label>
+                                                <input type="text" id="hGender" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label for="hDOB" class="col-form-label-sm mb-0">DOB</label>
+                                                <input type="text" id="hDOB" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-12 " style="margin-bottom: unset;">
+                                                <hr
+                                                    style="border-top: 2px solid #673ab7; margin-left: -60px; margin-right: -60px;" />
+                                            </div>
+                                        </div>
+                                        <!-- <hr style="border-top: 2px solid rgb(218, 15, 15);" /> -->
+                                        <!-- <hr style="border-top: 2px solid rgba(0,0,0,.1) !important;" /> -->
+                                    </div>
+
+
+                                    <div id="headerInfoAcc" class=" tabDiv">
+                                        <div class="row col-md-12">
+                                            <div class="col-md-4">
+                                                <label for="aCustId" class="col-form-label-sm mb-0">Reference Id</label>
+                                                <input type="text" id="aCustId" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label for="aTitle" class="col-form-label-sm mb-0">Title</label>
+                                                <input type="text" id="aTitle" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label for="aName" class="col-form-label-sm mb-0">Name</label>
+                                                <input type="text" id="aName" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label for="aMobile" class="col-form-label-sm mb-0">Mobile</label>
+                                                <input type="text" id="aMobile" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label for="aPAN" class="col-form-label-sm mb-0">PAN No.</label>
+                                                <input type="text" id="aPAN" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                        </div>
+                                        <div class="row col-md-12">
+                                            <div class="col-md-4">
+                                                <label for="aIndOthers"
+                                                    class="col-form-label-sm mb-0">Individual/Organization
+                                                </label>
+                                                <input type="text" id="aIndOthers" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="aProductType" class="col-form-label-sm mb-0">Product
+                                                    Type</label>
+                                                <input type="text" id="aProductType" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label for="aAccountType" class="col-form-label-sm mb-0">Account
+                                                    Type</label>
+                                                <input type="text" id="aAccountType" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label for="aModeOfOpertion" class="col-form-label-sm mb-0">Mode of
+                                                    Operation</label>
+                                                <input type="text" id="aModeOfOpertion" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-12 " style="margin-bottom: unset;">
+                                                <hr
+                                                    style="border-top: 2px solid #673ab7; margin-left: -60px; margin-right: -60px;" />
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div id="divBasicInfo" class=" tabDiv">
+
+                                        <div class="row col-md-12">
+                                            <div class="col-md-4 mb-3">
+                                                <label for="bFatherName" class="col-form-label-sm mb-0">Father's
+                                                    Name</label>
+                                                <input type="text" id="bFatherName" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="bMotherName" class="col-form-label-sm mb-0">Mother's
+                                                    Name</label>
+                                                <input type="text" id="bMotherName" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="bMarStatus" class="col-form-label-sm mb-0">Marital
+                                                    Status</label>
+                                                <input type="text" id="bMarStatus" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="bEmail" class="col-form-label-sm mb-0">Email</label>
+                                                <input type="text" id="bEmail" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="bOcc" class="col-form-label-sm mb-0">Occupation</label>
+                                                <input type="text" id="bOcc" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="bIncome" class="col-form-label-sm mb-0">Annual
+                                                    Income</label>
+                                                <input type="text" id="bIncome" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-2 mb-3">
+                                                <label for="bPol" class="col-form-label-sm mb-0">Politically Exposed</label>
+                                                <input type="text" id="bPol" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div id="divCreditCard" class="col-md-2 mb-3">
+                                                <label for="bCreditCard" class="col-form-label-sm mb-0">Existing Credit Card</label>
+                                                <input type="text" id="bCreditCard" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div id="divBankName" class="col-md-2 mb-3">
+                                                <!-- <label for="bBankName" class="col-form-label-sm mb-0">Bank Name</label> -->
+                                                <label class="form-label">Bank Name <small>(Card Issued)</small></label>
+                                                <input type="text" id="bBankName" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div id="divCardLimit" class="col-md-2 mb-3">
+                                                <label for="bCardLimit" class="col-form-label-sm mb-0">Card Limit</label>
+                                                <input type="text" id="bCardLimit" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div id="divSalaryAcc" class="col-md-2 mb-3">
+                                                <!-- <label for="bSalaryAcc" class="col-form-label-sm mb-0">Salary Account</label> -->
+                                                <label class="form-label">Bank Name <small>(Salary Account)</small></label>
+                                                <input type="text" id="bSalaryAcc" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div id="divCompanyName" class="col-md-2 mb-3">
+                                                <label for="bCompanyName" class="col-form-label-sm mb-0">Company Name</label>
+                                                <input type="text" id="bCompanyName" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+
+                                            <div class="col-md-12 mb-3">
+                                                <label for="bAdd" class="col-form-label-sm mb-0">Communication
+                                                    Address</label>
+                                                <!-- <input type="text" id="bAdd" readonly class="form-control form-control-sm"
+                                        value=""></input> -->
+                                                <textarea type="text" id="bAdd" rows="3" readonly
+                                                    class="form-control form-control-sm" value=""></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="divBasicInfoAcc" class=" tabDiv">
+                                        <div class="row col-md-12">
+                                            <div class="col-md-4 mb-3">
+                                                <label for="cFatherName" class="col-form-label-sm mb-0">Father's
+                                                    Name</label>
+                                                <input type="text" id="cFatherName" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="cMotherName" class="col-form-label-sm mb-0">Mother's
+                                                    Name</label>
+                                                <input type="text" id="cMotherName" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="cMarStatus" class="col-form-label-sm mb-0">Marital
+                                                    Status</label>
+                                                <input type="text" id="cMarStatus" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="cEmail" class="col-form-label-sm mb-0">Email</label>
+                                                <input type="text" id="cEmail" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+
+                                            <div id="withoutMinor1" class="col-md-4 mb-3">
+                                                <label for="cOcc" class="col-form-label-sm mb-0">Occupation</label>
+                                                <input type="text" id="cOcc" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div id="withoutMinor2" class="col-md-2 mb-3">
+                                                <label for="cIncome" class="col-form-label-sm mb-0">Annual
+                                                    Income</label>
+                                                <input type="text" id="cIncome" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div id="withoutMinor3" class="col-md-2 mb-3">
+                                                <label for="cPol" class="col-form-label-sm mb-0">Politically Exposed</label>
+                                                <input type="text" id="cPol" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div id="withMinor1" class="col-md-4 mb-3">
+                                                <label for="cGuardianName" class="col-form-label-sm mb-0">Guardian
+                                                    Name</label>
+                                                <input type="text" id="cGuardianName" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div id="withMinor2" class="col-md-4 mb-3">
+                                                <label for="cGuardianDOB" class="col-form-label-sm mb-0">Guardian
+                                                    DOB</label>
+                                                <input type="text" id="cGuardianDOB" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-2 mb-3">
+                                                <label for="cTDSYN" class="col-form-label-sm mb-0">TDS</label>
+                                                <input type="text" id="cTDSYN" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-2 mb-3">
+                                                <label for="cChequeBookYN" class="col-form-label-sm mb-0">Cheque
+                                                    Book</label>
+                                                <input type="text" id="cChequeBookYN" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-2 mb-3">
+                                                <label for="cATMCardYN" class="col-form-label-sm mb-0">ATM Card</label>
+                                                <input type="text" id="cATMCardYN" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-2 mb-3">
+                                                <label for="cINETBankingYN" class="col-form-label-sm mb-0">Internet
+                                                    Banking</label>
+                                                <input type="text" id="cINETBankingYN" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-2 mb-3">
+                                                <label for="cNomineeYN" class="col-form-label-sm mb-0">Nominee</label>
+                                                <input type="text" id="cNomineeYN" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+
+                                            <div class="col-md-12 mb-3">
+                                                <label for="cAdd" class="col-form-label-sm mb-0">Communication
+                                                    Address</label>
+                                                <!-- <input type="text" id="bAdd" readonly class="form-control form-control-sm"
+                                        value=""></input> -->
+                                                <textarea type="text" id="cAdd" rows="3" readonly
+                                                    class="form-control form-control-sm" value=""></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="divAadhaar" class=" tabDiv" style="display: none;">
+                                        <div class="row col-md-12">
+                                            <div class="col-md-4 mb-3">
+                                                <label for="adName" class="col-form-label-sm mb-0">Name As
+                                                    Aadhaar</label>
+                                                <input type="text" id="adName" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <!-- <div class="col-md-4 mb-3">
+                                    <label for="aAadhaar" class="col-form-label-sm mb-0">Aadhaar No.</label>
+                                    <input type="text" id="aAadhaar" placeholder="XXXX XXXX XXXX" readonly class="form-control form-control-sm"
+                                        value=""></input>
+                                </div> -->
+                                            <div class="col-md-4 mb-3">
+                                                <label for="aCareOf" class="col-form-label-sm mb-0">Care Of</label>
+                                                <input type="text" id="aCareOf" placeholder="NA" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-2 mb-3">
+                                                <label for="aGender" class="col-form-label-sm mb-0">Gender</label>
+                                                <input type="text" id="aGender" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-2 mb-3">
+                                                <label for="aDOB" class="col-form-label-sm mb-0">DOB</label>
+                                                <input type="text" id="aDOB" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-10 mb-0">
+                                                <label for="aAddr" class="col-form-label-sm mb-0">Aadhaar
+                                                    Address</label>
+                                                <textarea type="text" id="aAddr" rows="5" readonly
+                                                    class="form-control form-control-sm" value=""></textarea>
+                                            </div>
+                                            <div class="col-md-2 mb-0 pb-0" style="text-align: center;">
+                                                <img id="aImg" src="" alt="Aadhaar Image"
+                                                    class="form-control form-control-sm"
+                                                    style="height: auto !Important;">
+                                                <small><label for="aImg">Aadhaar Photo</label></small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="divPAN" class=" tabDiv" style="display: none;">
+                                        <div class="row col-md-12">
+                                            <div class="col-md-4 mb-3">
+                                                <label for="pFname" class="col-form-label-sm mb-0">First Name</label>
+                                                <input type="text" id="pFname" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="pMname" class="col-form-label-sm mb-0">Middle Name</label>
+                                                <input type="text" id="pMname" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="pLname" class="col-form-label-sm mb-0">Last Name</label>
+                                                <input type="text" id="pLname" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="pFullName" class="col-form-label-sm mb-0">Full Name</label>
+                                                <input type="text" id="pFullName" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="pStatus" class="col-form-label-sm mb-0">Status</label>
+                                                <input type="text" id="pStatus" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-2 mb-3">
+                                                <label for="pCat" class="col-form-label-sm mb-0">Category</label>
+                                                <input type="text" id="pCat" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                            <div class="col-md-2 mb-3">
+                                                <label for="pLupd" class="col-form-label-sm mb-0">Last Updated</label>
+                                                <input type="text" id="pLupd" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="divMedia" class=" tabDiv" style="display: none;">
+                                        <div class="row col-md-12">
+                                            <div class="col-md-4">
+                                                <div class="col-md-12 mb-2">
+                                                    <label for="CustCurrrentLoc" class="col-form-label-sm mb-0">Current
+                                                        Location
+                                                        :&nbsp;&nbsp;&nbsp;India</label>
+                                                </div>
+                                                <div class="col-md-12 mb-3">
+                                                    <label for="mLat" class="col-form-label-sm mb-0">Latitude</label>
+                                                    <input type="text" id="mLat" readonly
+                                                        class="form-control form-control-sm" value=""></input>
+                                                </div>
+                                                <div class="col-md-12 mb-3">
+                                                    <label for="mLong" class="col-form-label-sm mb-0">Longitude</label>
+                                                    <input type="text" id="mLong" readonly
+                                                        class="form-control form-control-sm" value=""></input>
+                                                </div>
+                                                <div class="col-md-12 mb-3">
+                                                    <label for="mVeriCode" class="col-form-label-sm mb-0">Verification
+                                                        Code</label>
+                                                    <input type="text" id="mVeriCode" readonly
+                                                        class="form-control form-control-sm" value=""></input>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="row">
+                                                    <div class="col-md-6 mb-3" style="text-align: center;">
+                                                        <a id="anchormCustImg" href="" data-lightbox="lightmCustImg">
+                                                            <img id="mCustImg" src="" alt="Customer Image"
+                                                                class="form-control form-control-sm"
+                                                                style="height: auto !Important;">
+                                                            <small><label for="mCustImg"
+                                                                    class="col-form-label-sm mb-0">Customer
+                                                                    Photo</label></small>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3" style="text-align: center;">
+                                                        <a id="anchormDocImg" href="" data-lightbox="lightmDocImg">
+                                                            <img id="mDocImg" src="" alt="Document Image"
+                                                                class="form-control form-control-sm"
+                                                                style="height: auto !Important;">
+                                                            <small><label for="mDocImg">Document Photo</label></small>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3" style="text-align: center;">
+                                                        <a id="anchormSignImg" href="" data-lightbox="lightmSignImg">
+                                                            <img id="mSignImg" src="" alt="Signature Image"
+                                                                class="form-control form-control-sm"
+                                                                style="height: auto !Important;">
+                                                            <small><label for="mSignImg">Signature Photo</label></small>
+                                                        </a>
+                                                    </div>
+                                                    <div id="divAddrImg" class="col-md-6 mb-3"
+                                                        style="display: none; text-align: center;">
+                                                        <a id="anchormAddrImg" href="" data-lightbox="lightmAddrImg">
+                                                            <img id="mAddrImg" src="" alt="Address Image"
+                                                                class="form-control form-control-sm"
+                                                                style="height: auto !Important;">
+                                                            <small><label for="mAddrImg">Address Proof
+                                                                    Photo</label></small>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mx-auto mb-3" style="text-align: center;">
+                                                <video id="mSessionVideo" class="video cool-background form-control"
+                                                    style="height: auto;" controls></video>
+                                                <small><label for="mSessionVideo">Session Video</label></small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="divNominee" class=" tabDiv" style="display: none;">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="table-responsive" style="overflow: hidden;">
+                                                <table id="tblLiveNominee"
+                                                    class="table table-bordered table-striped table-hover dataTable responsive nowrap"
+                                                    style="width: 100%;">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Sr. No.</th>
+                                                            <th>Title</th>
+                                                            <th>Name</th>
+                                                            <th>Relation</th>
+                                                            <th>DOB</th>
+                                                            <th>Address 1</th>
+                                                            <th>Address 2</th>
+                                                            <th>Address 3</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <th>Sr. No.</th>
+                                                            <th>Title</th>
+                                                            <th>Name</th>
+                                                            <th>Relation</th>
+                                                            <th>DOB</th>
+                                                            <th>Address 1</th>
+                                                            <th>Address 2</th>
+                                                            <th>Address 3</th>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button id="btnAccept" class="btn-primary form-control mb-2"
+                                            onclick="InitAuth('1')">Accept</button>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button id="btnReject" class="btn-primary btn-sm form-control mb-2"
+                                            onclick="InitAuth('2')">Reject</button>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button id="btnHold" class="btn-primary btn-sm form-control mb-2"
+                                            onclick="InitAuth('3')"></i>Hold</button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Jquery Core Js -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="../plugins/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Select Plugin Js -->
+    <script src="../plugins/bootstrap-select/js/bootstrap-select.js"></script>
+
+    <!-- Slimscroll Plugin Js -->
+    <script src="../plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="../plugins/node-waves/waves.js"></script>
+
+    <!-- Jquery CountTo Plugin Js -->
+    <script src="../plugins/jquery-countto/jquery.countTo.js"></script>
+
+    <!-- Morris Plugin Js -->
+    <script src="../plugins/raphael/raphael.min.js"></script>
+    <script src="../plugins/morrisjs/morris.js"></script>
+
+    <!-- ChartJs -->
+    <script src="../plugins/chartjs/Chart.bundle.js"></script>
+
+   <!-- Sparkline Chart Plugin Js -->
+    <script src="../plugins/jquery-sparkline/jquery.sparkline.js"></script>
+
+    <!-- Jquery DataTable Plugin Js -->
+    <script src="../plugins/jquery-datatable/jquery.dataTables.js"></script>
+    <script src="../plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js"></script>
+
+    <!-- DataTable Responsive -->
+    <script src="../plugins/jquery-datatable/dataTables.responsive.1.0.7.min.js"></script>
+
+    <script src="../lib/alertifyjs/build/alertify.js"></script>
+
+    <script src="../lib/lightbox2-2.11.3/dist/js/lightbox.js"></script>
+
+    <!-- Custom Js -->
+    <!-- <script src="../js/serverDate.js"></script> -->
+    <script src="../js/admin.js"></script>
+    <script src="../js/env.url.js"></script>
+    <!-- <script src="../js/adminInitCharts.js"></script> -->
+    <script src="../js/pages/Authorizer/authorizerCk.js"></script>
+
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>VKYC Home</title>
+    <!-- Favicon-->
+    <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
+
+    <!-- Adil -->
+    <link href="../lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../lib/site/css/site.css" rel="stylesheet" />
+    <link href="../lib/custom/css/customStyle.css" rel="stylesheet" />
+
+    <!-- --DEV-- -->
+    <!-- Sweet Alert Css -->
+    <link href="../plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+    <link href="../lib/alertifyjs/build/css/alertify.css" rel="stylesheet" />
+    <link href="../lib/alertifyjs/build/css/themes/default.css" rel="stylesheet" />
+    <link href="../lib/lightbox2-2.11.3/dist/css/lightbox.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../lib/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .customTextArea {
+            height: auto;
+            background-color: #e9ecef;
+            opacity: 1;
+            line-height: 1;
+            padding-bottom: 0;
+        }
+    </style>
+</head>
+
+<body class="bg">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" href="#">VKYC</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <span class="navbar-text text-right">
+                        You are <span id="navbarUsername"></span>
+                    </span>
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <section>
+        <div class="container containerSection">
+            <div class="row-fluid LoginrowClass pb-3" id="mainPanel" style="display: none;">
+                <div class="LoginrowClass card card-body bg-light mx-auto welcome-badge">
+                    <!-- <div class="welcome-badge btn btn-primary">
+                        Welcome To Video KYC. Powered By Finacus
+                    </div> -->
+                    <b style="font-weight: 400; font-size: 1.3rem;">Welcome To Video KYC</b>
+                </div>
+
+                <div class="span3 card card-body bg-light" id="videoCallDiv">
+                    <span id="callPage">
+                        <!-- <h2 class="LoginrowClass mt-4">Video call</h2> -->
+                        <div class="row-fluid">
+                            <div class="call-page span3">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div id="divVideoCard" class="mx-auto col-md-4 card card-body bg-light">
+                                            Partner
+                                            <br />
+                                            <video id="remoteVideo" class="video cool-background form-control"
+                                                style="height: auto;" autoplay></video>
+                                            <br />
+                                            <div class="card divOnlyCust mb-3" style="display: none;">
+                                                <div class="card-header">
+                                                    <b>Verification Code </b> <small>(Please read it out to the
+                                                        Operator, when asked.)</small>
+                                                </div>
+                                                <div class="card-body">
+                                                    <textarea id="xVerifyCodeCust" readonly rows="1"
+                                                        style="text-align: center; font-size: x-large;"
+                                                        class="form-control form-control-sm bg-white font-weight-bold"
+                                                        value=""></textarea>
+                                                </div>
+                                            </div>
+                                            <div id="divLocalVideo" class="col-md-12 mx-auto">
+                                                <label for="localVideo" class="col-form-label-sm mb-0">You</label>
+                                                <video id="localVideo" class="video cool-background form-control" autoplay
+                                                muted="muted" style="height: auto !important;"></video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </div>
+    </section>
+  
+</body>
+
+<script src="https://cdn.webrtc-experiment.com/RecordRTC.js"></script>
+<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+<script src="../lib/jquery/dist/jquery.min.js"></script>
+<script src="../lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../plugins/sweetalert/sweetalert.min.js"></script>
+<script src="../js/swal-loader.js"></script>
+<!-- <script src="client.js"></script> -->
+<script src="../js/pages/Customer/client.cust.js"></script>
+<script src="../lib/lightbox2-2.11.3/dist/js/lightbox.js"></script>
+<script src="../lib/alertifyjs/build/alertify.js"></script>
+
+</html>

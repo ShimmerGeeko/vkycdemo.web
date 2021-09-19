@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Customer Basic Info - CC</title>
+    <!-- Favicon-->
+    <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
+        type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core Css -->
+    <link href="../plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Bootstrap Select Css -->
+    <link href="../plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+
+    <!-- Waves Effect Css -->
+    <link href="../plugins/node-waves/waves.css" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="../plugins/animate-css/animate.css" rel="stylesheet" />
+
+    <!-- Sweet Alert Css -->
+    <link href="../plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="../css/themes/all-themes.css" rel="stylesheet" />
+    <link href="../css/customStyle.css" rel="stylesheet">
+
+    <style>
+        .dropdown-toggle {
+            padding-left: 0px !important;
+        }
+
+        .caret {
+            left: 4px !important;
+        }
+
+        .dropdown-menu {
+            max-height: 200px;
+        }
+
+        .custom-select-label {
+            font-weight: 400 !important;
+            font-size: 12px;
+            position: absolute;
+            z-index: 11;
+            margin-top: -12px;
+            color: #aaa;
+        }
+    </style>
+    <script src="../js/validateAppSessionCust.js"></script>
+</head>
+
+<body class="theme-deep-purple ls-closed bg">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Search Bar -->
+    <!-- <div class="search-bar">
+        <div class="search-icon">
+            <i class="material-icons">search</i>
+        </div>
+        <input type="text" placeholder="START TYPING...">
+        <div class="close-search">
+            <i class="material-icons">close</i>
+        </div>
+    </div> -->
+    <!-- #END# Search Bar -->
+    <!-- Top Bar -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!-- Right Notification Toggle -->
+                <!-- <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a> -->
+                <!-- <a href="javascript:void(0);" class="bars"></a> -->
+                <a class="navbar-brand" href="#">व्हिडिओ केवायसी | <small>वन स्टॉप केवायसी सोल्यूशन</small></a>
+                <div id="serverClock"></div>
+            </div>
+        </div>
+    </nav>
+    <!-- #Top Bar -->
+
+    <section class="content">
+        <div class="container-fluid">
+            <!-- <div class="block-header">
+                <h2>Basic Information (As Per Aadhaar)</h2>
+            </div> -->
+
+            <!-- Inline Layout | With Floating Label -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                मुलभूत माहिती
+                                <small><i>आधार नुसार</i></small>
+                            </h2>
+                        </div>
+                        <div class="body">
+                            <form class="formBody" action="javascript:void(0);" method="POST" autocomplete="off">
+                                <div id="rowBasicInfo" class="row clearfix">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div style="padding-top: 8px;">
+                                            <input id="ckCbsExCust" name="ckCbsExCust" type="checkbox">
+                                            <label for="ckCbsExCust">जुना ग्राहक</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="rowBasicInfo1" class="row clearfix">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group form-float field-requiredVal">
+                                            <div class="form-line">
+                                                <input id="cbsCustId" name="cbsCustId" type="text"
+                                                    class="form-control ValNumeric" maxlength="50" disabled>
+                                                <label class="form-label">ग्राहक आयडी</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12" style="margin-bottom: unset;">
+                                        <div class="form-group field-requiredVal">
+                                            <label class="custom-select-label">शीर्षक</label>
+                                            <select id="selTitle" name="selTitle" class="form-control show-tick"
+                                                required>
+                                                <option value="" style="color: #aaa;">Title</option>
+                                                <option value="Mr">Mr.</option>
+                                                <option value="Miss">Miss.</option>
+                                                <option value="Mrs">Mrs.</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="form-group form-float field-requiredVal">
+                                            <div class="form-line">
+                                                <input id="bName" name="bName" type="text" class="form-control ValAlpha"
+                                                    maxlength="50" required>
+                                                <label class="form-label">नाव <small>(आधार नुसार)</small></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="form-group form-float field-requiredVal">
+                                            <div class="form-line">
+                                                <input id="bFName" name="bFName" type="text"
+                                                    class="form-control ValAlpha" maxlength="50" required>
+                                                <label class="form-label">वडिलांचे नाव</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="form-group form-float field-requiredVal">
+                                            <div class="form-line">
+                                                <input id="bMName" name="bMName" type="text"
+                                                    class="form-control ValAlpha" maxlength="50" required>
+                                                <label class="form-label">आईचे नाव</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group form-float field-requiredVal">
+                                            <div class="form-line">
+                                                <input id="bEmail" type="email" name="bEmail" class="form-control"
+                                                    maxlength="100" required>
+                                                <label class="form-label">ईमेल</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group form-float field-requiredVal">
+                                            <div class="form-line">
+                                                <input id="bOcc" name="bOcc" type="text" class="form-control ValAlpha"
+                                                    maxlength="50" required>
+                                                <label class="form-label">व्यवसाय</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group field-requiredVal">
+                                            <label class="custom-select-label">लिंग</label>
+                                            <!-- <label for="selGender" class="form-label" style="top: -10px !important;">Gender</label> -->
+                                            <select id="selGender" name="selGender" class="form-control show-tick"
+                                                required>
+                                                <option value="" style="color: #aaa;">Gender</option>
+                                                <option value="M">Male</option>
+                                                <option value="F">Female</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="form-group field-requiredVal">
+                                            <label class="custom-select-label">वैवाहिक स्थिती</label>
+                                            <!-- <label for="selMarital" class="form-label" style="top: -10px !important;">Marital Status</label> -->
+                                            <select id="selMarital" name="selMarital" class="form-control show-tick"
+                                                required>
+                                                <option value="" style="color: #aaa;">Marital Status</option>
+                                                <option value="S">Single</option>
+                                                <option value="M">Married</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="form-group form-float field-requiredVal">
+                                            <div class="form-line">
+                                                <input id="bDOB" name="bDOB" type="date" class="form-control" required>
+                                                <label for="txtDob" class="form-label"
+                                                    style="top: -10px !important;">जन्मतारीख</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group form-float field-requiredVal">
+                                            <div class="form-line">
+                                                <input id="bIncome" name="bIncome" type="text"
+                                                    class="form-control ValNumeric" maxlength="10" required>
+                                                <label class="form-label">वार्षिक उत्पन्न</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group field-requiredVal">
+                                            <label class="custom-select-label">राजकीय उघडकीस आले</label>
+                                            <select id="selPolYN" name="selPolYN" class="form-control show-tick"
+                                                required>
+                                                <option value="" style="color: #aaa;">Politically Exposed</option>
+                                                <option value="N">No</option>
+                                                <option value="Y">Yes</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group form-float field-requiredVal">
+                                            <div class="form-line">
+                                                <input id="bHouse" name="bHouse" type="text" class="form-control"
+                                                    maxlength="50" required>
+                                                <label class="form-label">घर</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="form-group form-float field-requiredVal">
+                                            <div class="form-line">
+                                                <input id="bLocality" name="bLocality" type="text" class="form-control"
+                                                    maxlength="50" required>
+                                                <label class="form-label">परिसर</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="form-group form-float field-requiredVal">
+                                            <div class="form-line">
+                                                <input id="bLandmark" name="bLandmark" type="text" class="form-control"
+                                                    maxlength="50" required>
+                                                <label class="form-label">लँडमार्क</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                        <div class="form-group field-requiredVal">
+                                            <label class="custom-select-label">राज्य</label>
+                                            <select id="ddlState" name="ddlState"
+                                                class="form-control show-tick selectpicker" required>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group form-float field-requiredVal">
+                                            <div class="form-line">
+                                                <input id="bDistrict" name="bDistrict" type="text" class="form-control"
+                                                    maxlength="50" required>
+                                                <label class="form-label">जिल्हा</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="form-group field-requiredVal">
+                                            <label class="custom-select-label">शहर</label>
+                                            <select id="ddlCity" name="ddlCity"
+                                                class="form-control show-tick selectpicker" required>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="form-group form-float field-requiredVal">
+                                            <div class="form-line">
+                                                <input id="bPinCode" name="bPinCode" type="text"
+                                                    class="form-control ValNumeric" minlength="6" maxlength="6"
+                                                    required>
+                                                <label class="form-label">पिनकोड  </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group field-requiredVal">
+                                            <label class="custom-select-label">पगार खाते</label>
+                                            <select id="selSalaryAcc" name="selSalaryAcc" class="form-control show-tick" required>
+                                                <option value="" style="color: #aaa;">Salary Account</option>
+                                                <option value="UNION">Union Bank</option>
+                                                <option value="OTHER">Other Bank</option>
+                                            </select>
+                                        </div>
+                                    </div>    
+                                    <div id="divNameOfBank" class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="display: none;">
+                                        <div class="form-group form-float field-requiredVal">
+                                            <div class="form-line">
+                                                <input id="bSalBankName" name="bSalBankName" type="text" class="form-control"
+                                                    maxlength="50">
+                                                <label class="form-label">बँकेचे नाव<small>(पगार खाते)</small></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group field-requiredVal">
+                                            <label class="custom-select-label">विद्यमान क्रेडिट कार्ड</label>
+                                            <select id="selCreditCard" name="selCreditCard" class="form-control show-tick" required>
+                                                <option value="" style="color: #aaa;">Existing Credit Card</option>
+                                                <option value="Y">Yes</option>
+                                                <option value="N">No</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div id="divBankName" class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="display: none;">
+                                        <div class="form-group form-float field-requiredVal">
+                                            <div class="form-line">
+                                                <input id="bCardIssuedBank" name="bCardIssuedBank" type="text" class="form-control"
+                                                    maxlength="50">
+                                                <label class="form-label">बँकेचे नाव <small>(कार्ड जारी केले)</small></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="divCardLimit" class="col-lg-2 col-md-2 col-sm-2 col-xs-12" style="display: none;">
+                                        <div class="form-group form-float field-requiredVal">
+                                            <div class="form-line">
+                                                <input id="bCardLimit" name="bCardLimit" type="text"
+                                                    class="form-control ValNumeric" maxlength="10">
+                                                <label class="form-label">कार्ड मर्यादा</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                        <div class="form-group form-float field-requiredVal">
+                                            <div class="form-line">
+                                                <input id="bCompanyName" name="bCompanyName" type="text" class="form-control"
+                                                    maxlength="50" required>
+                                                <label class="form-label">कंपनीचे नाव</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="rowPan" class="row clearfix" style="display: none;">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                        <div class="form-group form-float field-requiredVal">
+                                            <div class="form-line">
+                                                <input id="bPAN" name="bPAN" type="text"
+                                                    class="form-control pan-field ValAlphaNumeric ValNoSpace"
+                                                    minlength="10" maxlength="10" required>
+                                                <label class="form-label">पॅन क्रमांक</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                        <div class="form-group form-float field-requiredVal">
+                                            <div class="form-line">
+                                                <input id="bFileCode" name="bFileCode" type="password"
+                                                    class="form-control pan-field" maxlength="4" required>
+                                                <label class="form-label">आधार फाईल शेअर कोड</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                        <div class="form-group form-float field-requiredVal">
+                                            <div class="form-line">
+                                                <input id="bFile" name="bFile" type="file"
+                                                    class="form-control file-input pan-field" required>
+                                                <label class="form-label" style="top: -15px !important;">आधार .zip फाईल</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                        <div class="form-group field-requiredVal">
+                                            <label class="custom-select-label">कागदपत्र</label>
+                                            <select id="selDocType" name="selDocType" class="form-control show-tick pan-field"
+                                                required>
+                                                <option value="" style="color: #aaa;">Document Type</option>
+                                                <option value="7">Salary Slip</option>
+                                                <option value="6">Bank Statement</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                        <div class="form-group form-float field-requiredVal">
+                                            <div class="form-line">
+                                                <input id="bFile1" name="bFile1" type="file"
+                                                    class="form-control file-input pan-field" required>
+                                                <label class="form-label" style="top: -15px !important;">दस्तऐवज फाइल</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <b class="pull-right"><span style="font-weight: 400 !important;">ऑफलाइन आधार फाइल मिळवा: </span><i><a
+                                                    href="https://resident.uidai.gov.in/offline-kyc"
+                                                    target="_blank">https://resident.uidai.gov.in/offline-kyc</a></i></b>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div id="divSubmit" class="col-lg-2 col-md-2 col-sm-2 col-xs-12 pull-right"
+                                        style="display: none;">
+                                        <button id="btnSubmit" class="btn btn-block bg-deep-purple waves-effect"
+                                            type="submit">प्रस्तुत करणे</button>
+                                    </div>
+                                    <div id="divNext" class="col-lg-2 col-md-2 col-sm-2 col-xs-12 pull-right">
+                                        <button id="btnNext" class="btn btn-block bg-deep-purple waves-effect"
+                                            type="button">पुढे</button>
+                                    </div>
+                                    <div id="divPrev" class="col-lg-2 col-md-2 col-sm-2 col-xs-12 pull-right"
+                                        style="display: none;">
+                                        <button id="btnPrev" class="btn btn-block bg-deep-purple waves-effect"
+                                            type="button" onclick="previous();">मागील</button>
+                                    </div>
+                                    <!-- <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 pull-right">
+                                        <button type="submit" class="btn btn-block bg-deep-purple waves-effect" onclick="next();">Next</button>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 pull-right">
+                                        <button id="btnPrev" type="button" class="btn btn-block bg-deep-purple waves-effect" onclick="previous();" style="display: none;">Previous</button>
+                                    </div> -->
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jquery Core Js -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="../plugins/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Select Plugin Js -->
+    <script src="../plugins/bootstrap-select/js/bootstrap-select.js"></script>
+
+    <!-- Slimscroll Plugin Js -->
+    <script src="../plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="../plugins/node-waves/waves.js"></script>
+
+    <!-- Custom Form Validator -->
+    <script src="../js/validateForm.js"></script>
+
+    <!-- Validation Plugin Js -->
+    <script src="../plugins/jquery-validation/jquery.validate.js"></script>
+
+    <!-- SweetAlert Plugin Js -->
+    <script src="../plugins/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Custom Js -->
+    <script src="../js/admin.js"></script>
+    <script src="../js/env.url.js"></script>
+    <script src="../js/pages/Customer/custInfoCC.js"></script>
+</body>
+
+</html>

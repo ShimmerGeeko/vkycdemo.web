@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Customer Individual Account</title>
+    <!-- Favicon-->
+    <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
+        type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core Css -->
+    <link href="../plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Bootstrap Select Css -->
+    <link href="../plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+
+    <!-- Waves Effect Css -->
+    <link href="../plugins/node-waves/waves.css" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="../plugins/animate-css/animate.css" rel="stylesheet" />
+
+    <!-- Sweet Alert Css -->
+    <link href="../plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="../css/themes/all-themes.css" rel="stylesheet" />
+    <link href="../css/customStyle.css" rel="stylesheet">
+
+    <style>
+        .dropdown-toggle {
+            padding-left: 0px !important;
+        }
+
+        .caret {
+            left: 4px !important;
+        }
+
+        .dropdown-menu {
+            max-height: 200px;
+        }
+
+        .form-group>.bootstrap-select>button {
+            display: none !important;
+        }
+
+        .custom-select-label {
+            font-weight: 400 !important;
+            font-size: 12px;
+            position: absolute;
+            z-index: 11;
+            margin-top: -12px;
+            color: #aaa;
+        }
+    </style>
+    <script src="../js/validateAppSessionCust.js"></script>
+</head>
+
+<body class="theme-deep-purple ls-closed bg">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Search Bar -->
+    <!-- <div class="search-bar">
+        <div class="search-icon">
+            <i class="material-icons">search</i>
+        </div>
+        <input type="text" placeholder="START TYPING...">
+        <div class="close-search">
+            <i class="material-icons">close</i>
+        </div>
+    </div> -->
+    <!-- #END# Search Bar -->
+    <!-- Top Bar -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!-- Right Notification Toggle -->
+                <!-- <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a> -->
+                <!-- <a href="javascript:void(0);" class="bars"></a> -->
+                <a class="navbar-brand" href="#">व्हिडिओ केवायसी | <small>वन स्टॉप केवायसी सोल्यूशन</small></a>
+                <div id="serverClock"></div>
+            </div>
+        </div>
+    </nav>
+    <!-- #Top Bar -->
+
+    <section class="content">
+        <div class="container-fluid">
+            <!-- <div class="block-header">
+                <h2>Basic Information (As Per Aadhaar)</h2>
+            </div> -->
+
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>वैयक्तिक खाते माहिती</h2>
+                            <ul class="header-dropdown m-r--5">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"
+                                        role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons">more_vert</i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="javascript:void(0);">कृती</a></li>
+                                        <li><a href="javascript:void(0);">आणखी एक क्रिया</a></li>
+                                        <li><a href="javascript:void(0);">इथे आणखी काहीतरी</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="body">
+                            <form id="wizard_with_validation" method="POST">
+                                <!-- <h3>1</h3> -->
+                                <h3></h3>
+                                <fieldset>
+                                    <!-- <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div style="padding-top: 8px;">
+                                            <input id="ckCbsExCust" name="ckCbsExCust" type="checkbox" required>
+                                            <label for="ckCbsExCust">Existing Customer</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input id="cbsCustId" name="cbsCustId" type="text"
+                                                    class="form-control ValNumeric" maxlength="50">
+                                                <label class="form-label">Customer Id</label>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                        <div class="form-group">
+                                            <label class="custom-select-label">उत्पादनाचा प्रकार</label>
+                                            <select id="selPrdType" name="selPrdType" class="form-control show-tick"
+                                                required>
+                                                <option value="" style="color: #aaa;">Select</option>
+                                                <option value="SAVINGS">SAVINGS ACCOUNT</option>
+                                                <option value="CURRENT">CURRENT ACCOUNT</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                        <div class="form-group">
+                                            <label class="custom-select-label">खाते प्रकार</label>
+                                            <select id="selAccType" name="selAccType" class="form-control show-tick"
+                                                required onchange="selAccTypeChange(value);">
+                                                <option value="" style="color: #aaa;">Select</option>
+                                                <option value="1">NORMAL</option>
+                                                <option value="2">SENIOR CITIZEN</option>
+                                                <option value="3">MINOR</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group">
+                                            <label for="selMOP" class="custom-select-label">ऑपरेशनची पद्धत</label>
+                                            <select id="selMOP" name="selMOP" class="form-control show-tick" required
+                                                onchange="selMopOnchange(value);">
+                                                <option value="" style="color: #aaa;">Select</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group">
+                                            <label class="custom-select-label">टीडीएस</label>
+                                            <select id="selTDS" name="selTDS" class="form-control show-tick" required>
+                                                <option value="" style="color: #aaa;">Select</option>
+                                                <option value="N">No</option>
+                                                <option value="Y">Yes</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group field-requiredVal">
+                                            <label class="custom-select-label">शीर्षक</label>
+                                            <select id="selTitle" name="selTitle" class="form-control show-tick"
+                                                required>
+                                                <option value="" style="color: #aaa;">Select</option>
+                                                <option value="Mr">Mr.</option>
+                                                <option value="Miss">Miss.</option>
+                                                <option value="Mrs">Mrs.</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input id="bName" name="bName" type="text" class="form-control ValAlpha"
+                                                    maxlength="50" required>
+                                                <label class="form-label">खातेधारकाचे नाव <small>(आधार नुसार)</small></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input id="bFName" name="bFName" type="text"
+                                                    class="form-control ValAlpha" maxlength="50" required>
+                                                <label class="form-label">वडिलांचे नाव</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input id="bMName" name="bMName" type="text"
+                                                    class="form-control ValAlpha" maxlength="50" required>
+                                                <label class="form-label">आईचे नाव</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="divSelMarital" class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group">
+                                            <label class="custom-select-label">वैवाहिक स्थिती </label>
+                                            <select id="selMarital" name="selMarital" class="form-control show-tick"
+                                                required>
+                                                <option value="" style="color: #aaa;">Select</option>
+                                                <option value="S">Single</option>
+                                                <option value="M">Married</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group field-requiredVal">
+                                            <label class="custom-select-label">लिंग</label>
+                                            <select id="selGender" name="selGender" class="form-control show-tick"
+                                                required>
+                                                <option value="" style="color: #aaa;">Select</option>
+                                                <option value="M">Male</option>
+                                                <option value="F">Female</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input id="bDOB" name="bDOB" type="date" class="form-control" required>
+                                                <label for="txtDob" class="form-label"
+                                                    style="top: -10px !important;">जन्मतारीख</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="divGuardianDOB" class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input id="minorDOB" name="minorDOB" type="date" class="form-control"
+                                                    required>
+                                                <label for="minorDOB" class="form-label"
+                                                    style="top: -10px !important;">किरकोळ जन्मतारीख</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="divGuardianName" class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input id="guardianName" name="guardianName" type="text"
+                                                    class="form-control ValAlpha" maxlength="50" required>
+                                                <label class="form-label">पालक नाव</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="divGuardianRelation" class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input id="guardianRelation" name="guardianRelation" type="text"
+                                                    class="form-control ValAlpha" maxlength="50" required>
+                                                <label class="form-label">पालक नाते</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="divSelPolYN" class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="form-group">
+                                            <label for="selPolYN" class="custom-select-label">राजकीय उघडकीस आले</label>
+                                            <select id="selPolYN" name="selPolYN" class="form-control show-tick"
+                                                required>
+                                                <option value="" style="color: #aaa;">Select</option>
+                                                <option value="N">No</option>
+                                                <option value="Y">Yes</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div id="divbEmail" class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input id="bEmail" type="email" name="bEmail" class="form-control"
+                                                    maxlength="100" required>
+                                                <label class="form-label">ईमेल</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="divbPAN" class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group form-float ">
+                                            <div class="form-line">
+                                                <input id="bPAN" name="bPAN" type="text"
+                                                    class="form-control ValAlphaNumeric ValNoSpace" minlength="10"
+                                                    maxlength="10" required>
+                                                <label class="form-label">पॅन क्रमांक</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="divbOcc" class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input id="bOcc" name="bOcc" type="text" class="form-control ValAlpha"
+                                                    maxlength="50" required>
+                                                <label class="form-label">व्यवसाय</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="divbIncome" class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input id="bIncome" name="bIncome" type="text"
+                                                    class="form-control ValNumeric" maxlength="10" required>
+                                                <label class="form-label">वार्षिक उत्पन्न</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="form-group">
+                                            <label class="custom-select-label">नामनिर्देशित होय / नाही</label>
+                                            <select id="selNomineYN" name="selNomineYN" class="form-control show-tick"
+                                                required onchange="selNomineeYnOnchange(value)">
+                                                <option value="" style="color: #aaa;">Select</option>
+                                                <option value="N">No</option>
+                                                <option value="Y">Yes</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div id="divAddJointBtn" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                                        style="padding: 0;">
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <button id="btnCreateJointDiv" type="button"
+                                                class="btn btn-default waves-effect" onclick="CreateJointDataDiv();">
+                                                <i class="material-icons">person_add</i>
+                                                <span> संयुक्त ग्राहक जोडा</span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div id="JointDiv" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                                        style="padding: 0;"></div>
+                                </fieldset>
+
+                                <!-- <h3>2</h3> -->
+                                <h3></h3>
+                                <fieldset>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="form-group">
+                                            <label class="custom-select-label">राज्य</label>
+                                            <select id="ddlState" name="ddlState"
+                                                class="form-control show-tick selectpicker"
+                                                onchange="ddlStateOnChange()" required>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="form-group ">
+                                            <label class="custom-select-label">शहर</label>
+                                            <select id="ddlCity" name="ddlCity"
+                                                class="form-control show-tick selectpicker" required>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="form-group form-float ">
+                                            <div class="form-line">
+                                                <input id="bDistrict" name="bDistrict" type="text" class="form-control"
+                                                    maxlength="50" required>
+                                                <label class="form-label">जिल्हा</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input id="bHouse" name="bHouse" type="text" class="form-control"
+                                                    maxlength="50" required>
+                                                <label class="form-label">घर</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input id="bLocality" name="bLocality" type="text" class="form-control"
+                                                    maxlength="50" required>
+                                                <label class="form-label">परिसर</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input id="bLandmark" name="bLandmark" type="text" class="form-control"
+                                                    maxlength="50" required>
+                                                <label class="form-label">लँडमार्क</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="form-group form-float ">
+                                            <div class="form-line">
+                                                <input id="bPinCode" name="bPinCode" type="text"
+                                                    class="form-control ValNumeric" minlength="6" maxlength="6"
+                                                    required>
+                                                <label class="form-label">पिनकोड</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <!-- <h3>3</h3> -->
+                                <h3></h3>
+                                <fieldset>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group">
+                                            <label class="custom-select-label">अर्जदारांची संख्या</label>
+                                            <select id="selNomineeNo" name="selNomineeNo"
+                                                class="nominee-content form-control show-tick" required
+                                                onchange="selNomineeNoChange(value);">
+                                                <option value="" style="color: #aaa;">Select</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group">
+                                            <label class="custom-select-label">1. नामनिर्देशित शीर्षक</label>
+                                            <select id="selNomineeTitle1" name="selNomineeTitle1"
+                                                class="nominee-content form-control show-tick" required>
+                                                <option value="" style="color: #aaa;">Select</option>
+                                                <option value="Mr">Mr.</option>
+                                                <option value="Miss">Miss.</option>
+                                                <option value="Mrs">Mrs.</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input id="nomineeName1" name="nomineeName1" type="text"
+                                                    class="nominee-content form-control ValAlpha" maxlength="50"
+                                                    required>
+                                                <label class="form-label">1. नामनिर्देशित नाव</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input id="nomineeRelation1" name="nomineeRelation1" type="text"
+                                                    class="nominee-content form-control ValAlpha" maxlength="15"
+                                                    required>
+                                                <label class="form-label">1. नामनिर्देशित नाते</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input id="nomineeDOB1" name="nomineeDOB1" type="date"
+                                                    class="nominee-content form-control nomDOB" required>
+                                                <label for="nomineeDOB1" class="form-label"
+                                                    style="top: -10px !important;">1. नामनिर्देशित जन्मतारीख</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input id="nomineeAddr1_1" name="nomineeAddr1_1" type="text"
+                                                    class="nominee-content form-control ValAlpha" maxlength="35"
+                                                    required>
+                                                <label class="form-label">1. नामनिर्देशित पत्ता 1</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input id="nomineeAddr1_2" name="nomineeAddr1_2" type="text"
+                                                    class="nominee-content form-control ValAlpha" maxlength="35"
+                                                    required>
+                                                <label class="form-label">1. नामनिर्देशित पत्ता 2</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input id="nomineeAddr1_3" name="nomineeAddr1_3" type="text"
+                                                    class="nominee-content form-control ValAlpha" maxlength="35"
+                                                    required>
+                                                <label class="form-label">1. नामनिर्देशित पत्ता 3</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div id="NomineeContent2" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                                        style="padding: 0;">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <hr style="margin-top: 0; border-bottom: 1px solid #000;" />
+                                        </div>
+
+                                        <div id="divNomineeTitle2" class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="custom-select-label">2. नामनिर्देशित शीर्षक</label>
+                                                <select id="selNomineeTitle2" name="selNomineeTitle2"
+                                                    class="nominee-content form-control show-tick" required>
+                                                    <option value="" style="color: #aaa;">Select</option>
+                                                    <option value="Mr">Mr.</option>
+                                                    <option value="Miss">Miss.</option>
+                                                    <option value="Mrs">Mrs.</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div id="divNomineeName2" class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input id="nomineeName2" name="nomineeName2" type="text"
+                                                        class="nominee-content form-control ValAlpha" maxlength="50"
+                                                        required>
+                                                    <label class="form-label">2. नामनिर्देशित नाव</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="divNomineeRelation2" class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input id="nomineeRelation2" name="nomineeRelation2" type="text"
+                                                        class="nominee-content form-control ValAlpha" maxlength="15"
+                                                        required>
+                                                    <label class="form-label">2. नामनिर्देशित नाते</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="divNomineeDOB2" class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input id="nomineeDOB2" name="nomineeDOB2" type="date"
+                                                        class="nominee-content form-control nomDOB" required>
+                                                    <label for="nomineeDOB2" class="form-label"
+                                                        style="top: -10px !important;">2. नामनिर्देशित जन्मतारीख</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input id="nomineeAddr2_1" name="nomineeAddr2_1" type="text"
+                                                        class="nominee-content form-control ValAlpha" maxlength="35"
+                                                        required>
+                                                    <label class="form-label">2. नामनिर्देशित पत्ता 1</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input id="nomineeAddr2_2" name="nomineeAddr2_2" type="text"
+                                                        class="nominee-content form-control ValAlpha" maxlength="35"
+                                                        required>
+                                                    <label class="form-label">2. नामनिर्देशित पत्ता 2</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input id="nomineeAddr2_3" name="nomineeAddr2_3" type="text"
+                                                        class="nominee-content form-control ValAlpha" maxlength="35"
+                                                        required>
+                                                    <label class="form-label">2. नामनिर्देशित पत्ता 3</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div id="NomineeContent3" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                                        style="padding: 0;">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <hr style="margin-top: 0; border-bottom: 1px solid #000;" />
+                                        </div>
+
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="custom-select-label">3.  नामनिर्देशित शीर्षक</label>
+                                                <select id="selNomineeTitle3" name="selNomineeTitle3"
+                                                    class="nominee-content form-control show-tick" required>
+                                                    <option value="" style="color: #aaa;">Select</option>
+                                                    <option value="Mr">Mr.</option>
+                                                    <option value="Miss">Miss.</option>
+                                                    <option value="Mrs">Mrs.</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input id="nomineeName3" name="nomineeName3" type="text"
+                                                        class="nominee-content form-control ValAlpha" maxlength="50"
+                                                        required>
+                                                    <label class="form-label">3. नामनिर्देशित नाव</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input id="nomineeRelation3" name="nomineeRelation3" type="text"
+                                                        class="nominee-content form-control ValAlpha" maxlength="15"
+                                                        required>
+                                                    <label class="form-label">3. नामनिर्देशित नाते</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input id="nomineeDOB3" name="nomineeDOB3" type="date"
+                                                        class="nominee-content form-control nomDOB" required>
+                                                    <label for="nomineeDOB3" class="form-label"
+                                                        style="top: -10px !important;">3. नामनिर्देशित जन्मतारीख</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input id="nomineeAddr3_1" name="nomineeAddr3_1" type="text"
+                                                        class="nominee-content form-control" maxlength="35" required>
+                                                    <label class="form-label">3. नामनिर्देशित पत्ता 1</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input id="nomineeAddr3_2" name="nomineeAddr3_2" type="text"
+                                                        class="nominee-content form-control" maxlength="35" required>
+                                                    <label class="form-label">3. नामनिर्देशित पत्ता 2</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input id="nomineeAddr3_3" name="nomineeAddr3_3" type="text"
+                                                        class="nominee-content form-control" maxlength="35" required>
+                                                    <label class="form-label">3. नामनिर्देशित पत्ता 3</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div id="NomineeContent4" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                                        style="padding: 0;">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <hr style="margin-top: 0; border-bottom: 1px solid #000;" />
+                                        </div>
+
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="custom-select-label">4.  नामनिर्देशित शीर्षक</label>
+                                                <select id="selNomineeTitle4" name="selNomineeTitle4"
+                                                    class="nominee-content form-control show-tick" required>
+                                                    <option value="" style="color: #aaa;">Select</option>
+                                                    <option value="Mr">Mr.</option>
+                                                    <option value="Miss">Miss.</option>
+                                                    <option value="Mrs">Mrs.</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input id="nomineeName4" name="nomineeName4" type="text"
+                                                        class="nominee-content form-control ValAlpha" maxlength="50"
+                                                        required>
+                                                    <label class="form-label">4. नामनिर्देशित नाव</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input id="nomineeRelation4" name="nomineeRelation4" type="text"
+                                                        class="nominee-content form-control ValAlpha" maxlength="15"
+                                                        required>
+                                                    <label class="form-label">4. नामनिर्देशित नाते</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input id="nomineeDOB4" name="nomineeDOB4" type="date"
+                                                        class="nominee-content form-control nomDOB" required>
+                                                    <label for="nomineeDOB4" class="form-label"
+                                                        style="top: -10px !important;">4. नामनिर्देशित जन्मतारीख</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input id="nomineeAddr4_1" name="nomineeAddr4_1" type="text"
+                                                        class="nominee-content form-control" maxlength="35" required>
+                                                    <label class="form-label">4. नामनिर्देशित पत्ता 1</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input id="nomineeAddr4_2" name="nomineeAddr4_2" type="text"
+                                                        class="nominee-content form-control" maxlength="35" required>
+                                                    <label class="form-label">4. नामनिर्देशित पत्ता 2</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input id="nomineeAddr4_3" name="nomineeAddr4_3" type="text"
+                                                        class="nominee-content form-control" maxlength="35" required>
+                                                    <label class="form-label">4. नामनिर्देशित पत्ता 3</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div id="NomineeContent5" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                                        style="padding: 0;">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <hr style="margin-top: 0; border-bottom: 1px solid #000;" />
+                                        </div>
+
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="custom-select-label">5.  नामनिर्देशित शीर्षक</label>
+                                                <select id="selNomineeTitle5" name="selNomineeTitle5"
+                                                    class="nominee-content form-control show-tick" required>
+                                                    <option value="" style="color: #aaa;">Select</option>
+                                                    <option value="Mr">Mr.</option>
+                                                    <option value="Miss">Miss.</option>
+                                                    <option value="Mrs">Mrs.</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input id="nomineeName5" name="nomineeName5" type="text"
+                                                        class="nominee-content form-control ValAlpha" maxlength="50"
+                                                        required>
+                                                    <label class="form-label">5. नामनिर्देशित नाव</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input id="nomineeRelation5" name="nomineeRelation5" type="text"
+                                                        class="nominee-content form-control ValAlpha" maxlength="15"
+                                                        required>
+                                                    <label class="form-label">5. नामनिर्देशित नाते</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input id="nomineeDOB5" name="nomineeDOB5" type="date"
+                                                        class="nominee-content form-control nomDOB" required>
+                                                    <label for="nomineeDOB5" class="form-label"
+                                                        style="top: -10px !important;">5. नामनिर्देशित जन्मतारीख</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input id="nomineeAddr5_1" name="nomineeAddr5_1" type="text"
+                                                        class="nominee-content form-control" maxlength="35" required>
+                                                    <label class="form-label">5. नामनिर्देशित पत्ता 1</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input id="nomineeAddr5_2" name="nomineeAddr5_2" type="text"
+                                                        class="nominee-content form-control" maxlength="35" required>
+                                                    <label class="form-label">5. नामनिर्देशित पत्ता 2</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input id="nomineeAddr5_3" name="nomineeAddr5_3" type="text"
+                                                        class="nominee-content form-control" maxlength="35" required>
+                                                    <label class="form-label">5. नामनिर्देशित पत्ता 3</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <h3></h3>
+                                <fieldset>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                        <div class="form-group form-float ">
+                                            <div class="form-line">
+                                                <input id="bFileCode" name="bFileCode" type="password"
+                                                    class="form-control pan-field" maxlength="4" required>
+                                                <label class="form-label">आधार फाईल शेअर कोड</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                        <div class="form-group form-float ">
+                                            <div class="form-line">
+                                                <input id="bFile" name="bFile" type="file"
+                                                    class="form-control file-input pan-field" required>
+                                                <label class="form-label" style="top: -15px !important;">आधार .zip फाईल</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group">
+                                            <input type="checkbox" id="ckATM" name="ckATM"
+                                                class="chk-col-deep-purple" />
+                                            <label for="ckATM">एटीएम कार्ड</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group">
+                                            <input type="checkbox" id="ckCB" name="ckCB" class="chk-col-deep-purple" />
+                                            <label for="ckCB">चेक बुक</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <div class="form-group">
+                                            <input type="checkbox" id="ckIB" name="ckIB" class="chk-col-deep-purple" />
+                                            <label for="ckIB">इंटरनेट बँकिंग</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <b class="pull-left"><span style="font-weight: 400 !important;">ऑफलाइन आधार फाइल मिळवा: </span><i><a
+                                                    href="https://resident.uidai.gov.in/offline-kyc"
+                                                    target="_blank">https://resident.uidai.gov.in/offline-kyc</a></i></b>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jquery Core Js -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="../plugins/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Select Plugin Js -->
+    <script src="../plugins/bootstrap-select/js/bootstrap-select.js"></script>
+
+    <!-- Slimscroll Plugin Js -->
+    <script src="../plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="../plugins/node-waves/waves.js"></script>
+
+    <!-- Custom Form Validator -->
+    <script src="../js/validateForm.js"></script>
+
+    <!-- Validation Plugin Js -->
+    <script src="../plugins/jquery-validation/jquery.validate.js"></script>
+
+    <!-- SweetAlert Plugin Js -->
+    <script src="../plugins/sweetalert/sweetalert.min.js"></script>
+
+    <!-- JQuery Steps Plugin Js -->
+    <script src="../plugins/jquery-steps/jquery.steps.js"></script>
+
+
+    <!-- Custom Js -->
+    <script src="../js/admin.js"></script>
+    <script src="../js/env.url.js"></script>
+
+    <script src="../js/form-wizard.js"></script>
+    <script src="../js/tooltips-popovers.js"></script>
+    <script src="../js/pages/Customer/custAccIndForm.js"></script>
+</body>
+
+</html>

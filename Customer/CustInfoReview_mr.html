@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Customer Info Review</title>
+    <!-- Favicon-->
+    <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
+        type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core Css -->
+    <link href="../plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Bootstrap Select Css -->
+    <link href="../plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+
+    <!-- Waves Effect Css -->
+    <link href="../plugins/node-waves/waves.css" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="../plugins/animate-css/animate.css" rel="stylesheet" />
+
+    <!-- Sweet Alert Css -->
+    <link href="../plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="../css/themes/all-themes.css" rel="stylesheet" />
+    <link href="../css/customStyle.css" rel="stylesheet">
+
+    <style>
+        .focused:after {
+            border-bottom-color: #9ad7fb !important;
+        }
+    </style>
+    <script src="../js/validateAppSessionCust.js"></script>
+</head>
+
+<body class="theme-deep-purple ls-closed bg">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Search Bar -->
+    <!-- <div class="search-bar">
+        <div class="search-icon">
+            <i class="material-icons">search</i>
+        </div>
+        <input type="text" placeholder="START TYPING...">
+        <div class="close-search">
+            <i class="material-icons">close</i>
+        </div>
+    </div> -->
+    <!-- #END# Search Bar -->
+    <!-- Top Bar -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!-- Right Notification Toggle -->
+                <!-- <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a> -->
+                <!-- <a href="javascript:void(0);" class="bars"></a> -->
+                <a class="navbar-brand" href="#">व्हिडिओ केवायसी | <small>वन स्टॉप केवायसी सोल्यूशन</small></a>
+                <div id="serverClock"></div>
+            </div>
+        </div>
+    </nav>
+    <!-- #Top Bar -->
+
+    <section class="content">
+        <div class="container-fluid">
+            <!-- <div class="block-header">
+                <h2>Basic Information (As Per Aadhaar)</h2>
+            </div> -->
+
+            <!-- Inline Layout | With Floating Label -->
+            <div class="row clearfix">
+                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 col-centered">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                मूलभूत माहिती पुनरावलोकन
+                            </h2>
+                        </div>
+                        <div class="body">
+                            <form class="formBody" action="javascript:void(0);" method="POST" autocomplete="off">
+                                <div id="rowBasicInfo" class="row clearfix">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                                        <div class="form-group form-float">
+                                            <div class="form-line focused">
+                                                <input id="bName" name="bName" type="text" class="form-control" readonly>
+                                                <label class="form-label">नाव</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                                        <div class="form-group form-float">
+                                            <div class="form-line focused">
+                                                <input id="bFName" name="bFName" type="text" class="form-control" readonly>
+                                                <label class="form-label">वडिलांचे नाव</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                                        <div class="form-group form-float">
+                                            <div class="form-line focused">
+                                                <input id="bMName" name="bMName" type="text" class="form-control" readonly>
+                                                <label class="form-label">आईचे नाव</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                                        <div class="form-group form-float">
+                                            <div class="form-line focused">
+                                                <input id="hDOB" name="hDOB" type="text" class="form-control" readonly>
+                                                <label class="form-label">जन्मतारीख</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                                        <div class="form-group form-float">
+                                            <div class="form-line focused">
+                                                <input id="hGender" name="hGender" type="text" class="form-control" readonly>
+                                                <label class="form-label">लिंग</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                                        <div class="form-group form-float">
+                                            <div class="form-line focused">
+                                                <input id="bMarStatus" name="bMarStatus" type="text" class="form-control" readonly>
+                                                <label class="form-label">वैवाहिक स्थिती</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                                        <div class="form-group form-float">
+                                            <div class="form-line focused">
+                                                <input id="bEmail" type="email" name="bEmail" class="form-control" readonly>
+                                                <label class="form-label">ईमेल</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                                        <div class="form-group form-float">
+                                            <div class="form-line focused">
+                                                <input id="bOcc" name="bOcc" type="text" class="form-control"readonly>
+                                                <label class="form-label">व्यवसाय</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                                        <div class="form-group form-float">
+                                            <div class="form-line focused">
+                                                <input id="bIncome" name="bIncome" type="text" class="form-control"readonly>
+                                                <label class="form-label">वार्षिक उत्पन्न</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                                        <div class="form-group form-float">
+                                            <div class="form-line focused">
+                                                <input id="bPol" name="bPol" type="text" class="form-control"readonly>
+                                                <label class="form-label">राजकीय उघडकीस आले</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 mb-4">
+                                        <label for="txtCommAddress" class="form-label" style="color: #aaa; font-weight: normal;">संप्रेषण पत्ता</label>
+                                        <textarea type="text" id="txtCommAddress" rows="3" readonly class="form-control"
+                                        value=""></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 mb-4">
+                                        <label for="aAddr" class="form-label" style="color: #aaa; font-weight: normal;">कायमचा पत्ता <small>(आधार नुसार)</small></label>
+                                        <textarea type="text" id="aAddr" rows="3" readonly class="form-control"
+                                        value=""></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div id="divNext" class="col-lg-2 col-md-2 col-sm-2 col-xs-6 col-centered">
+                                        <button id="btnNext" class="btn btn-lg btn-block bg-deep-purple waves-effect"
+                                            type="button" onclick="onNext()">पुढे</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jquery Core Js -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="../plugins/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Select Plugin Js -->
+    <script src="../plugins/bootstrap-select/js/bootstrap-select.js"></script>
+
+    <!-- Slimscroll Plugin Js -->
+    <script src="../plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="../plugins/node-waves/waves.js"></script>
+
+    <!-- Custom Form Validator -->
+    <script src="../js/validateForm.js"></script>
+
+    <!-- Validation Plugin Js -->
+    <script src="../plugins/jquery-validation/jquery.validate.js"></script>
+
+    <!-- SweetAlert Plugin Js -->
+    <script src="../plugins/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Custom Js -->
+    <script src="../js/admin.js"></script>
+    <script src="../js/env.url.js"></script>
+    <script src="../js/pages/Customer/custInfoReview.js"></script>
+</body>
+
+</html>

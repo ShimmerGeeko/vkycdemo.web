@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Customer Call Screen</title>
+    <!-- Favicon-->
+    <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
+        type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core Css -->
+    <link href="../plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Waves Effect Css -->
+    <link href="../plugins/node-waves/waves.css" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="../plugins/animate-css/animate.css" rel="stylesheet" />
+
+    <!-- Sweet Alert Css -->
+    <link href="../plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="../css/themes/all-themes.css" rel="stylesheet" />
+    <!-- <link href="../css/customStyle.css" rel="stylesheet"> -->
+    <style>
+        .col-centered {
+            float: none !important;
+            margin: 0 auto !important;
+        }
+
+        .col-centered-mt3 {
+            float: none !important;
+            margin: 3% auto !important;
+        }
+
+        .bg {
+            background-image: url(../images/tech1.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        @keyframes blink_effect {
+            0% {
+                visibility: hidden;
+            }
+
+            50% {
+                visibility: hidden;
+            }
+
+            100% {
+                visibility: visible;
+            }
+        }
+
+        .blink {
+            animation: .9s blink_effect infinite
+        }
+
+        .btn-circle {
+            width: 35px !important;
+            height: 35px !important;
+            background-color: #ffffff96 !important;
+        }
+
+        .btn-circle i {
+            font-size: 20px !important;
+            position: relative !important;
+            left: -4px !important;
+        }
+    </style>
+    <script src="../js/validateAppSessionCust.js"></script>
+</head>
+
+<body class="theme-deep-purple ls-closed bg">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Top Bar -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
+                    aria-expanded="false"></a>
+                <!-- <a href="javascript:void(0);" class="bars"></a> -->
+                <a class="navbar-brand" href="javascript:void(0);">व्हिडिओ केवायसी | <small>वन स्टॉप केवायसी सोल्यूशन</small></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <div class="nav navbar-nav navbar-right">
+                    <!-- Notifications -->
+                    <li class="dropdown pull-right">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                            <i class="material-icons">notifications</i>
+                            <!-- <span class="label-count">7</span> -->
+                        </a>
+                        <div class="dropdown-menu" style="box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);">
+                            <div class="card card-about-me" style="box-shadow: none !important;">
+                                <div class="header">
+                                    तपशील
+                                </div>
+                                <div class="body" style="padding-bottom: 0 !important;">
+                                    <ul>
+                                        <li>
+                                            <div class="title">
+                                                <i class="material-icons">verified_user</i>
+                                                पडताळणी कोड
+                                            </div>
+                                            <div class="content">
+                                                <p>
+                                                    कृपया ऑपरेटरला विचारले असता ते वाचा.
+                                                </p>
+                                                <div>
+                                                    <!-- <button class="btn btn-success btn-lg btn-block waves-effect" type="button">SUCCESS <span class="badge">4</span></button> -->
+                                                    <button id="btnVerificationCodeNoti" class="btn btn-success btn-lg btn-block" type="button" style="cursor: default; font-size: large; font-weight: bold;"></button>
+                                                </div>
+        
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- #END# Notifications -->
+                </div>
+            </div>
+        </div>
+        <div style="position: absolute; right: 10px; top: 4px; color: #fff;">
+            <b><small><span id="upLink"></span><i class="material-icons" style="font-size: small;">arrow_upward</i></small></b>
+            <b><small><span id="downLink"></span><i class="material-icons" style="font-size: small;">arrow_downward</i> KB/s</small></b>
+        </div>
+    </nav>
+    <!-- #Top Bar -->
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row clearfix">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="card">
+                        <div class="header">
+                            <h2 style="color: #666;">ऑपरेटर</h2>
+                        </div>
+                        <div class="body">
+                            <video id="remoteVideo" class="video cool-background form-control" style="height: auto;"
+                                autoplay></video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4">
+                    <div class="card">
+                        <div class="header">
+                            <h2 style="color: #666;">आपण</h2>
+                        </div>
+                        <div class="body" style="position: relative; text-align: center;">
+                            <video id="localVideo" class="video cool-background form-control" autoplay muted="muted"
+                                style="height: auto !important;"></video>
+                            <div style="position: absolute; width: 90%; bottom: 30px;">
+                                <!-- <button id="btnFrontCam">Front Cam</button>
+                                <button id="btnBackCam">Back Cam</button> -->
+                                <button id="btnFlip" class="btn btn-default btn-circle waves-effect waves-circle waves-float" onclick="camflip()"><i class="material-icons">switch_camera</i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4">
+                    <div class="card card-about-me">
+                        <div class="header">
+                            <h2 style="color: #666;">तपशील</h2>
+                        </div>
+                        <div class="body">
+                            <ul>
+                                <li>
+                                    <div class="title">
+                                        <i class="material-icons">verified_user</i>
+                                        पडताळणी कोड
+                                    </div>
+                                    <div class="content">
+                                        <p>
+                                            कृपया ऑपरेटरला विचारले असता ते वाचा.
+                                        </p>
+                                        <div>
+                                            <!-- <button class="btn btn-success btn-lg btn-block waves-effect" type="button">SUCCESS <span class="badge">4</span></button> -->
+                                            <button id="btnVerificationCode" class="btn btn-success btn-lg btn-block" type="button" style="cursor: default; font-size: large; font-weight: bold;"></button>
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <i class="material-icons">phone_in_talk</i>
+                                        कॉल स्थिती
+                                    </div>
+                                    <div class="content">
+                                        <div>
+                                            <!-- <button class="btn btn-success btn-lg btn-block waves-effect" type="button">SUCCESS <span class="badge">4</span></button> -->
+                                            <button class="btn bg-blue btn-lg btn-block" type="button" style="cursor: default; font-size: medium; font-weight: bold;"><span id="callStatusSpan" class="blink">ऑपरेटरला कनेक्ट होण्याची प्रतीक्षा करीत आहे ...</span></button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <i class="material-icons">network_wifi</i>
+                                        प्रवाह कनेक्शन स्थिती
+                                    </div>
+                                    <div class="content">
+                                        <div>
+                                            <button id="btnIceConnStats" class="btn bg-blue btn-lg btn-block" type="button" style="cursor: default; font-size: medium; font-weight: bold;"> जोडलेले नाही </button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <i class="material-icons">location_on</i>
+                                        स्थळ
+                                    </div>
+                                    <div class="content">
+                                        <p>
+                                            मुंबई, भारत
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jquery Core Js -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="../plugins/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Select Plugin Js -->
+    <script src="../plugins/bootstrap-select/js/bootstrap-select.js"></script>
+
+    <!-- Slimscroll Plugin Js -->
+    <script src="../plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="../plugins/node-waves/waves.js"></script>
+
+    <!-- Custom Form Validator -->
+    <script src="../js/validateForm.js"></script>
+
+    <!-- Validation Plugin Js -->
+    <script src="../plugins/jquery-validation/jquery.validate.js"></script>
+
+    <!-- SweetAlert Plugin Js -->
+    <script src="../plugins/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Custom Js -->
+    <script src="../js/RecordRTC.js"></script>
+    <script src="../js/adapter-latest.js"></script>
+    <script src="../js/admin.js"></script>
+    <script src="../js/env.url.js"></script>
+    <script src="../js/pages/Customer/client.cust.js"></script>
+</body>
+
+</html>

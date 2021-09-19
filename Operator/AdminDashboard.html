@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html class="htmlBg" style="height: 100% !important;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>ADMIN Dashboard</title>
+    <!-- Favicon-->
+    <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
+        type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core Css -->
+    <link href="../plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Waves Effect Css -->
+    <link href="../plugins/node-waves/waves.css" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="../plugins/animate-css/animate.css" rel="stylesheet" />
+
+    <!-- Morris Chart Css-->
+    <link href="../plugins/morrisjs/morris.css" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="../css/themes/all-themes.css" rel="stylesheet" />
+
+    <!-- JQuery DataTable Css -->
+    <link href="../plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTable Responsive -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/responsive/1.0.7/css/responsive.dataTables.min.css">
+
+    <!-- Sweetalert Css -->
+    <link href="../plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+
+    <!-- SweetAlert Plugin Js -->
+    <script src="../plugins/sweetalert/sweetalert.min.js"></script>
+
+    <style>
+        .htmlBg {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("../images/tech1.png") !important;
+        }
+        body {
+            background-image: none !important;
+            background-color: transparent !important;
+        }
+    </style>
+
+    <script src="../js/validateAppSessionOp.js"></script>
+</head>
+
+<!-- <body class="theme-red"> -->
+
+<body class="theme-deep-purple ls-closed">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- #END# Page Loader -->
+    <!-- Check Session -->
+
+    <!-- #END# Check Session -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Search Bar -->
+    <!-- <div class="search-bar">
+        <div class="search-icon">
+            <i class="material-icons">search</i>
+        </div>
+        <input type="text" placeholder="START TYPING...">
+        <div class="close-search">
+            <i class="material-icons">close</i>
+        </div>
+    </div> -->
+    <!-- #END# Search Bar -->
+    <!-- Top Bar -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!-- Right Notification Toggle -->
+                <!-- <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a> -->
+                <a href="javascript:void(0);" class="bars"></a>
+                <a class="navbar-brand" href="./index.html">Video KYC</a>
+                <div id="serverClock"></div>
+            </div>
+        </div>
+    </nav>
+    <!-- #Top Bar -->
+    <section>
+        <!-- Left Sidebar -->
+        <aside id="leftsidebar" class="sidebar">
+            <!-- User Info -->
+            <div class="user-info">
+                <!-- <div class="image">
+                    <img src="images/user.png" width="48" height="48" alt="User" />
+                </div> -->
+                <div class="info-container">
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Operator</div>
+                    <!-- <div class="email">adil.k@finacus.co.in</div> -->
+                    <div id="divOpMob" class="mobile"></div>
+                    <div class="btn-group user-helper-dropdown">
+                        <i class="material-icons" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">keyboard_arrow_down</i>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
+                            <!-- <li role="separator" class="divider"></li>
+                            <li><a href="javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
+                            <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
+                            <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li> -->
+                            <li role="separator" class="divider"></li>
+                            <li><a href="./index.html"><i class="material-icons">input</i>Sign Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- #User Info -->
+            <!-- Menu -->
+            <div class="menu">
+                <ul class="list">
+                    <li class="header">MAIN NAVIGATION</li>
+                    <li class="active">
+                        <a href="./AdminDashboard.html">
+                            <i class="material-icons">home</i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./index.html">
+                            <i class="material-icons">input</i>
+                            <span>Sign Out</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <i class="material-icons">https</i>
+                            <span>Privacy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <i class="material-icons">flag</i>
+                            <span>About</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- #Menu -->
+            <!-- Footer -->
+            <div class="legal">
+                <div class="copyright">
+                    &copy; 2019 - 2020 <a href="javascript:void(0);">Video KYC</a>
+                </div>
+                <div class="version">
+                    <b>Version: </b> 1.0.1
+                </div>
+            </div>
+            <!-- #Footer -->
+        </aside>
+        <!-- #END# Left Sidebar -->
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <h2>ADMINISTRATOR</h2>
+            </div>
+
+            <!-- Widgets -->
+            <div class="row clearfix">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div id="clearData" class="info-box bg-red hover-zoom-effect" style="cursor: pointer !important;">
+                        <div class="icon">
+                            <i class="material-icons">delete_forever</i>
+                        </div>
+                        <div class="content">
+                            <div class="text">Clear</div>
+                            <div class="number">Customer Data</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Widgets -->
+        </div>
+    </section>
+
+    <!-- Jquery Core Js -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="../plugins/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Select Plugin Js -->
+    <script src="../plugins/bootstrap-select/js/bootstrap-select.js"></script>
+
+    <!-- Slimscroll Plugin Js -->
+    <script src="../plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="../plugins/node-waves/waves.js"></script>
+
+    <!-- Jquery CountTo Plugin Js -->
+    <script src="../plugins/jquery-countto/jquery.countTo.js"></script>
+
+    <!-- Morris Plugin Js -->
+    <script src="../plugins/raphael/raphael.min.js"></script>
+    <script src="../plugins/morrisjs/morris.js"></script>
+
+    <!-- ChartJs -->
+    <script src="../plugins/chartjs/Chart.bundle.js"></script>
+
+    <!-- Flot Charts Plugin Js -->
+    <!-- <script src="../plugins/flot-charts/jquery.flot.js"></script>
+    <script src="../plugins/flot-charts/jquery.flot.resize.js"></script>
+    <script src="../plugins/flot-charts/jquery.flot.pie.js"></script>
+    <script src="../plugins/flot-charts/jquery.flot.categories.js"></script>
+    <script src="../plugins/flot-charts/jquery.flot.time.js"></script> -->
+
+    <!-- Sparkline Chart Plugin Js -->
+    <script src="../plugins/jquery-sparkline/jquery.sparkline.js"></script>
+
+    <!-- Jquery DataTable Plugin Js -->
+    <script src="../plugins/jquery-datatable/jquery.dataTables.js"></script>
+    <script src="../plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js"></script>
+
+    <!-- DataTable Responsive -->
+    <script src="../plugins/jquery-datatable/dataTables.responsive.1.0.7.min.js"></script>
+
+    <!-- Custom Js -->
+    <!-- <script src="../js/serverDate.js"></script> -->
+    <script src="../js/admin.js"></script>
+    <script src="../js/env.url.js"></script>
+    <!-- <script src="../js/adminInitCharts.js"></script> -->
+
+    <!-- Final Script -->
+    <script src="../js/pages/Operator/adminDashboard.js"></script>
+
+</body>
+
+</html>

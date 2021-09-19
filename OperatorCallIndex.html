@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>VKYC Home</title>
+    <!-- Favicon-->
+    <link rel="icon" href="./favicon/favicon.ico" type="image/x-icon">
+
+    <!-- Adil -->
+    <link href="./lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./lib/site/css/site.css" rel="stylesheet" />
+    <link href="./lib/custom/css/customStyle.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- --DEV-- -->
+    <!-- Sweet Alert Css -->
+    <link href="./plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+    <link href="./lib/alertifyjs/build/css/alertify.css" rel="stylesheet" />
+    <link href="./lib/alertifyjs/build/css/themes/default.css" rel="stylesheet" />
+    <link href="./lib/lightbox2-2.11.3/dist/css/lightbox.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./lib/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+    <link href="./css/scheduleLaterSwitch.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.css"> -->
+    <link href="./css/cropper.css" rel="stylesheet" />
+    <!-- <link href="./lib/alertifyjs/build/css/themes/bootstrap.css" rel="stylesheet" /> -->
+    <!-- --PROD-- -->
+    <!-- <link href="/lib/alertifyjs/build/css/alertify.min.css" rel="stylesheet" /> -->
+    <!-- <link href="/lib/alertifyjs/build/css/themes/default.min.css" rel="stylesheet" /> -->
+    <!---->
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/jquery-2.1.1.min.js"></script> -->
+    <script src="js/face-api.js"></script>
+    <!-- <script src='https://unpkg.com/tesseract.js@v2.0.0-alpha.13/dist/tesseract.min.js'></script> -->
+
+
+    <script type="text/javascript" src="jsqr/grid.js"></script>
+    <script type="text/javascript" src="jsqr/version.js"></script>
+    <script type="text/javascript" src="jsqr/detector.js"></script>
+    <script type="text/javascript" src="jsqr/formatinf.js"></script>
+    <script type="text/javascript" src="jsqr/errorlevel.js"></script>
+    <script type="text/javascript" src="jsqr/bitmat.js"></script>
+    <script type="text/javascript" src="jsqr/datablock.js"></script>
+    <script type="text/javascript" src="jsqr/bmparser.js"></script>
+    <script type="text/javascript" src="jsqr/datamask.js"></script>
+    <script type="text/javascript" src="jsqr/rsdecoder.js"></script>
+    <script type="text/javascript" src="jsqr/gf256poly.js"></script>
+    <script type="text/javascript" src="jsqr/gf256.js"></script>
+    <script type="text/javascript" src="jsqr/decoder.js"></script>
+    <script type="text/javascript" src="jsqr/qrcode.js"></script>
+    <script type="text/javascript" src="jsqr/findpat.js"></script>
+    <script type="text/javascript" src="jsqr/alignpat.js"></script>
+    <script type="text/javascript" src="jsqr/databr.js"></script>
+
+    <style>
+        .customTextArea {
+            height: auto;
+            /* background-color: #e9ecef; */
+            opacity: 1;
+            line-height: 1;
+            padding-bottom: 0;
+            border-radius: 0;
+        }
+
+        .container {
+            max-width: 95% !important;
+        }
+
+        .textAlignBorder {
+            text-align: center;
+            border-bottom: 2px solid #1f91f3;
+            /* background-color: #2196f3; */
+            background-color: #1b489f;
+            color: #fff;
+            font-weight: 700 !important;
+        }
+
+        .textAlignLeftBorder {
+            text-align: left;
+            border-bottom: 2px solid #1f91f3;
+        }
+
+        input[type="text"].form-control:disabled,
+        .form-control[readonly] {
+            background-color: #fff !important;
+            border: unset !important;
+        }
+
+        input[type="text"].form-control:disabled,
+        .form-control:focus,
+        .form-control[readonly] {
+            box-shadow: unset !important;
+        }
+
+        .local-video-inset {
+            height: 35% !important;
+            width: 20% !important;
+            position: absolute;
+            bottom: 2.5%;
+            right: 3.5%;
+            padding: 0;
+            margin: 0;
+            /* border-radius: 0; */
+        }
+
+        .btn {
+            border-radius: unset !important;
+        }
+
+        .btn-circle {
+            width: 35px !important;
+            height: 32px !important;
+            background-color: #ffffff96 !important;
+            border: none;
+            outline: none !important;
+            overflow: hidden;
+            width: 40px;
+            height: 40px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            border-radius: 50%;
+        }
+
+        .btn-circle>.material-icons {
+            margin-left: -2px;
+        }
+
+        .call-btn-row>div {
+            margin: 3px;
+        }
+
+        #panAadharDetails :hover {
+            background-color: #ccc;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .card-body {
+            border: 2px solid #ccc;
+            box-shadow: 0 2px 10px rgb(0 0 0 / 20%);
+        }
+
+        .badge {
+            font-size: 85% !important;
+        }
+
+        .badge-pill {
+            padding: .3em .8em .4em .8em !important;
+        }
+
+        .badge-light {
+            color: #aaaaaa;
+            text-shadow: 0 1px rgb(255 255 255 / 50%);
+            font-weight: 600;
+            background-color: #e1f0ff;
+            text-transform: uppercase;
+            background: #eceeef;
+            box-shadow: inset 0 1px 2px rgb(0 0 0 / 12%), inset 0 0 2px rgb(0 0 0 / 15%);
+            box-sizing: content-box;
+        }
+
+        .badge-orange {
+            color: #fff;
+            text-transform: uppercase;
+            background-color: #E1B42B;
+            text-shadow: 1.5px 1.5px 3px rgb(0 0 0 / 30%);
+            box-shadow: inset 0 1px 2px rgb(0 0 0 / 15%), inset 0 0 3px rgb(0 0 0 / 20%);
+        }
+
+        .live-record-icon {
+            color: #fff;
+            font-size: 20px !important;
+            background-color: #1b489f;
+            padding: 3px 3px 3px 3px;
+            border-radius: 50%;
+            margin-left: -8.5px !important;
+        }
+
+        .blink {
+            animation: .9s blink_effect infinite
+        }
+    </style>
+
+    <script src="./js/validateAppSessionOp.js"></script>
+</head>
+
+<body class="bg">
+    <!-- <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" href="#">Video KYC | <small>One Stop KYC Solution</small></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <span class="navbar-text text-right">
+                        You are <span id="navbarUsername"></span>
+                    </span>
+                </div>
+            </div>
+        </nav>
+    </header> -->
+
+    <section>
+        <!-- <img id="imgContactDefault" src="./images/contactDefault.png" style="display: none;"/> -->
+        <div class="container containerSection mt-4">
+            <div class="row-fluid LoginrowClass" id="mainPanel" style="border: 4px solid #00032a; overflow: hidden;">
+                <div class="row LoginrowClass mx-auto welcome-badge"
+                    style="justify-content: center;  color: #fff; background: linear-gradient(to top, #0082ff -95%, #00032a 100%) !important">
+                    <div class="row pb-1"
+                        style="font-size: small; font-weight: 500; width: 100%; align-items: center; border-bottom: 1px solid #ccc;">
+                        <div class="col-md-2">
+                            <span class="navbar-text text-right">
+                                You are <span id="navbarUsername"></span>
+                            </span>
+                        </div>
+                        <div class="col-md-2" style="display: none;">
+                            <span style="font-weight: 400;">Remote Packet Loss: </span><span
+                                id="remotePacketLoss">0</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span style="font-weight: 400;">Local Packet Loss: </span>
+                            <span id="localPacketLoss">0</span>
+                        </div>
+                        <div class="col-md-3">
+                            <span style="font-weight: 400;">Local Retransmitted Packets: </span>
+                            <span id="localRetransmittedPacket">0</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span style="font-weight: 400;">Speed: </span>
+                            <span id="upLink">0</span>
+                            <i class="material-icons" style="font-size: small;">arrow_upward</i>
+                            <span id="downLink">0</span>
+                            <i class="material-icons" style="font-size: small;">arrow_downward</i> KB/s
+                        </div>
+                        <div class="col-md-3">
+                            <span style="font-weight: 400;">Stream Connection</span>&nbsp;&nbsp;&nbsp;
+                            <button id="btnIceConnStats" style="cursor: default; border-radius: unset;"
+                                class="btn btn-sm btn-info">Not Connected</button>
+                        </div>
+                    </div>
+
+                    <div class="row p-2" style="width: 100%;">
+                        <div class="col-md-3">
+                            <label class="form-check-label">
+                                <input id="ckCode" type="checkbox"> <span style="font-size: medium;">Security Code
+                                    Verified</span>
+                            </label>
+                            <!-- <input id="ckCode" type="checkbox" class="col-md-12 form-check-input">
+                            <span style="font-size: 14px;" class="col-md-12 mt-4">Security Code Verified</span> -->
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-check-label">
+                                <input id="ckFace" type="checkbox" readonly="readonly" onclick="return false;"> <span
+                                    style="font-size: medium;">Face Match</span>
+                            </label>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-check-label">
+                                <input id="ckDoc" type="checkbox" readonly="readonly" onclick="return false;"> <span
+                                    style="font-size: medium;">Document Captured</span>
+                            </label>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-check-label">
+                                <input id="ckSignDoc" type="checkbox" readonly="readonly" onclick="return false;"> <span
+                                    style="font-size: medium;">Signature Captured</span>
+                            </label>
+                        </div>
+                        <!-- <div class="col-md-3" style="display: flex;">
+                            <input type="radio" class="col-md-12 form-check-input" id="radio5" name="radio5"
+                                value="option1">
+                            <span style="font-size: 14px;" class="col-md-12 mt-4 pl-5 pr-5">Address Match</span>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="card card-body bg-white pl-0 pr-0">
+                    <div class="row-fluid">
+                        <div>
+                            <div class="col-md-12 p-0">
+                                <div class="row">
+                                    <div id="divVideoCard" class="mx-auto col-md-4 card-body bg-white"
+                                        style="margin-right: 0 !important;">
+                                        <div align="center">
+                                            <h2 class="pb-2">Live Video Verification</h2>
+                                            <!-- <div class="ml-2">
+                                                <h2 class="pb-2">Live Video Verification</h2>
+                                            </div>
+
+                                            <div class="ml-auto">
+                                                <label class="switch" title="Passive Liveness Check">
+                                                    <input id="ckLiveness" type="checkbox" class="switch-input"
+                                                        name="radSlider">
+                                                    <span class="switch-label" data-on="ON" data-off="OFF"
+                                                        style="font-size: 15px !important;font-weight: 600;"></span>
+                                                    <span class="switch-handle"></span>
+                                                </label>
+                                            </div> -->
+                                        </div>
+                                        <!-- <div class="row textAlignBorder" style="border-top: 2px solid #1f91f3;"> -->
+                                        <div class="row textAlignBorder">
+                                            <div class="row mx-auto">
+                                                <h4 class="pt-1" style="font-weight: 700 !important;"><span
+                                                        id="callTobName"></span> - </h4>
+                                                &nbsp;<h4 class="pt-1" style="font-weight: 700 !important;"><span
+                                                        id="callToUsernameInput"><span></h4>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="col-md-10 mx-auto">
+                                            <div style="position:relative">
+                                                <video id="remoteVideo"
+                                                    class="video cool-background form-control p-0 m-0 rounded-0"
+                                                    poster="./images/contactDefault.png"
+                                                    style="position: relative; min-height: 309px;" autoplay></video>
+                                                <video id="localVideo"
+                                                    class="form-control local-video-inset p-0 m-0 rounded-3" autoplay
+                                                    muted="muted"
+                                                    style="height: auto !important; position: absolute;"></video>
+                                                <div id="recordIcon"
+                                                    style="position: absolute; top: 3%; margin-left: 3%; margin-top: 1%; display: none;">
+                                                    <!-- <i class="material-icons blink" style="color: red;">fiber_manual_record</i> -->
+                                                    <img class="blink" src="./images/recordIcon.jpg"
+                                                        style="width: 42px;height: 20px;" />
+                                                </div>
+                                                <div class="row call-btn-row"
+                                                    style="position: absolute; bottom: 2%; left: 20%;">
+                                                    <div>
+                                                        <button id="callBtn" class="btn btn-sm btn-circle">
+                                                            <i class="material-icons">call</i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="ml-3 mr-3">
+                                                        <button id="hangUpBtn" class="btn btn-sm btn-circle">
+                                                            <i class="material-icons">call_end</i>
+                                                        </button>
+                                                    </div>
+                                                    <div>
+                                                        <button id="btn-start-recording" class="btn btn-sm btn-circle"
+                                                            disabled>
+                                                            <i class="material-icons">video_call</i>
+                                                        </button>
+                                                    </div>
+                                                    <div>
+                                                        <button id="btn-stop-recording" style="display: none;"
+                                                            class="btn btn-sm btn-circle">
+                                                            <i class="material-icons">stop</i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mx-auto mt-1" style="text-align: center;">
+                                                <div class="row"
+                                                    style="border: 1px solid #ccc;background-color: #2b982b !important;color: #fff;">
+                                                    <div class="col-md-6" style="text-align: left;">
+                                                        <label for="xVerifyCodeOp"
+                                                            class="col-form-label-sm mb-0">Verification Code</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <textarea id="xVerifyCodeOp" readonly rows="1"
+                                                            style="text-align: center; font-size:medium;background-color: #2b982b !important;color: #fff;"
+                                                            class="form-control form-control-sm bg-white font-weight-bold"
+                                                            value=""></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="row"
+                                                    style="border: 1px solid #ccc; background-color: #2196F3 !important; color: #fff;">
+                                                    <div class=" col-md-12"
+                                                        style="background-color: #1b489f !important;color: #fff;">
+                                                        <textarea id="xRandomQuestions" rows="2" readonly
+                                                            style="text-align: left; font-size: medium; font-style: italic; background-color: #1b489f !important; color: #fff;"
+                                                            class="form-control form-control-sm bg-white"
+                                                            value="1. Question"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-1">
+                                                    <a data-toggle="modal" data-target="#sessionVideoModal"
+                                                        style="display: inline-flex;"><i class="material-icons"
+                                                            style="font-size: 23px; margin-right: 5px;">live_tv</i><i>
+                                                            View Recorded Session</i></a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="CustomerDetails" class="mx-auto col-md-7 divNonCust card-body bg-white"
+                                        style="margin-left: 1.6rem !important;">
+                                        <!-- <div class="row textAlignLeftBorder"> -->
+                                        <div class="row">
+                                            <!-- <h2 class="pb-2 pl-2">Details</h2> -->
+                                            <div>
+                                                <h2 class="pb-2 pl-2">Details</h2>
+                                            </div>
+                                            <div class="ml-auto mr-3" style="display: inline-flex;">
+                                                <!-- <div>
+                                                    <label class="switch" title="Passive Liveness Check">
+                                                        <input id="ckLiveness" type="checkbox" class="switch-input"
+                                                            name="radSlider">
+                                                        <span class="switch-label" data-on="ON" data-off="OFF"
+                                                            style="font-size: 15px !important;font-weight: 600;"></span>
+                                                        <span class="switch-handle"></span>
+                                                    </label>
+                                                </div> -->
+                                                <!-- <div style="margin-top: 1.5px;"> -->
+                                                    <div>
+                                                        <span class="badge badge-pill badge-light">Liveness Check</span>
+                                                    </div>
+                                                    
+                                                    <div>
+                                                        <button id="btnLivenessStartRecord" class="btn btn-sm btn-circle" title="Record Live Feed" style="margin: -5px 5px 0px 12px;" disabled>
+                                                            <i class="material-icons live-record-icon">video_call</i>
+                                                        </button>
+                                                    </div>
+                                                    <div>
+                                                        <button id="btnLivenessStopRecord_Spinner" class="btn btn-sm btn-circle" title="Record Live Feed" style="margin: -5px 5px 0px 12px; color: #1b489f; display: none;">
+                                                            <span class="spinner-border spinner-border-sm" role="status" style="float: left;"></span>
+                                                        </button>
+                                                    </div>
+                                                    <div>
+                                                        <button id="btnLivenessStopRecord" class="btn btn-sm btn-circle" title="Stop Recording" style="margin: -5px 5px 0px 12px; display: none;">
+                                                            <i class="material-icons live-record-icon">stop</i>
+                                                        </button>
+                                                    </div>
+                                                    <div>
+                                                        <span id="livenessStatsBadge" class="badge badge-pill badge-orange">- Pending -</span>
+                                                    </div>
+                                                    
+                                                <!-- </div> -->
+                                            </div>
+                                        </div>
+                                        <div class="row textAlignBorder">
+                                            <div class="col-md-3 p-1 pl-3" style="text-align: left;">
+                                                <h7>Field</h7>
+                                            </div>
+                                            <div class="col-md-4 p-1 pl-4" style="text-align: left;">
+                                                <h7>Input</h7>
+                                            </div>
+                                            <div id="aadharTitle" class="col-md-4 p-1 pl-4" style="text-align: left;">
+                                                <h7>Aadhar</h7>
+                                            </div>
+                                            <div id="panTitle" class="col-md-4 p-1 pl-4"
+                                                style="text-align: left; display: none;">
+                                                <h7>PAN</h7>
+                                            </div>
+                                            <div id="panAadharDetails" class="col-md-1" title="Next"
+                                                style="cursor: pointer; justify-content: center;">
+                                                <i class="material-icons" style="margin-top: 7%;">skip_next</i>
+                                                <!-- <i class="fas fa-chevron-right"></i> -->
+                                            </div>
+                                        </div>
+                                        <div class="row" style="font-weight: 500;">
+                                            <div class="col-md-3">
+                                                <label class="col-form-label-sm mb-0">Name</label></br>
+                                                <label class="col-form-label-sm mb-0">Gender</label></br>
+                                                <label class="col-form-label-sm mb-0">DOB</label></br>
+                                                <label class="col-form-label-sm mb-0">Postal
+                                                    Code</label></br>
+                                                <label class="col-form-label-sm mb-0">City</label></br>
+                                                <label class="col-form-label-sm mb-0">State</label></br>
+                                                <label class="col-form-label-sm mb-0">Country</label></br>
+                                                <label class="col-form-label-sm mb-0 mt-1">PAN Number</label></br>
+                                                <!-- <label for="bAddress"
+                                                    class="col-form-label-sm mb-0">Address</label></br> -->
+                                                <!-- <label for="xPhoto" class="col-form-label-sm mb-0">Photo</label></br> -->
+                                                <div class="col-md-12 mt-3 pl-0 pr-0">
+                                                    <button id="btnTakePersonPhoto"
+                                                        class="btn btn-primary btn-sm btnText form-control-sm mb-3 rounded-0 w-100"
+                                                        disabled>
+                                                        <span id="btnTakePersonPhoto_Spinner"
+                                                            class="spinner-border spinner-border-sm" role="status"
+                                                            style="float: left; display: none;"></span>
+                                                        <span id="btnTakePersonPhoto_LoadingText"
+                                                            style="display: none;">
+                                                            Processing...</span>
+                                                        <span id="btnTakePersonPhoto_ButtonText"
+                                                            style="display: block;">
+                                                            <i class="fa fa-camera mr-2" aria-hidden="true"></i>Take
+                                                            Photo
+                                                        </span>
+                                                    </button>
+                                                    <button id="matchphotobtn"
+                                                        class="btn btn-primary btn-sm form-control-sm mb-3 rounded-0 w-100"
+                                                        disabled>
+                                                        <span id="matchphotobtn_Spinner"
+                                                            class="spinner-border spinner-border-sm" role="status"
+                                                            style="float: left; display: none;"></span>
+                                                        <span id="matchphotobtn_LoadingText" style="display: none;">
+                                                            Processing...</span>
+                                                        <span id="matchphotobtn_ButtonText" style="display: block;"><i
+                                                                class="fa fa-user-circle mr-2"
+                                                                aria-hidden="true"></i>Compare Face</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4" id="inputDetails">
+                                                <input type="text" id="bName" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                                <input type="text" id="bGender" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                                <input type="text" id="bDOB" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                                <input type="text" id="bPinCode" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                                <input type="text" id="bCity" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                                <input type="text" id="bState" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                                <input type="text" id="bCountry" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                                <input type="text" readonly class="form-control form-control-sm"
+                                                    value="-"></input>
+                                                <div class="row" style="text-align: center;">
+                                                    <!-- <div class="col-md-8">
+                                                    <a id="anchorxCustPhoto" href="" data-lightbox="lightImgCust">
+                                                        <canvas id="canvas" class="form-control"
+                                                            style="height: auto;"></canvas>
+                                                    </a>
+                                                </div> -->
+                                                    <div class="col-md-6">
+                                                        <a id="anchorxCustPhoto" href="" data-lightbox="lightImgCust">
+                                                            <canvas id="canvas" class="form-control"
+                                                                style="height: auto;"></canvas>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-5 pl-0">
+                                                        <div class="mb-2">
+                                                            <span style="color: #2196f3;">Face Match</span>
+                                                        </div>
+                                                        <div class="row ml-2">
+                                                            <div id="icoCrossCustPhoto">
+                                                                <i class="material-icons"
+                                                                    style="color: red; font-size: 22px;">close</i>
+                                                            </div>
+                                                            <div id="icoCheckCustPhoto" style="display: none;">
+                                                                <i class="material-icons"
+                                                                    style="color: green; font-size: 22px;">check</i>
+                                                            </div>
+                                                            <div class="ml-2">
+                                                                <span id="faceMatchPercent"
+                                                                    style="color: green; font-size: 14px;"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4" id="aadharDetails">
+                                                <input type="text" id="xName" readonly
+                                                    class="form-control form-control-sm" value="Aadhar"></input>
+                                                <input type="text" id="xGender" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                                <input type="text" id="xDOB" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                                <input type="text" id="xPincode" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                                <input type="text" id="xCity" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                                <input type="text" id="xState" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                                <input type="text" id="xCountry" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                                <input type="text" readonly class="form-control form-control-sm"
+                                                    value="-"></input>
+                                                <div class="col-md-6" style="text-align: center;">
+                                                    <a id="anchorxDocPhoto" href="" data-lightbox="lightImgAadhaar">
+                                                        <img id="xDocPhoto" src="" class="form-control p-1"
+                                                            style="height: auto;" />
+                                                    </a>
+                                                    <!-- <div class="col-md-5">
+                                                    <a id="anchorxDocPhoto" href="" data-lightbox="lightImgAadhaar">
+                                                        <img id="xDocPhoto" src="" class="form-control p-1"
+                                                            style="height: auto;" />
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-5 pl-0">
+                                                    <div class="mb-2">
+                                                        <span style="color: #2196f3;">Face Match</span>
+                                                    </div>
+                                                    <div class="row ml-2">
+                                                        <div id="icoCrossCustPhoto">
+                                                            <i class="material-icons" style="color: red; font-size: 22px;">close</i>
+                                                        </div>
+                                                        <div id="icoCheckCustPhoto" style="display: none;">
+                                                            <i class="material-icons" style="color: green; font-size: 22px;">check</i>
+                                                        </div>
+                                                        <div class="ml-2">
+                                                            <span id="faceMatchPercent" style="color: green; font-size: 14px;"></span>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 pr-0 pl-0" id="panDetails" style="display: none;">
+                                                <input type="text" id="pName" readonly
+                                                    class="form-control form-control-sm" value="-"></input>
+                                                <input type="text" id="pGender" readonly
+                                                    class="form-control form-control-sm" value="-"></input>
+                                                <input type="text" id="pDOB" readonly
+                                                    class="form-control form-control-sm" value="-"></input>
+                                                <input type="text" id="pPincode" readonly
+                                                    class="form-control form-control-sm" value="-"></input>
+                                                <input type="text" id="pCity" readonly
+                                                    class="form-control form-control-sm" value="-"></input>
+                                                <input type="text" id="pState" readonly
+                                                    class="form-control form-control-sm" value="-"></input>
+                                                <input type="text" id="pCountry" readonly
+                                                    class="form-control form-control-sm" value="-"></input>
+                                                <input type="text" id="pPAN" readonly
+                                                    class="form-control form-control-sm" value=""></input>
+                                                <div class="row" style="text-align: center;">
+                                                    <!-- <a id="anchorxPanPhoto" href="" data-lightbox="lightImgPan">
+                                                    <img id="xPanPhoto" src="" class="form-control p-1"
+                                                        style="height: 90px; width: 96px;" />
+                                                </a> -->
+                                                    <div class="col-md-4">
+                                                        <a id="anchorxPanPhoto" href="" data-lightbox="lightImgPan">
+                                                            <img id="xPanPhoto" src="" class="form-control p-1"
+                                                                style="height: 90px; width: 96px;" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-5 pl-0" style="display: none;">
+                                                        <div class="mb-2">
+                                                            <span style="color: #2196f3;">Face Match</span>
+                                                        </div>
+                                                        <div class="row ml-1">
+                                                            <div id="icoCrossPanPhoto">
+                                                                <i class="material-icons"
+                                                                    style="color: red; font-size: 22px;">close</i>
+                                                            </div>
+                                                            <div id="icoCheckPanPhoto" style="display: none;">
+                                                                <i class="material-icons"
+                                                                    style="color: green; font-size: 22px;">check</i>
+                                                            </div>
+                                                            <div class="ml-2">
+                                                                <span id="panFaceMatchPercent"
+                                                                    style="color: green; font-size: 14px;"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12 pl-0 pr-0">
+                                                            <button id="matchPanphotobtn"
+                                                                class="btn btn-primary btn-sm form-control-sm mb-3 rounded-0 w-100"
+                                                                disabled>
+                                                                <span id="matchPanphotobtn_Spinner"
+                                                                    class="spinner-border spinner-border-sm"
+                                                                    role="status"
+                                                                    style="float: left; display: none;"></span>
+                                                                <span id="matchPanphotobtn_LoadingText"
+                                                                    style="display: none;">
+                                                                    Processing...</span>
+                                                                <span id="matchPanphotobtn_ButtonText"
+                                                                    style="display: block;"><i
+                                                                        class="fa fa-user-circle mr-2"
+                                                                        aria-hidden="true"></i>Compare Face</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="col-md-4">
+                                                    <div class="col-md-12 mt-3 pl-0 pr-0">
+                                                        
+                                                        <button id="matchphotobtn"
+                                                            class="btn btn-primary btn-sm form-control-sm mb-3 rounded-0 w-100"
+                                                            disabled>
+                                                            <span id="matchphotobtn_Spinner"
+                                                                class="spinner-border spinner-border-sm" role="status"
+                                                                style="float: left; display: none;"></span>
+                                                            <span id="matchphotobtn_LoadingText" style="display: none;">
+                                                                Processing...</span>
+                                                            <span id="matchphotobtn_ButtonText" style="display: block;"><i
+                                                                    class="fa fa-user-circle mr-2"
+                                                                    aria-hidden="true"></i>Compare Face</span>
+                                                        </button>
+                                                    </div>
+                                                </div> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row p-3 mt-3"
+                                            style="background-color: #429ba9; color: #fff; font-weight: 500;">
+                                            <div class="col-md-3 pl-0">
+                                                <span>Current Location : India</span>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <span>Latitude: <label id="CustLat"></label></span>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <span>Longitude: </b><label id="CustLong"></label></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="mx-auto col-md-4 card-body bg-white"
+                                        style="margin-right: 0 !important;">
+                                        <div class="textAlignLeftBorder">
+                                            <h2 class="pb-2">Identify Documents</h2>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-7 mt-2 mx-auto" style="text-align: center;">
+                                                <label for="ddlDocType" class="col-form-label-sm mt-3 mb-0"
+                                                    style="float: left;">Id Document Type</label>
+                                                <select class="custom-select custom-select-sm mr-sm-2 mb-3"
+                                                    id="ddlDocType">
+                                                    <option selected value="0">PAN</option>
+                                                    <option value="1">Aadhaar</option>
+                                                    <option value="2">Signature</option>
+                                                </select>
+                                                <button id="docphotobtn"
+                                                    class="btn btn-primary btn-sm btnText form-control form-control-sm mb-3"
+                                                    disabled>
+                                                    <span id="docphotobtn_Spinner"
+                                                        class="spinner-border spinner-border-sm" role="status"
+                                                        style="float: left; display: none;"></span>
+                                                    <span id="docphotobtn_LoadingText" style="display: none;">
+                                                        Processing...</span>
+                                                    <span id="docphotobtn_ButtonText" style="display: block;"><i
+                                                            class="fa fa-camera mr-2" aria-hidden="true"></i>Take
+                                                        Document
+                                                        Picture</span>
+                                                </button>
+                                            </div>
+                                            <div class="col-md-7 mx-auto"
+                                                style="text-align: center; position: relative;">
+                                                <div class="float-right"
+                                                    style="position: absolute; z-index: 1; background-color: #eee;">
+                                                    <button id="initCropperBtn" class="btn btn-sm" disabled><i
+                                                            class="fa fa-edit" title="Crop Image"
+                                                            aria-hidden="true"></i></button>
+                                                    <button id="destroyCropperBtn" class="btn btn-sm"
+                                                        style="display: none;">
+                                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                                    </button>
+                                                    <button id="cropBtn" class="btn btn-sm" style="display: none;">
+                                                        <i class="fa fa-crop" aria-hidden="true"></i></button>
+                                                </div>
+                                                <a id="anchordocphotocanvas0" href=""
+                                                    data-lightbox="lightImgdocphotoCanvas" data-title="PAN">
+                                                    <canvas id="docphotocanvas0" class="form-control"
+                                                        style="height: auto; max-height: 140px;"></canvas>
+                                                    <small><label id="docphotoLabel0">Captured PAN</label></small>
+                                                </a>
+                                                <a id="anchordocphotocanvas1" href=""
+                                                    data-lightbox="lightImgdocphotoCanvas" data-title="Aadhaar"
+                                                    style="display: none;">
+                                                    <canvas id="docphotocanvas1" class="form-control"
+                                                        style="height: auto; max-height: 140px"></canvas>
+                                                    <small><label id="docphotoLabel1">Captured Document
+                                                            Picture</label></small>
+                                                </a>
+                                                <a id="anchordocphotocanvas2" href=""
+                                                    data-lightbox="lightImgdocphotoCanvas" data-title="Signature"
+                                                    style="display: none;">
+                                                    <canvas id="docphotocanvas2" class="form-control"
+                                                        style="height: auto; max-height: 140px"></canvas>
+                                                    <small><label id="docphotoLabel2">Captured Document
+                                                            Picture</label></small>
+                                                </a>
+                                                <!-- <a id="anchordocphotocanvas3" href=""
+                                                        data-lightbox="lightImgdocphotoCanvas" data-title="can3" style="display: none;">
+                                                        <canvas id="docphotocanvas3" class="form-control"
+                                                            style="height: auto; max-height: 140px"></canvas>
+                                                        <small><label id="docphotoLabel3">Captured Document
+                                                                Picture</label></small>
+                                                    </a> -->
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="mx-auto col-md-7 card-body bg-white"
+                                        style="margin-left: 1.6rem !important;">
+                                        <div class="row">
+                                            <div id="divAddrMismatch" class="row col-md-12 pl-5 mb-2"
+                                                style="display: block; text-align: center;">
+                                                <label id="lblAddrMismatch" class="col-form-label-sm mb-0"
+                                                    style="font-weight: bold; font-size: 0.8rem !important;"></label>
+                                                <br />
+                                                <input type="radio" id="radMismatchY" name="addrMismatch"
+                                                    data-toggle="collapse" data-target=".collapseOne.show">
+                                                <label for="radMismatchY" class="col-form-label-sm mr-2 mb-0">Address
+                                                    Match</label>
+                                                <input type="radio" id="radMismatchN" name="addrMismatch"
+                                                    data-toggle="collapse" data-target=".collapseOne:not(.show)">
+                                                <label for="radMismatchN" class="col-form-label-sm mb-0">Address
+                                                    Mismatch</label>
+                                            </div>
+                                        </div>
+                                        <!-- <hr style="border-bottom: 2px solid #1f91f3;"/> -->
+                                        <div class="row mt-1">
+                                            <div class="col-md-4">
+                                                <div class="col-md-12 mx-auto" style="text-align: center;">
+                                                    <label for="ddlAddrDocType" class="col-form-label-sm mb-0"
+                                                        style="float: left;">Identity Document Type</label>
+                                                    <select class="custom-select custom-select-sm mr-sm-2 mb-3"
+                                                        id="ddlAddrDocType" disabled>
+                                                        <option value="3">Passport</option>
+                                                        <option value="4">Voter ID Card</option>
+                                                        <option selected value="5">Electricity Bill</option>
+                                                    </select>
+                                                    <button id="docAddrphotobtn"
+                                                        class="btn btn-primary btn-sm form-control form-control-sm mb-3"
+                                                        disabled>
+                                                        <span><i class="fa fa-camera mr-2"
+                                                                aria-hidden="true"></i>Address
+                                                            Proof</span>
+                                                    </button>
+                                                </div>
+                                                <div class="col-md-12 mx-auto"
+                                                    style="text-align: center; position: relative;">
+                                                    <div class="float-right"
+                                                        style="position: absolute; z-index: 1; background-color: #eee;">
+                                                        <button id="initCropperBtnAddr" class="btn btn-sm" disabled><i
+                                                                class="fa fa-edit" title="Crop Image"
+                                                                aria-hidden="true"></i></button>
+                                                        <button id="destroyCropperBtnAddr" class="btn btn-sm"
+                                                            style="display: none;">
+                                                            <i class="fa fa-times" aria-hidden="true"></i>
+                                                        </button>
+                                                        <button id="cropBtnAddr" class="btn btn-sm"
+                                                            style="display: none;">
+                                                            <i class="fa fa-crop" aria-hidden="true"></i></button>
+                                                    </div>
+                                                    <a id="anchordocAddrCanvas" href=""
+                                                        data-lightbox="lightImgAddrCanvas">
+                                                        <canvas id="docAddrCanvas" class="form-control"
+                                                            style="height: auto; max-height: 140px"></canvas>
+                                                        <small><label for="docAddrCanvas"
+                                                                class="col-form-label-sm mb-0">Address
+                                                                Picture</label></small>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="col-md-12">
+                                                    <label for="bAddress" class="mb-0">Current Address</label>
+                                                    <div id="bAddress"
+                                                        class="form-control form-control-sm customTextArea"
+                                                        style="height: 83px; overflow-y: scroll;">
+                                                        <span style="font-weight: 500;">House: </span><label
+                                                            id="bHouse"></label><br>
+                                                        <span style="font-weight: 500;">Locality: </span><label
+                                                            id="bLocality"></label>
+                                                        <span style="font-weight: 500;">PO: </span><label
+                                                            id="bPO"></label>
+                                                        <span style="font-weight: 500;">Street: </span><label
+                                                            id="bStreet"></label><br>
+                                                        <span style="font-weight: 500;">Landmark: </span><label
+                                                            id="bLandmark"></label>
+                                                        <span style="font-weight: 500;">District: </span><label
+                                                            id="bDistrict"></label>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <label for="xAddress" class="mb-0 mt-2">Aadhaar Address</label>
+                                                    <div id="xAddress"
+                                                        class="form-control form-control-sm customTextArea"
+                                                        style="max-height: 96px; overflow-y: scroll;">
+                                                        <span style="font-weight: 500;">House: </span><label
+                                                            id="aHouse"></label><br>
+                                                        <span style="font-weight: 500;">Locality: </span><label
+                                                            id="aLocality"></label>
+                                                        <span style="font-weight: 500;">PO: </span><label
+                                                            id="aPO"></label>
+                                                        <span style="font-weight: 500;">Street: </span><label
+                                                            id="aStreet"></label><br>
+                                                        <span style="font-weight: 500;">Landmark: </span><label
+                                                            id="aLandmark"></label>
+                                                        <span style="font-weight: 500;">District: </span><label
+                                                            id="aDistrict"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-12 mx-auto card-body bg-white"
+                                        style="margin-left: 2.85rem !important; margin-right: 2.85rem !important;">
+                                        <div class="row">
+                                            <div class="col-md-3 col-xs-6">
+                                                <button id="btnAuthorize" type="button" class="btn btn-primary w-100"
+                                                    style="background-color: #1b489f;">
+                                                    <i class="material-icons mr-2"
+                                                        style="position: relative;top: 4px;">done</i><span
+                                                        style="position: relative; top:-1px">ACCEPT</span></button>
+                                            </div>
+                                            <div class="col-md-3 col-xs-6">
+                                                <button id="btnReject" type="button" class="btn btn-primary w-100"
+                                                    style="line-height: unset !important; background-color: #1b489f;">
+                                                    <i class="material-icons mr-2"
+                                                        style="position: relative;top: 4px;">phonelink_erase</i><span
+                                                        style="position: relative; top:-1px">REJECT</span></button>
+                                            </div>
+                                            <div class="col-md-3 col-xs-6">
+                                                <button id="btnHold" type="button" class="btn btn-primary w-100"
+                                                    style="background-color: #1b489f;">
+                                                    <i class="material-icons mr-2"
+                                                        style="position: relative;top: 4px;">help</i><span
+                                                        style="position: relative; top:-1px">HOLD</span></button>
+                                            </div>
+                                            <div class="col-md-3 col-xs-6">
+                                                <button id="btnDrop" type="button" class="btn btn-primary w-100"
+                                                    style="background-color: #1b489f;">
+                                                    <i class="material-icons mr-2"
+                                                        style="position: relative;top: 4px;">signal_wifi_off</i><span
+                                                        style="position: relative; top:-1px">DROP</span></button>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="col-md-12 mb-0" style="text-align: center;">
+                                        <button id="btnAuthorize" type="button" class="btn btn-success mr-4"
+                                            style="border-radius: unset; background-color: #29aa1f;"><i
+                                                class="fa fa-camera mr-2"></i>ACCEPT</button>
+                                        <button id="btnReject" type="button" class="btn btn-danger mr-4"
+                                            style="border-radius: unset; line-height: unset !important; background-color: #bf1010;"><i
+                                                class="fa fa-camera mr-2"></i>REJECT</button>
+                                        <button id="btnHold" type="button" class="btn btn-warning mr-4"
+                                            style="border-radius: unset; background-color: #dd6310;"><i
+                                                class="fa fa-camera mr-2"></i>HOLD</button>
+                                        <button id="btnDrop" type="button" class="btn btn-primary"
+                                            style="border-radius: unset; background-color: #1b5e9b;"><i
+                                                class="fa fa-camera mr-2"></i>DROP</button>
+                                    </div> -->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="sessionVideoModal" tabindex="-1" role="dialog"
+                aria-labelledby="sessionVideoModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="sessionVideoModalLabel">Recorded Session</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <video id="viewremoteVideo" class="videoClass form-control"
+                                style="height: 20%; max-height: 200px;" autoplay></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    </div>
+
+</body>
+
+<!-- <script src="client.js"></script> -->
+<!-- <script src="https://cdn.webrtc-experiment.com/RecordRTC.js"></script> -->
+<!-- <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script> -->
+<script src="./js/RecordRTC.js"></script>
+<script src="./js/adapter-latest.js"></script>
+
+<!-- <script src="js/tesseract-ocr.js"></script> -->
+<script src="./lib/jquery/dist/jquery.min.js"></script>
+<script src="./lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./plugins/sweetalert/sweetalert.min.js"></script>
+<script src="./js/swal-loader.js"></script>
+<script src="./js/env.url.js"></script>
+<script src="client.js"></script>
+
+<script src="./lib/site/js/site.js" asp-append-version="true"></script>
+<script src="./lib/lightbox2-2.11.3/dist/js/lightbox.js"></script>
+<script src="./lib/alertifyjs/build/alertify.js"></script>
+<!-- Cropper Libs -->
+<script src="./lib/cropperUtil/CropperUtil.js"></script>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.7/cropper.min.js"></script> -->
+<script src="./js/tensorflow.tfjs.js"></script>
+<script src="./js/tensorflow-models.mobilenet.js"></script>
+<script src="./js/cropper.min.js"></script>
+
+</html>
